@@ -3,6 +3,8 @@ import React, { Fragment, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import SEO from "../components/Seo/Seo";
 import MenuNavbar from "../components/Navbar/MenuNavbar";
+import HeaderBanner from "../components/Banner/HeaderBanner";
+import Footer from "../components/Footer/Footer";
 
 // const qs = require("qs");
 
@@ -25,33 +27,6 @@ const Home = () => {
     pauseOnHover: false,
     pauseOnFocus: false,
   };
-  // ## SLIDE ##
-
-  // Set default when reload page.
-  // useEffect(() => {
-  //   if (localStorage.getItem("watana_lang")) {
-  //     setLang(localStorage.getItem("watana_lang"));
-  //     i18n.changeLanguage(lang);
-  //   } else {
-  //     setLang("th");
-  //   }
-
-  //   if (lang !== undefined) {
-  //     getPage("home", lang);
-  //     // getStrAPI(
-  //     //   "interviews",
-  //     //   lang,
-  //     //   "&populate=*&sort[0]=id:desc&pagination[pageSize]=4"
-  //     // );
-  //   }
-  // }, [lang]);
-
-  // const handleLang = (event, attrLang) => {
-  //   let changeText = attrLang === "th" ? "en" : "th";
-  //   localStorage.setItem("watana_lang", changeText);
-  //   setLang(localStorage.getItem("watana_lang"));
-  //   i18n.changeLanguage(lang);
-  // };
 
   return (
     <div id="home">
@@ -65,36 +40,24 @@ const Home = () => {
         />
 
         <MenuNavbar></MenuNavbar>
-        {/* <MenuNavbar>
-            <div className="align-items-center icon-nav-custom">
-              <img
-                src="images/icon/icon-12.png"
-                alt={"NCL Language " + lang}
-                // height="30"
-                className="narbar_link img-icon-nav"
-                data-lang={lang}
-                onClick={(event) =>
-                  handleLang(
-                    event.target,
-                    event.target.attributes.getNamedItem("data-lang").value
-                  )
-                }
-              />
-              <span
-                style={{ textTransform: "uppercase" }}
-                className="pt-1 narbar_font"
-                data-lang={lang}
-                onClick={(event) =>
-                  handleLang(
-                    event.target,
-                    event.target.attributes.getNamedItem("data-lang").value
-                  )
-                }
-              >
-                {lang}
-              </span>
+        {/* Product search  */}
+        <HeaderBanner />
+        <section className="container mx-auto py-16">
+          <div className="flex flex-col gap-5 ">
+            <h1 className="uppercase text-center text-red">Product search </h1>
+            <h1 className="text-blue text-center">ค้าหาสินค้า</h1>
+            <div className="flex justify-center">
+              <div className="bg-red h-[9px] w-[9px] rounded-full"></div>
+              <div className=" border-t-2 border-red w-1 my-auto"></div>
+              <div className="bg-red h-[9px] w-[9px] rounded-full"></div>
+              <div className=" border-t-2 border-red w-1 my-auto"></div>
+              <div className="bg-red h-[9px] w-[9px] rounded-full"></div>
             </div>
-          </MenuNavbar> */}
+          </div>
+          <input type="text" className="w-10" />
+        </section>
+
+        <Footer></Footer>
       </Fragment>
     </div>
   );

@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1 {
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: bold;
+  }
+}
+
+@layer components {
+  .bgImages {
+    @apply bg-no-repeat bg-center bg-cover;
+  }
+}
