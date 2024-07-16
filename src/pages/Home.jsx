@@ -1,8 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
-// import { Seo, MenuNavbar, Footer } from "../components";
-// import { Header, About, BoardProduct, InterViews } from "../containers";
-// import useGetPage from "../hooks/useGetPage";
-// import useStrAPI from "../hooks/useStrAPI";
+
 import { useTranslation } from "react-i18next";
 import SEO from "../components/Seo/Seo";
 import MenuNavbar from "../components/Navbar/MenuNavbar";

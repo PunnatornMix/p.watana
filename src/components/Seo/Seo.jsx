@@ -5,7 +5,7 @@ const SEO = ({ title, description, name, type, keywords }) => {
   return (
     <Helmet>
       {/* Standard metadata tags */}
-      <title>NCL - {title}</title>
+      <title>Watana - {title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       {/* End standard metadata tags */}

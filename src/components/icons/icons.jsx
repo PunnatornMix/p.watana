@@ -212,3 +212,71 @@ export function UnitedStates({ className = null }) {
     </svg>
   );
 }
+
+export function ThailandIcon({ className = null }) {
+  return (
+    <>
+      <svg
+        viewBox="0 0 36 36"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        aria-hidden="true"
+        role="img"
+        // class="iconify iconify--twemoji"
+        className={className}
+        preserveAspectRatio="xMidYMid meet"
+        fill="#000000"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          <path
+            fill="#A7122D"
+            d="M0 26.518V27a4 4 0 0 0 4 4h28a4 4 0 0 0 4-4v-.482H0z"
+          ></path>
+          <path fill="#EEE" d="M0 22.181h36v4.485H0z"></path>
+          <path fill="#292648" d="M0 13.513h36v8.821H0z"></path>
+          <path fill="#EEE" d="M0 9.181h36v4.485H0z"></path>
+          <path
+            fill="#A7122D"
+            d="M0 9.333V9a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v.333H0z"
+          ></path>
+        </g>
+      </svg>
+    </>
+  );
+}
+
+export function TriangleIcon({ className = null }) {
+  return (
+    <>
+      <svg
+        viewBox="0 0 20 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className={className}
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          {" "}
+          <path
+            d="M8.72798 15.795L3.72798 7.795C3.10356 6.79593 3.82183 5.5 4.99998 5.5L15 5.5C16.1781 5.5 16.8964 6.79593 16.272 7.795L11.272 15.795C10.6845 16.735 9.31549 16.735 8.72798 15.795Z"
+            fill="#000000"
+          ></path>{" "}
+        </g>
+      </svg>
+    </>
+  );
+}
+export function Icon({ className = null }) {
+  return <></>;
+}
