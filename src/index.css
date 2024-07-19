@@ -10,7 +10,21 @@
 }
 
 @layer components {
-  .bgImages {
+  .bannerImages {
     @apply bg-no-repeat bg-center bg-cover;
   }
+}
+
+#demo-simple-select {
+  display: flex;
+  gap: 4px;
+  /* justify-content: center; */
+  width: 56px;
+  align-items: center;
+  padding: 0px;
+  /* border: none !important; */
+}
+
+#demo-simple-select p {
+  display: none;
 }

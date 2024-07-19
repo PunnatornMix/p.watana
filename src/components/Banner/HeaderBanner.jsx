@@ -1,8 +1,8 @@
 import React from "react";
 
-function HeaderBanner() {
+function HeaderBanner({ src }) {
   return (
-    <div className='bg-[url("/images/mock/image.png")] bgImages w-100 h-[700px]'></div>
+    <div className={`bg-[url("${src}")] bannerImages w-100 h-[700px]`}></div>
   );
 }
 
