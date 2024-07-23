@@ -10,12 +10,29 @@
   p {
     font-size: clamp(16px, 3vw, 18px);
   }
+  img {
+    transition: opacity 4s ease-in-out;
+  }
+
+  img.hovered {
+    opacity: 0;
+  }
 }
 
 @layer components {
   .bannerImages {
     @apply bg-no-repeat bg-center bg-cover;
   }
+  /* .transitionImg {
+    transition: opacity 4s ease-in-out;
+  }
+  .transitionImg.hovered {
+    opacity: 0;
+  }
+
+  .transitionImg.hovered + .transitionImg {
+    opacity: 1;
+  } */
 }
 
 #demo-simple-select {
@@ -30,4 +47,15 @@
 
 #demo-simple-select p {
   display: none;
+}
+
+.relative {
+  position: relative;
+  width: 100%;
+  height: 345px;
+}
+
+.absolute {
+  position: absolute;
+  transition: opacity 1s ease-in-out;
 }

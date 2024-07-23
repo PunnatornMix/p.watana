@@ -171,6 +171,55 @@ const Home = () => {
               src="/images/applications/Electronics/Component38.png"
               hoverSrc="/images/applications/Electronics/Hover/Component38hover.png"
             />
+            <ApplicationLists
+              src="/images/applications/Food/Component39.png"
+              hoverSrc="/images/applications/Food/Hover/Component39hover.png"
+            />
+            <ApplicationLists
+              src="/images/applications/Agriculture/Component40.png"
+              hoverSrc="/images/applications/Agriculture/Hover/Component40hover.png"
+            />
+            <ApplicationLists
+              src="/images/applications/Construction/Component41.png"
+              hoverSrc="/images/applications/Construction/Hover/Component41hover.png"
+            />
+            <ApplicationLists
+              src="/images/applications/Water/Component42.png"
+              hoverSrc="/images/applications/Water/Hover/Component42hover.png"
+            />
+            <ApplicationLists
+              src="/images/applications/Coating/Component43.png"
+              hoverSrc="/images/applications/Coating/Hover/Component43Hover.png"
+            />
+            <ApplicationLists
+              src="/images/applications/Automobile/Component44.png"
+              hoverSrc="/images/applications/Automobile/Hover/Component44Hover.png"
+            />
+            <ApplicationLists
+              src="/images/applications/Ceramic/Component45.png"
+              hoverSrc="/images/applications/Ceramic/Hover/Component45Hover.png"
+            />
+            <ApplicationLists
+              src="/images/applications/Rubber/Component46.png"
+              hoverSrc="/images/applications/Rubber/Hover/Component46Hover.png"
+            />
+
+            <ApplicationLists
+              src="/images/applications/Textiles/Component47.png"
+              hoverSrc="/images/applications/Textiles/Hover/Component47Hover.png"
+            />
+            <ApplicationLists
+              src="/images/applications/Printing/Component48.png"
+              hoverSrc="/images/applications/Printing/Hover/Component48Hover.png"
+            />
+            <ApplicationLists
+              src="/images/applications/Steel/Component49.png"
+              hoverSrc="/images/applications/Steel/Hover/Component49Hover.png"
+            />
+            <ApplicationLists
+              src="/images/applications/Other/Component50.png"
+              hoverSrc="/images/applications/Other/Hover/Component50Hover.png"
+            />
           </div>
         </section>
 
