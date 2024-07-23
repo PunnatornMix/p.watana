@@ -35,8 +35,8 @@ function MenuNavbar({ children }) {
 
   return (
     <>
-      <div className="container mx-auto flex h-16 my-10 justify-between">
-        <div className="bg-green-400 w-20 h-16"></div>
+      <div className="container mx-auto flex text-blue h-16 my-10 justify-between">
+        <img src="/images/Logo/Group7_0.png"></img>
         <div className="md:flex hidden gap-16 items-center ">
           <p>{lang === "th" ? "เกี่ยวกับบริษัท" : "about us"}</p>
           <p>รายการสินค้า</p>
