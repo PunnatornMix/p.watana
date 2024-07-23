@@ -1,3 +1,5 @@
+import { light } from "@mui/material/styles/createPalette";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -8,6 +10,7 @@ export default {
         red1: "#FF4155",
         blue: "#100F9C",
         grey: "#424143",
+        lightBlue: "#F8FDFF",
       },
       dropShadow: {
         red: "0 2px 5px #DC1E32",

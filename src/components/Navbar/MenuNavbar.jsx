@@ -14,7 +14,6 @@ function MenuNavbar({ children }) {
 
   // const [lang, setLang] = useState();
   // const { t, i18n } = useTranslation();
-  // const lang = localStorage.getItem("ncl_lang");
 
   // useEffect(() => {
   //   // console.log(localStorage.getItem("itemsHref"));
@@ -35,13 +34,14 @@ function MenuNavbar({ children }) {
 
   return (
     <>
-      <div className="container mx-auto flex text-blue h-16 my-10 justify-between">
+      <div className="container mx-auto flex text-blue  h-16 my-10 justify-between">
         <img src="/images/Logo/Group7_0.png"></img>
-        <div className="md:flex hidden gap-16 items-center ">
-          <p>{lang === "th" ? "เกี่ยวกับบริษัท" : "about us"}</p>
-          <p>รายการสินค้า</p>
-          <p>ข่าวสารและกิจกรรม</p>
-          <p>ติดต่อบริษัท</p>
+        <div className="md:flex hidden gap-16 items-center font-bold">
+          <p>{lang === "th" ? "เกี่ยวกับบริษัท" : "ABOUT US"}</p>
+          <p>{lang === "th" ? "รายการสินค้า" : "PRODUCT LIST"}</p>
+          {lang === "th" ? "" : ""}
+          <p>{lang === "th" ? "ข่าวสารและกิจกรรม" : "NEWS & ACTIVITIES"}</p>
+          <p>{lang === "th" ? "ติดต่อบริษัท" : "CONTACT US"}</p>
         </div>
         <div className="md:flex hidden items-center">
           <div className="flex gap-3 items-center">

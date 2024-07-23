@@ -17,23 +17,26 @@ import ApplicationLists from "../components/ApplicationLists/ApplicationLists";
 // const qs = require("qs");
 
 const Home = () => {
-  const [lang, setLang] = useState("");
+  // const [lang, setLang] = useState();
   const { t, i18n } = useTranslation();
 
   const handleLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
   };
 
-  useEffect(() => {
-    const storedLang = localStorage.getItem("i18nextLng");
-    if (storedLang) {
-      setLang(storedLang);
-      i18n.changeLanguage(storedLang);
-    } else {
-      setLang("th");
-    }
-  }, [lang]);
-  console.log("lang", lang);
+  // useEffect(() => {
+  //   const storedLang = localStorage.getItem("i18nextLng");
+  //   if (storedLang) {
+  //     setLang(storedLang);
+  //     i18n.changeLanguage(storedLang);
+  //   } else {
+  //     setLang("th");
+  //     i18n.changeLanguage("th");
+  //   }
+  //   console.log("storedLang", storedLang);
+  // }, []);
+  // console.log("storedLang", storedLang);
+  const lang = localStorage.getItem("i18nextLng");
 
   return (
     <div id="home">
@@ -76,9 +79,8 @@ const Home = () => {
           <HeaderBanner src="/images/Banner/HomeBanner.png" />
         </div>
         {/* Product search  */}
-        {/* <section className="bg-[url('/images/home/Group2133.png')] bg-no-repeat bg-right "> */}
         <section
-          className="bg-[url('/images/home/Group2133.png')] bg-no-repeat  bg-auto z-100 bg-right"
+          className="bg-[url('/images/home/Group2133.png')] bg-no-repeat  bg-auto z-100"
           style={{
             backgroundPosition: "right -72% bottom 100% ",
             backgroundSize: "60%",
@@ -91,7 +93,7 @@ const Home = () => {
           /> */}
             <div className="flex flex-col mx-auto gap-5 ">
               <h1 className="uppercase text-center text-red">Product search</h1>
-              <h1 className="text-blue text-center">ค้าหาสินค้า</h1>
+              <h1 className="text-blue text-center">ค้นหาสินค้า</h1>
               <ThreeDots />
             </div>
             <div
@@ -135,22 +137,38 @@ const Home = () => {
             <ThreeDots />
 
             <p className="text-white w-[56%]">
-              บริษัท ปิ่นวัฒนาการค้า จำกัด คือ ผู้นำเข้า-ส่งออก
-              และจัดจำหน่ายเคมีภัณฑ์อุตสาหกรรมจากทั่วโลก ตั้งแต่ปี พ.ศ. 2518{" "}
-              <br />
-              มีชื่อเสียงยาวนาน เคมีภัณฑ์คุณภาพ ราคายุติธรรม บริการประทับใจ
+              {" "}
+              {lang == "th" ? (
+                <>
+                  บริษัท ปิ่นวัฒนาการค้า จำกัด คือ ผู้นำเข้า-ส่งออก
+                  และจัดจำหน่ายเคมีภัณฑ์อุตสาหกรรมจากทั่วโลก ตั้งแต่ปี พ.ศ. 2518
+                  <br />
+                  มีชื่อเสียงยาวนาน เคมีภัณฑ์คุณภาพ ราคายุติธรรม บริการประทับใจ
+                </>
+              ) : (
+                <>
+                  P. Watana Trading Co., Ltd. is an Importer, Exporter and
+                  Distributor of industrial chemicals around the world since
+                  1975.
+                  <br />
+                  Long Reputation, Quality Chemicals, Fair Price, Impressive
+                  Service.
+                </>
+              )}
             </p>
             <button
-              className="btn hover:drop-shadow-red  text-white rounded-full w-36 border-0 button-red"
+              className="btn hover:drop-shadow-red  text-white rounded-full w-36 border-0 button-red
+              hover:tracking-widest"
               style={{
                 background:
                   "linear-gradient(180deg, rgba(220,30,50,1) 0%, rgba(255,65,85,1) 100%)",
               }}
             >
-              <p className="hover:tracking-widest">อ่านต่อ</p>
+              <p>อ่านต่อ</p>
             </button>
           </div>
         </section>
+        <img src="/images/home/bg-tri.png" className="bg-red" />
         {/* Application */}
         <section className="container mx-auto ">
           <div className="text-center flex flex-col gap-4 py-16">
@@ -158,7 +176,7 @@ const Home = () => {
             <h1 className="text-blue">การใช้งาน</h1>
             <ThreeDots />
           </div>
-          <div className="grid grid-cols-4">
+          <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 grid-cols-2">
             <ApplicationLists
               src="/images/applications/Cleaning/Component36.png"
               hoverSrc="/images/applications/Cleaning/Hover/Component36hover.png"
@@ -220,6 +238,23 @@ const Home = () => {
               src="/images/applications/Other/Component50.png"
               hoverSrc="/images/applications/Other/Hover/Component50Hover.png"
             />
+          </div>
+        </section>
+        {/* <img src="/images/home/bg-tri.png" className="bg-[#F8FDFF]" /> */}
+        <img
+          src="/images/home/bg-tri.png"
+          // className="bg-red bg-top bg-no-repeat"
+          className="bg-[url('images/color/lightBlue.png')] bg-white bg-top bg-no-repeat"
+          style={{
+            backgroundSize: "100% 50%",
+          }}
+        />
+
+        <section>
+          <div className="text-center flex flex-col gap-4 pb-16 bg-white ">
+            <h1 className="text-red">NEWS & ACTIVITIES</h1>
+            <h1 className="text-blue">ข่าวสารและกิจกรรม</h1>
+            <ThreeDots />
           </div>
         </section>
 

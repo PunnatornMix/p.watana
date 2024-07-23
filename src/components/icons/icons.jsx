@@ -145,7 +145,7 @@ export function UnitedStates({ className = null }) {
       ></g>
       <g id="SVGRepo_iconCarrier">
         {" "}
-        <g clip-path="url(#clip0_503_2952)">
+        <g cliPath="url(#clip0_503_2952)">
           {" "}
           <rect width="28" height="20" rx="2" fill="white"></rect>{" "}
           <mask
@@ -219,7 +219,7 @@ export function ThailandIcon({ className = null }) {
       <svg
         viewBox="0 0 36 36"
         xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
         aria-hidden="true"
         role="img"
         // class="iconify iconify--twemoji"
@@ -227,11 +227,11 @@ export function ThailandIcon({ className = null }) {
         preserveAspectRatio="xMidYMid meet"
         fill="#000000"
       >
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
         <g
           id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         ></g>
         <g id="SVGRepo_iconCarrier">
           <path
@@ -260,11 +260,11 @@ export function TriangleIcon({ className = null }) {
         xmlns="http://www.w3.org/2000/svg"
         className={className}
       >
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
         <g
           id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         ></g>
         <g id="SVGRepo_iconCarrier">
           {" "}

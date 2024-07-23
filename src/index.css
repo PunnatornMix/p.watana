@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    background-color: #f8fdff;
+    /* background-color: blue; */
+  }
   h1 {
     font-size: clamp(24px, 3vw, 36px);
     font-weight: bold;
@@ -49,13 +53,13 @@
   display: none;
 }
 
-.relative {
+/* .relative {
   position: relative;
   width: 100%;
   height: 345px;
-}
+} */
 
-.absolute {
+/* .absolute {
   position: absolute;
   transition: opacity 1s ease-in-out;
-}
+} */
