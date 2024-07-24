@@ -10,32 +10,60 @@ import {
   TriangleIcon,
   UnitedStates,
 } from "../components/icons/icons";
-import { Box, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import {
+  Box,
+  Card,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+} from "@mui/material";
 import ThreeDots from "../components/ThreeDots/ThreeDots";
 import ApplicationLists from "../components/ApplicationLists/ApplicationLists";
+import NewsCard from "../components/NewsCard/NewsCard";
+import NewsCarousel from "../components/NewsCarousel/NewsCarousel";
 
-// const qs = require("qs");
+const NewsList = [
+  <NewsCard
+    src={"/images/newsList/Rectangle1297_0.png"}
+    date="กันยายน 20, 2023"
+    title={"กิจกรรมบริษัทกับพนักงานร่วมกันเพื่อสร้างสัมพันธ์"}
+    content={`บริษัท ปิ่นวัฒนาการค้า จำกัด ก่อตั้งขึ้นเมื่อปี พ.ศ. 2518
+          เริ่มจากการดำเนินธุรกิจในการจำหน่ายสินค้าเคมีทั่วไป พัฒนาสู่....
+          การเป็น.การนำเข้าสินค้าเคมีภัณฑ์จากต่างประเทศทั่วโลก
+          ให้แก่หน่วยงานและบริษัทชั้นนำในประเทศไทย บริษัทฯ
+          ได้มุ่งเน้นในส่วนของการจำหน่ายสินค้าที่หลากหลายและมีคุณภาพที่ดีที่สุด
+          พร้อมทั้งบริการ ที่มีประสิทธิภาพ
+          เพื่อเข้าถึงความต้องการที่แท้จริงและความพอใจ สูงสุดของลูกค้า
+          ตลอดจนสร้างมาตรฐานให้กับองค์กรโดยการพัฒนาบุคลากรอย่างต่อเนื่อง
+          ทำให้บริษัทฯ ประสบความสำเร็จและก้าวหน้าอย่างถาวร`}
+  />,
+  <NewsCard
+    src={"/images/newsList/Group2868_0.png"}
+    date="กันยายน 20, 2023"
+    title={"กิจกรรมบริษัทกับพนักงาน"}
+    content={`บริษัท ปิ่นวัฒนาการค้า จำกัด ก่อตั้งขึ้นเมื่อปี พ.ศ. 2518 เริ่มจากการดำเนินธุรกิจในการจำหน่ายสินค้าเคมีทั่วไป พัฒนาสู่.... การเป็น.การนำเข้าสินค้าเคมีภัณฑ์จากต่างประเทศทั่วโลก ให้แก่หน่วยงานและบริษัทชั้นนำในประเทศไทย บริษัทฯ ได้มุ่งเน้นในส่วนของการจำหน่ายสินค้าที่หลากหลายและมีคุณภาพที่ดีที่สุด พร้อมทั้งบริการ ที่มีประสิทธิภาพ เพื่อเข้าถึงความต้องการที่แท้จริงและความพอใจ สูงสุดของลูกค้า ตลอดจนสร้างมาตรฐานให้กับองค์กรโดยการพัฒนาบุคลากรอย่างต่อเนื่อง ทำให้บริษัทฯ ประสบความสำเร็จและก้าวหน้าอย่างถาวร`}
+  />,
+  <NewsCard
+    src={"/images/newsList/Group2404_0.png"}
+    date="กันยายน 20, 2023"
+    title={"กิจกรรมบริษัทกับพนักงานร่วมกันเพื่อสร้างสัมพันธ์โครงการ"}
+    content={`บริษัท ปิ่นวัฒนาการค้า จำกัด ก่อตั้งขึ้นเมื่อปี พ.ศ. 2518 เริ่มจากการดำเนินธุรกิจในการจำหน่ายสินค้าเคมีทั่วไป พัฒนาสู่.... การเป็น.การนำเข้าสินค้าเคมีภัณฑ์จากต่างประเทศทั่วโลก ให้แก่หน่วยงานและบริษัทชั้นนำในประเทศไทย บริษัทฯ ได้มุ่งเน้นในส่วนของการจำหน่ายสินค้าที่หลากหลายและมีคุณภาพที่ดีที่สุด พร้อมทั้งบริการ ที่มีประสิทธิภาพ เพื่อเข้าถึงความต้องการที่แท้จริงและความพอใจ สูงสุดของลูกค้า ตลอดจนสร้างมาตรฐานให้กับองค์กรโดยการพัฒนาบุคลากรอย่างต่อเนื่อง ทำให้บริษัทฯ ประสบความสำเร็จและก้าวหน้าอย่างถาวร`}
+  />,
+
+  <NewsCard />,
+  <NewsCard />,
+  <NewsCard />,
+  // <NewsCard />,
+];
 
 const Home = () => {
-  // const [lang, setLang] = useState();
   const { t, i18n } = useTranslation();
 
   const handleLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
   };
 
-  // useEffect(() => {
-  //   const storedLang = localStorage.getItem("i18nextLng");
-  //   if (storedLang) {
-  //     setLang(storedLang);
-  //     i18n.changeLanguage(storedLang);
-  //   } else {
-  //     setLang("th");
-  //     i18n.changeLanguage("th");
-  //   }
-  //   console.log("storedLang", storedLang);
-  // }, []);
-  // console.log("storedLang", storedLang);
   const lang = localStorage.getItem("i18nextLng");
 
   return (
@@ -243,18 +271,24 @@ const Home = () => {
         {/* <img src="/images/home/bg-tri.png" className="bg-[#F8FDFF]" /> */}
         <img
           src="/images/home/bg-tri.png"
-          // className="bg-red bg-top bg-no-repeat"
           className="bg-[url('images/color/lightBlue.png')] bg-white bg-top bg-no-repeat"
+          // className="bg-[url('images/color/red.png')] bg-white bg-top bg-no-repeat"
           style={{
             backgroundSize: "100% 50%",
           }}
         />
 
-        <section>
-          <div className="text-center flex flex-col gap-4 pb-16 bg-white ">
-            <h1 className="text-red">NEWS & ACTIVITIES</h1>
-            <h1 className="text-blue">ข่าวสารและกิจกรรม</h1>
-            <ThreeDots />
+        {/* NEWS & ACTIVITIES */}
+        <section className=" bg-white ">
+          <div className="container mx-auto">
+            <div className=" text-center  mx-auto flex flex-col gap-4 pb-16 -translate-y-[60%] ">
+              <h1 className="text-red">NEWS & ACTIVITIES</h1>
+              <h1 className="text-blue">ข่าวสารและกิจกรรม</h1>
+              <ThreeDots />
+            </div>
+            <NewsCarousel></NewsCarousel>
+
+            {NewsList.map((news, index) => news)}
           </div>
         </section>
 

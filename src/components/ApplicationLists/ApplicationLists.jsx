@@ -1,29 +1,3 @@
-// import React, { useState } from "react";
-
-// function ApplicationLists({ src, hoverSrc }) {
-//   const [isHover, setIsHover] = useState(false);
-
-//   const handleMouseEnter = () => {
-//     setIsHover(true);
-//   };
-
-//   const handleMouseLeave = () => {
-//     setIsHover(false);
-//   };
-
-//   return (
-//     <img
-//       onMouseEnter={handleMouseEnter}
-//       onMouseLeave={handleMouseLeave}
-//       className={`cursor-pointer h-[345px] transitionImg ${
-//         isHover ? "hovered" : ""
-//       }`}
-//       src={isHover ? hoverSrc : src}
-//     />
-//   );
-// }
-
-// export default ApplicationLists;
 import React, { useState } from "react";
 
 function ApplicationLists({ src, hoverSrc }) {

@@ -1,15 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    background-color: #f8fdff;
-    /* background-color: blue; */
+    /* background-color: #f8fdff; */
+    background-color: lightgray;
   }
   h1 {
     font-size: clamp(24px, 3vw, 36px);
     font-weight: bold;
+  }
+  h3 {
+    font-size: clamp(18px, 3vw, 20px);
+    font-weight: bold;
+  }
+  title {
+    font-size: clamp(18px, 3vw, 20px);
   }
   p {
     font-size: clamp(16px, 3vw, 18px);
@@ -27,16 +36,6 @@
   .bannerImages {
     @apply bg-no-repeat bg-center bg-cover;
   }
-  /* .transitionImg {
-    transition: opacity 4s ease-in-out;
-  }
-  .transitionImg.hovered {
-    opacity: 0;
-  }
-
-  .transitionImg.hovered + .transitionImg {
-    opacity: 1;
-  } */
 }
 
 #demo-simple-select {

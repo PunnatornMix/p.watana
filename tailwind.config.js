@@ -1,8 +1,8 @@
-import { light } from "@mui/material/styles/createPalette";
-
 /** @type {import('tailwindcss').Config} */
+
+const flowbite = require("flowbite-react/tailwind");
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", flowbite.content()],
   theme: {
     extend: {
       colors: {
@@ -16,6 +16,9 @@ export default {
         red: "0 2px 5px #DC1E32",
       },
     },
+    fontFamily: {
+      sans: ["Kanit"],
+    },
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), flowbite.plugin()],
 };
