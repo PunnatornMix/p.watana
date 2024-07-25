@@ -36,6 +36,11 @@
   .bannerImages {
     @apply bg-no-repeat bg-center bg-cover;
   }
+  .backgroundImg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
 }
 
 #demo-simple-select {

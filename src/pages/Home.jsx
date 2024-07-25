@@ -64,7 +64,7 @@ const Home = () => {
         </div>
         {/* Product search  */}
         <section
-          className="bg-[url('/images/home/Group2133.png')] bg-no-repeat  bg-auto z-100"
+          className="bg-[url('/images/home/Group2133.png')] bg-no-repeat bg-auto z-100"
           style={{
             backgroundPosition: "right -72% bottom 100% ",
             backgroundSize: "60%",
@@ -80,14 +80,11 @@ const Home = () => {
               <h1 className="text-blue text-center">ค้นหาสินค้า</h1>
               <ThreeDots />
             </div>
-            <div
-              className="bg-[url('/images/home/Group2149.png')]  bg-no-repeat bg-center bg-auto  h-[358px] w-full flex flex-col justify-end"
-              style={{ backgroundSize: "100%" }}
-            >
+            <div className="bg-[url('/images/home/Group2149.png')] backgroundImg  h-[358px] w-full flex flex-col justify-end">
               <label className="input input-primary rounded-full flex items-center gap-2 mx-[79px]">
                 <input
                   type="text"
-                  className="grow"
+                  className="grow border-none"
                   placeholder={lang === "th" ? `ค้นหาสินค้า` : `PRODUCT SEARCH`}
                 />
                 <svg
@@ -240,17 +237,17 @@ const Home = () => {
         </section>
 
         {/* Location */}
-        <section className=" text-center mb-16">
-          <div className="container mx-auto">
+        <section>
+          <div className="container mx-auto text-center">
             <h1 className="text-red">Location</h1>
             <h1 className="text-blue">ที่ตั้งบริษัท</h1>
             <ThreeDots />
             <div className="flex justify-center pt-20">
-              <div className="flex  gap-[45px]">
+              <div className="flex  gap-[45px] h-[491px]">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.1330096947077!2d100.33539487514713!3d13.710392986677208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e295ef8e6a287f%3A0x72b73ac00ddcfde!2z4Lib4Li04LmI4LiZ4Lin4Lix4LiS4LiZ4Liy4LiB4Liy4Lij4LiE4LmJ4Liy!5e0!3m2!1sth!2sth!4v1721890601350!5m2!1sth!2sth"
                   width="679"
-                  height="491"
+                  height="full"
                   allowfullscreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
