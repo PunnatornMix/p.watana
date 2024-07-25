@@ -11,40 +11,7 @@ import ThreeDots from "../components/ThreeDots/ThreeDots";
 import ApplicationLists from "../components/ApplicationLists/ApplicationLists";
 import NewsCard from "../components/NewsCard/NewsCard";
 import NewsCarousel from "../components/NewsCarousel/NewsCarousel";
-
-const NewsList = [
-  <NewsCard
-    src={"/images/newsList/Rectangle1297_0.png"}
-    date="กันยายน 20, 2023"
-    title={"กิจกรรมบริษัทกับพนักงานร่วมกันเพื่อสร้างสัมพันธ์"}
-    content={`บริษัท ปิ่นวัฒนาการค้า จำกัด ก่อตั้งขึ้นเมื่อปี พ.ศ. 2518
-          เริ่มจากการดำเนินธุรกิจในการจำหน่ายสินค้าเคมีทั่วไป พัฒนาสู่....
-          การเป็น.การนำเข้าสินค้าเคมีภัณฑ์จากต่างประเทศทั่วโลก
-          ให้แก่หน่วยงานและบริษัทชั้นนำในประเทศไทย บริษัทฯ
-          ได้มุ่งเน้นในส่วนของการจำหน่ายสินค้าที่หลากหลายและมีคุณภาพที่ดีที่สุด
-          พร้อมทั้งบริการ ที่มีประสิทธิภาพ
-          เพื่อเข้าถึงความต้องการที่แท้จริงและความพอใจ สูงสุดของลูกค้า
-          ตลอดจนสร้างมาตรฐานให้กับองค์กรโดยการพัฒนาบุคลากรอย่างต่อเนื่อง
-          ทำให้บริษัทฯ ประสบความสำเร็จและก้าวหน้าอย่างถาวร`}
-  />,
-  <NewsCard
-    src={"/images/newsList/Group2868_0.png"}
-    date="กันยายน 20, 2023"
-    title={"กิจกรรมบริษัทกับพนักงาน"}
-    content={`บริษัท ปิ่นวัฒนาการค้า จำกัด ก่อตั้งขึ้นเมื่อปี พ.ศ. 2518 เริ่มจากการดำเนินธุรกิจในการจำหน่ายสินค้าเคมีทั่วไป พัฒนาสู่.... การเป็น.การนำเข้าสินค้าเคมีภัณฑ์จากต่างประเทศทั่วโลก ให้แก่หน่วยงานและบริษัทชั้นนำในประเทศไทย บริษัทฯ ได้มุ่งเน้นในส่วนของการจำหน่ายสินค้าที่หลากหลายและมีคุณภาพที่ดีที่สุด พร้อมทั้งบริการ ที่มีประสิทธิภาพ เพื่อเข้าถึงความต้องการที่แท้จริงและความพอใจ สูงสุดของลูกค้า ตลอดจนสร้างมาตรฐานให้กับองค์กรโดยการพัฒนาบุคลากรอย่างต่อเนื่อง ทำให้บริษัทฯ ประสบความสำเร็จและก้าวหน้าอย่างถาวร`}
-  />,
-  <NewsCard
-    src={"/images/newsList/Group2404_0.png"}
-    date="กันยายน 20, 2023"
-    title={"กิจกรรมบริษัทกับพนักงานร่วมกันเพื่อสร้างสัมพันธ์โครงการ"}
-    content={`บริษัท ปิ่นวัฒนาการค้า จำกัด ก่อตั้งขึ้นเมื่อปี พ.ศ. 2518 เริ่มจากการดำเนินธุรกิจในการจำหน่ายสินค้าเคมีทั่วไป พัฒนาสู่.... การเป็น.การนำเข้าสินค้าเคมีภัณฑ์จากต่างประเทศทั่วโลก ให้แก่หน่วยงานและบริษัทชั้นนำในประเทศไทย บริษัทฯ ได้มุ่งเน้นในส่วนของการจำหน่ายสินค้าที่หลากหลายและมีคุณภาพที่ดีที่สุด พร้อมทั้งบริการ ที่มีประสิทธิภาพ เพื่อเข้าถึงความต้องการที่แท้จริงและความพอใจ สูงสุดของลูกค้า ตลอดจนสร้างมาตรฐานให้กับองค์กรโดยการพัฒนาบุคลากรอย่างต่อเนื่อง ทำให้บริษัทฯ ประสบความสำเร็จและก้าวหน้าอย่างถาวร`}
-  />,
-
-  <NewsCard />,
-  <NewsCard />,
-  <NewsCard />,
-  // <NewsCard />,
-];
+import ButtonGradient from "../components/Button/ButtonGradient";
 
 const Home = () => {
   const { t, i18n } = useTranslation();
@@ -153,7 +120,7 @@ const Home = () => {
             <h1 className="text-white">เราคือใคร</h1>
             <ThreeDots />
 
-            <p className="text-white w-[56%]">
+            <p className="text-white w-[56%] font-light">
               {" "}
               {lang == "th" ? (
                 <>
@@ -173,16 +140,7 @@ const Home = () => {
                 </>
               )}
             </p>
-            <button
-              className="btn hover:drop-shadow-red  text-white rounded-full w-36 border-0 button-red
-              hover:tracking-widest"
-              style={{
-                background:
-                  "linear-gradient(180deg, rgba(220,30,50,1) 0%, rgba(255,65,85,1) 100%)",
-              }}
-            >
-              <p>อ่านต่อ</p>
-            </button>
+            <ButtonGradient>อ่านต่อ</ButtonGradient>
           </div>
         </section>
         <img src="/images/home/bg-tri.png" className="bg-red" />
@@ -257,7 +215,6 @@ const Home = () => {
             />
           </div>
         </section>
-        {/* <img src="/images/home/bg-tri.png" className="bg-[#F8FDFF]" /> */}
         <img
           src="/images/home/bg-tri.png"
           className="bg-[url('images/color/lightBlue.png')] bg-white bg-top bg-no-repeat"
@@ -269,19 +226,55 @@ const Home = () => {
 
         {/* NEWS & ACTIVITIES */}
         <section className=" bg-white pb-32">
-          <div className="container mx-auto">
+          <div className="container mx-auto flex flex-col">
             <div className=" text-center  mx-auto flex flex-col gap-4 -translate-y-[60%] ">
               <h1 className="text-red">NEWS & ACTIVITIES</h1>
               <h1 className="text-blue">ข่าวสารและกิจกรรม</h1>
               <ThreeDots />
             </div>
             <NewsCarousel></NewsCarousel>
-
-            {/* {NewsList.map((news, index) => news)} */}
+            <button className="btn bg-[red] text-white hover:tracking-widest hover:bg-[red] hover:drop-shadow-red border-none rounded-full w-48 my-20 self-center">
+              ดูทั้งหมด
+            </button>
           </div>
         </section>
 
-        <Footer></Footer>
+        {/* Location */}
+        <section className=" text-center mb-16">
+          <div className="container mx-auto">
+            <h1 className="text-red">Location</h1>
+            <h1 className="text-blue">ที่ตั้งบริษัท</h1>
+            <ThreeDots />
+            <div className="flex justify-center pt-20">
+              <div className="flex  gap-[45px]">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.1330096947077!2d100.33539487514713!3d13.710392986677208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e295ef8e6a287f%3A0x72b73ac00ddcfde!2z4Lib4Li04LmI4LiZ4Lin4Lix4LiS4LiZ4Liy4LiB4Liy4Lij4LiE4LmJ4Liy!5e0!3m2!1sth!2sth!4v1721890601350!5m2!1sth!2sth"
+                  width="679"
+                  height="491"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+                <div className="flex flex-col items-center gap-4 self-center">
+                  <h3 className="w-[322px] text-center">
+                    บริษัท ปิ่นวัฒนาการค้า จำกัด <br /> ผู้นำเข้า-ส่งออก
+                    ผู้จัดจำหน่ายเคมีภัณฑ์ ตั้งแต่ปี พ.ศ. 2518
+                  </h3>
+                  <div className="flex items-center gap-4">
+                    <img src="/images/Logo/joinus.png" className="w-[40px]" />
+                    <h3 className="font-bold">ร่วมงานกับเรา</h3>
+                  </div>
+                  <ButtonGradient>คลิกเลย</ButtonGradient>
+                </div>
+              </div>
+              <img
+                src="/images/home/Rectangle1302_0.png"
+                className="w-[370px]"
+              />
+            </div>
+          </div>
+          <Footer></Footer>
+        </section>
       </Fragment>
     </div>
   );

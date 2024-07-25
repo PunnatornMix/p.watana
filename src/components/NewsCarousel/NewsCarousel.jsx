@@ -55,7 +55,7 @@ const NewsList = [
 function NewsCarousel() {
   return (
     <div className="h-56 sm:h-64 xl:h-80 2xl:h-[525px] ">
-      <Carousel slide={false} className="bg-red">
+      <Carousel slide={false} className="bg-red ">
         {NewsList.reduce((acc, current, index) => {
           if (index % 3 === 0) acc.push([]);
           acc[acc.length - 1].push(current);

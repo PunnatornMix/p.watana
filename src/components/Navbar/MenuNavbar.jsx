@@ -1,13 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  CirclePhone,
-  LineIcon,
-  Mail,
-  ThailandIcon,
-  TriangleIcon,
-  UnitedStates,
-} from "../icons/icons";
-import { useTranslation } from "react-i18next";
+import { CirclePhone, LineIcon, Mail } from "../icons/icons";
 
 function MenuNavbar({ children }) {
   const lang = localStorage.getItem("i18nextLng");
@@ -36,7 +28,7 @@ function MenuNavbar({ children }) {
     <>
       <div className="container mx-auto flex text-blue  h-16 my-10 justify-between">
         <img src="/images/Logo/Group7_0.png"></img>
-        <div className="md:flex hidden gap-16 items-center font-bold">
+        <div className="md:flex hidden gap-16 items-center">
           <p>{lang === "th" ? "เกี่ยวกับบริษัท" : "ABOUT US"}</p>
           <p>{lang === "th" ? "รายการสินค้า" : "PRODUCT LIST"}</p>
           {lang === "th" ? "" : ""}
