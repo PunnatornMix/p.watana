@@ -5,19 +5,8 @@ import SEO from "../components/Seo/Seo";
 import MenuNavbar from "../components/Navbar/MenuNavbar";
 import HeaderBanner from "../components/Banner/HeaderBanner";
 import Footer from "../components/Footer/Footer";
-import {
-  ThailandIcon,
-  TriangleIcon,
-  UnitedStates,
-} from "../components/icons/icons";
-import {
-  Box,
-  Card,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-} from "@mui/material";
+import { ThailandIcon, UnitedStates } from "../components/icons/icons";
+import { Box, FormControl, MenuItem, Select } from "@mui/material";
 import ThreeDots from "../components/ThreeDots/ThreeDots";
 import ApplicationLists from "../components/ApplicationLists/ApplicationLists";
 import NewsCard from "../components/NewsCard/NewsCard";
@@ -279,16 +268,16 @@ const Home = () => {
         />
 
         {/* NEWS & ACTIVITIES */}
-        <section className=" bg-white ">
+        <section className=" bg-white pb-32">
           <div className="container mx-auto">
-            <div className=" text-center  mx-auto flex flex-col gap-4 pb-16 -translate-y-[60%] ">
+            <div className=" text-center  mx-auto flex flex-col gap-4 -translate-y-[60%] ">
               <h1 className="text-red">NEWS & ACTIVITIES</h1>
               <h1 className="text-blue">ข่าวสารและกิจกรรม</h1>
               <ThreeDots />
             </div>
             <NewsCarousel></NewsCarousel>
 
-            {NewsList.map((news, index) => news)}
+            {/* {NewsList.map((news, index) => news)} */}
           </div>
         </section>
 
