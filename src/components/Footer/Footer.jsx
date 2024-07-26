@@ -37,7 +37,11 @@ function Footer() {
                       : "For more inquiries"}
                   </p>
                   <div className="flex gap-4">
-                    <CirclePhone className="fill-[#100F9C] w-[35px]" />
+                    {/* <CirclePhone className="fill-[#100F9C] w-[35px]" /> */}
+                    <LogoHover
+                      src={"/images/Logo/phone.png"}
+                      hoverSrc={"/images/Logo/phoneH.png"}
+                    />
 
                     <h3 className="font-bold">084 111 0053</h3>
                   </div>
@@ -57,8 +61,6 @@ function Footer() {
                 <p>{lang === "th" ? "ติดต่อบริษัท" : "Contact Us"}</p>
               </div>
               <div className="flex flex-col gap-4 ">
-                {lang === "th" ? "" : ""}
-
                 <p>{lang === "th" ? "ช่องทางการติดต่อ" : "Contact methods"}</p>
                 <div className="flex justify-between">
                   <LogoHover
@@ -82,8 +84,12 @@ function Footer() {
 
         <div className="h-[50px] bg-grey text-white  flex items-center justify-center ">
           <p className="text-center">
+            {lang === "th"
+              ? `
             © สงวนลิขสิทธิ์ พ.ศ. 2567 บริษัท ปิ่นวัฒนาการค้า จำกัด |
-            <span className="text-[#BEBBBB]"> by Belong-To</span>
+              `
+              : "Copyright © 2024 | P. WATANA TRADING CO., LTD. All rights reserved. | Designed by "}
+            <span className="text-[#BEBBBB]"> Belong-To</span>
           </p>
         </div>
       </div>

@@ -7,9 +7,13 @@ function MenuNavbar({ children }) {
   return (
     <div className=" w-full text-blue h-32 bg-[white] fixed top-0 z-50">
       <div className="container mx-auto flex justify-between h-full items-center">
-        <img src="/images/Logo/Group7_0.png" className="w-[70px]"></img>
+        <a href="/">
+          <img src="/images/Logo/Group7_0.png" className="w-[70px]"></img>
+        </a>
         <div className="md:flex hidden gap-16 items-center">
-          <p>{lang === "th" ? "เกี่ยวกับบริษัท" : "ABOUT US"}</p>
+          <a href="/aboutus">
+            {lang === "th" ? "เกี่ยวกับบริษัท" : "ABOUT US"}
+          </a>
           <p>{lang === "th" ? "รายการสินค้า" : "PRODUCT LIST"}</p>
           {lang === "th" ? "" : ""}
           <p>{lang === "th" ? "ข่าวสารและกิจกรรม" : "NEWS & ACTIVITIES"}</p>
