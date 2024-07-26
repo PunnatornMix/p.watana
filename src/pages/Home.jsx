@@ -15,6 +15,15 @@ import ButtonGradient from "../components/Button/ButtonGradient";
 
 const Home = () => {
   const { t, i18n } = useTranslation();
+  const [isHover, setIsHover] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHover(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHover(false);
+  };
 
   const handleLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
@@ -58,8 +67,7 @@ const Home = () => {
           </Box>
         </MenuNavbar>
 
-        <div className="relative">
-          <div className="bg-[url('/images/triBanner.png')] h-[120px] w-full bannerImages absolute top-[-25px] z-50 "></div>
+        <div className=" pt-32">
           <HeaderBanner src="/images/Banner/HomeBanner.png" />
         </div>
         {/* Product search  */}
@@ -84,7 +92,7 @@ const Home = () => {
               <label className="input input-primary rounded-full flex items-center gap-2 mx-[79px]">
                 <input
                   type="text"
-                  className="grow border-none"
+                  className="input grow border-none"
                   placeholder={lang === "th" ? `ค้นหาสินค้า` : `PRODUCT SEARCH`}
                 />
                 <svg
@@ -110,8 +118,24 @@ const Home = () => {
         </section>
 
         {/* who we are */}
-        <section className="flex h-[608px]">
-          <div className="bg-[url('/images/home/Group2349.png')] w-full bannerImages"></div>
+        <section className=" flex h-[608px]">
+          {/* <div className="bg-[url('/images/home/Group2349.png'),url('/images/home/lWWA.png')] hover:bg-[url('/images/home/Group2349.png'),url('/images/home/lWWAH.png')] w-full bannerImages"></div> */}
+          <div
+            className="relative w-full "
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div
+              className={`absolute top-0 left-0 w-full h-full  transition-opacity bannerImages duration-2000 ease-in-out bg-[url('/images/home/Group2349.png'),url('/images/home/lWWA.png')] ${
+                isHover ? "opacity-0" : "opacity-100"
+              }`}
+            ></div>
+            <div
+              className={`absolute top-0 left-0 w-full h-full transition-opacity bannerImages duration-2000 ease-in-out bg-[url('/images/home/Group2349.png'),url('/images/home/lWWAH.png')] 
+             ${isHover ? "opacity-100" : "opacity-0"}`}
+            ></div>
+          </div>
+
           <div className="bg-[url('/images/home/Path3647.png')] w-full bannerImages flex flex-col gap-5 items-center justify-center text-center">
             <h1 className="text-white">WHO WE ARE </h1>
             <h1 className="text-white">เราคือใคร</h1>
@@ -140,10 +164,16 @@ const Home = () => {
             <ButtonGradient>อ่านต่อ</ButtonGradient>
           </div>
         </section>
-        <img src="/images/home/bg-tri.png" className="bg-red" />
+        <div className="relative">
+          <img
+            src="/images/home/tribgGrey.png"
+            // className="w-full absolute -top-[85px]"
+            className="w-full absolute -top-[clamp(70px,5vw,85px)]"
+          />
+        </div>
         {/* Application */}
         <section className="container mx-auto ">
-          <div className="text-center flex flex-col gap-4 py-16">
+          <div className="text-center flex flex-col gap-4 pt-20">
             <h1 className="text-red">Application</h1>
             <h1 className="text-blue">การใช้งาน</h1>
             <ThreeDots />
@@ -222,7 +252,7 @@ const Home = () => {
         />
 
         {/* NEWS & ACTIVITIES */}
-        <section className=" bg-white pb-32">
+        <section className=" bg-white pb-20">
           <div className="container mx-auto flex flex-col">
             <div className=" text-center  mx-auto flex flex-col gap-4 -translate-y-[60%] ">
               <h1 className="text-red">NEWS & ACTIVITIES</h1>
@@ -230,7 +260,7 @@ const Home = () => {
               <ThreeDots />
             </div>
             <NewsCarousel></NewsCarousel>
-            <button className="btn bg-[red] text-white hover:tracking-widest hover:bg-[red] hover:drop-shadow-red border-none rounded-full w-48 my-20 self-center">
+            <button className="btn bg-[red] text-white hover:tracking-widest hover:bg-[red] hover:drop-shadow-red border-none rounded-full w-48 my-12 self-center">
               ดูทั้งหมด
             </button>
           </div>

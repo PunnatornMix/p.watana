@@ -25,9 +25,9 @@ function MenuNavbar({ children }) {
   // };
 
   return (
-    <>
-      <div className="container mx-auto flex text-blue  h-16 my-10 justify-between">
-        <img src="/images/Logo/Group7_0.png"></img>
+    <div className=" w-full text-blue h-32 bg-[white] fixed top-0 z-50">
+      <div className="container mx-auto flex justify-between h-full items-center">
+        <img src="/images/Logo/Group7_0.png" className="w-[70px]"></img>
         <div className="md:flex hidden gap-16 items-center">
           <p>{lang === "th" ? "เกี่ยวกับบริษัท" : "ABOUT US"}</p>
           <p>{lang === "th" ? "รายการสินค้า" : "PRODUCT LIST"}</p>
@@ -49,7 +49,8 @@ function MenuNavbar({ children }) {
           </div>
         </div>
       </div>
-    </>
+      <div className="bg-[url('/images/tri.png')]  h-[120px] w-full bannerImages  top-[115px] "></div>
+    </div>
   );
 }
 
