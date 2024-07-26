@@ -16,6 +16,7 @@
   }
   h3 {
     font-size: clamp(18px, 3vw, 20px);
+    font-weight: medium;
   }
   title {
     font-size: clamp(18px, 3vw, 20px);

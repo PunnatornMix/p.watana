@@ -119,7 +119,6 @@ const Home = () => {
 
         {/* who we are */}
         <section className=" flex h-[608px]">
-          {/* <div className="bg-[url('/images/home/Group2349.png'),url('/images/home/lWWA.png')] hover:bg-[url('/images/home/Group2349.png'),url('/images/home/lWWAH.png')] w-full bannerImages"></div> */}
           <div
             className="relative w-full "
             onMouseEnter={handleMouseEnter}
@@ -161,7 +160,9 @@ const Home = () => {
                 </>
               )}
             </p>
-            <ButtonGradient>อ่านต่อ</ButtonGradient>
+            <ButtonGradient>
+              {lang === "th" ? "อ่านต่อ" : "SEE MORE"}
+            </ButtonGradient>
           </div>
         </section>
         <div className="relative">
@@ -261,10 +262,11 @@ const Home = () => {
             </div>
             <NewsCarousel></NewsCarousel>
             <button className="btn bg-[red] text-white hover:tracking-widest hover:bg-[red] hover:drop-shadow-red border-none rounded-full w-48 my-12 self-center">
-              ดูทั้งหมด
+              {lang === "th" ? "ดูทั้งหมด" : "SEE ALL"}
             </button>
           </div>
         </section>
+        {lang === "th" ? "" : ""}
 
         {/* Location */}
         <section>
@@ -283,15 +285,32 @@ const Home = () => {
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
                 <div className="flex flex-col items-center gap-4 self-center">
-                  <h3 className="w-[322px] text-center">
-                    บริษัท ปิ่นวัฒนาการค้า จำกัด <br /> ผู้นำเข้า-ส่งออก
-                    ผู้จัดจำหน่ายเคมีภัณฑ์ ตั้งแต่ปี พ.ศ. 2518
-                  </h3>
+                  {lang === "th" ? (
+                    <>
+                      <h3 className="w-[322px] text-center text-blue">
+                        บริษัท ปิ่นวัฒนาการค้า จำกัด <br /> ผู้นำเข้า-ส่งออก
+                        ผู้จัดจำหน่ายเคมีภัณฑ์ ตั้งแต่ปี พ.ศ. 2518
+                      </h3>
+                    </>
+                  ) : (
+                    <>
+                      <h3 className="w-[322px] text-center text-blue ">
+                        P. Watana Trading Co., Ltd.
+                        <br />
+                        Chemical Importer, Exporter and Distributor since 1975
+                      </h3>
+                    </>
+                  )}
+
                   <div className="flex items-center gap-4">
                     <img src="/images/Logo/joinus.png" className="w-[40px]" />
-                    <h3 className="font-bold">ร่วมงานกับเรา</h3>
+                    <h3 className="font-bold text-blue">
+                      {lang === "th" ? "ร่วมงานกับเรา" : "JOIN WITH US"}
+                    </h3>
                   </div>
-                  <ButtonGradient>คลิกเลย</ButtonGradient>
+                  <ButtonGradient>
+                    {lang === "th" ? "คลิกเลย" : "CLICK NOW"}
+                  </ButtonGradient>
                 </div>
               </div>
               <img

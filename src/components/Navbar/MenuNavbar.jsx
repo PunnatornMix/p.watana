@@ -4,26 +4,6 @@ import { CirclePhone, LineIcon, Mail } from "../icons/icons";
 function MenuNavbar({ children }) {
   const lang = localStorage.getItem("i18nextLng");
 
-  // const [lang, setLang] = useState();
-  // const { t, i18n } = useTranslation();
-
-  // useEffect(() => {
-  //   // console.log(localStorage.getItem("itemsHref"));
-  //   if (localStorage.getItem("watana_lang")) {
-  //     setLang(localStorage.getItem("watana_lang"));
-  //     i18n.changeLanguage(lang);
-  //   } else {
-  //     setLang("th");
-  //   }
-  // }, [lang]);
-
-  // const handleLang = (event, attrLang) => {
-  //   let changeText = attrLang === "th" ? "en" : "th";
-  //   localStorage.setItem("watana_lang", changeText);
-  //   setLang(localStorage.getItem("watana_lang"));
-  //   i18n.changeLanguage(lang);
-  // };
-
   return (
     <div className=" w-full text-blue h-32 bg-[white] fixed top-0 z-50">
       <div className="container mx-auto flex justify-between h-full items-center">
@@ -37,11 +17,15 @@ function MenuNavbar({ children }) {
         </div>
         <div className="md:flex hidden items-center">
           <div className="flex gap-3 items-center">
-            <CirclePhone className="fill-[#100F9C] w-[35px]" />
+            <CirclePhone className="fill-blue w-[35px] hover:fill-red cursor-pointer" />
             <div>084 111 0053</div>
-            <Mail className="fill-[#100F9C] w-[35px] border-[2.5px] border-[#100F9C] rounded-full p-1" />
-            <LineIcon className="w-[35px] border-[2.5px] border-[#100F9C] rounded-full  p-1" />
-            <div className="border-[2.5px] h-[35px] flex border-[#100F9C] rounded-md p-1">
+            <Mail className="fill-blue w-[35px] border-[2.5px] border-blue hover:border-red hover:fill-red rounded-full p-1 cursor-pointer" />
+            <div>
+              <LineIcon
+                className={`w-[35px] border-[2.5px] border-blue hover:border-red rounded-full  p-1 cursor-pointer`}
+              />
+            </div>
+            <div className="border-[2.5px] h-[35px] flex border-blue  rounded-md p-1 cursor-pointer">
               {children}
             </div>
 

@@ -3,22 +3,42 @@ import { CirclePhone } from "../icons/icons";
 import LogoHover from "../Button/LogoHover";
 
 function Footer() {
+  const lang = localStorage.getItem("i18nextLng");
+
   return (
     <div className="relative">
       <div className="bg-[url('/images/home/footer.png')] absolute w-full bg-center bg-no-repeat -translate-y-[33%] ">
         <div className="container mx-auto flex text-white h-[362px]">
           <div className="h-[80%] w-[80%] mx-auto mt-auto flex items-center justify-between">
             <div className="flex flex-col gap-4 ">
-              <h3>บริษัท ปิ่นวัฒนาการค้า จำกัด</h3>
+              <h3>
+                {lang === "th"
+                  ? "บริษัท ปิ่นวัฒนาการค้า จำกัด"
+                  : "P. WATANA TRADING CO., LTD."}
+              </h3>
               <p>
-                154 ซอยเพชรเกษม 114 แขวงหนองค้างพลู <br /> เขตหนองแขม กรุงเทพฯ
-                10160
+                {lang === "th" ? (
+                  <>
+                    154 ซอยเพชรเกษม 114 แขวงหนองค้างพลู <br /> เขตหนองแขม
+                    กรุงเทพฯ 10160
+                  </>
+                ) : (
+                  <>
+                    154 Soi Phetkasem 114, Nongkhangphlu, <br /> Nongkhaem,
+                    Bangkok 10160 Thailand
+                  </>
+                )}
               </p>
               <div className="flex gap-10">
                 <div className="flex flex-col gap-3">
-                  <p>สอบถามข้อมูลทั่วไป</p>
+                  <p>
+                    {lang === "th"
+                      ? "สอบถามข้อมูลทั่วไป"
+                      : "For more inquiries"}
+                  </p>
                   <div className="flex gap-4">
                     <CirclePhone className="fill-[#100F9C] w-[35px]" />
+
                     <h3 className="font-bold">084 111 0053</h3>
                   </div>
                 </div>
@@ -29,13 +49,17 @@ function Footer() {
             </div>
             <div className="flex gap-40 items-center justify-center">
               <div className="flex flex-col gap-4 ">
-                <p>เกี่ยวกับบริษัท</p>
-                <p>รายการสินค้า</p>
-                <p>ข่าวสารและกิจกรรม</p>
-                <p>ติดต่อบริษัท</p>
+                <p>{lang === "th" ? "เกี่ยวกับบริษัท" : "About Us"}</p>
+                <p>{lang === "th" ? "รายการสินค้า" : "Product List"}</p>
+                <p>
+                  {lang === "th" ? "ข่าวสารและกิจกรรม" : "News & Activities"}
+                </p>
+                <p>{lang === "th" ? "ติดต่อบริษัท" : "Contact Us"}</p>
               </div>
               <div className="flex flex-col gap-4 ">
-                <p>ช่องทางการติดต่อ</p>
+                {lang === "th" ? "" : ""}
+
+                <p>{lang === "th" ? "ช่องทางการติดต่อ" : "Contact methods"}</p>
                 <div className="flex justify-between">
                   <LogoHover
                     src={"/images/Logo/mail.png"}
