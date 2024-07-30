@@ -246,7 +246,6 @@ const Home = () => {
         <img
           src="/images/home/bg-tri.png"
           className="bg-[url('images/color/lightBlue.png')] bg-white bg-top bg-no-repeat"
-          // className="bg-[url('images/color/red.png')] bg-white bg-top bg-no-repeat"
           style={{
             backgroundSize: "100% 50%",
           }}
@@ -319,8 +318,8 @@ const Home = () => {
               />
             </div>
           </div>
-          <Footer></Footer>
         </section>
+        <Footer className="-translate-y-[33%]" />
       </Fragment>
     </div>
   );

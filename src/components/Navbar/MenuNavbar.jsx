@@ -8,7 +8,7 @@ function MenuNavbar({ children }) {
     <div className=" w-full text-blue h-32 bg-[white] fixed top-0 z-50">
       <div className="container mx-auto flex justify-between h-full items-center">
         <a href="/">
-          <img src="/images/Logo/Group7_0.png" className="w-[70px]"></img>
+          <img src="/images/Logo/watana.png" className="w-[70px]"></img>
         </a>
         <div className="md:flex hidden gap-16 items-center">
           <a href="/aboutus">
