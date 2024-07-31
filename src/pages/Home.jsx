@@ -25,16 +25,17 @@ const Home = () => {
   const handleMouseLeave = () => {
     setIsHover(false);
   };
-
+  changeLanguage
   useEffect(() => {
     const storedLang = localStorage.getItem("i18nextLng");
-    if (storedLang) {
-      i18n.changeLanguage(storedLang);
-      setLang(storedLang);
-    } else {
-      i18n.changeLanguage("th");
-      setLang("th");
-    }
+    console.log("storedLang", storedLang);
+    // if (storedLang) {
+    //   i18n.changeLanguage(storedLang);
+    //   setLang(storedLang);
+    // } else {
+    //   i18n.changeLanguage("th");
+    //   setLang("th");
+    // }
   }, [i18n]);
 
   const handleLanguageChange = (e) => {

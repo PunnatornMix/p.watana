@@ -114,7 +114,8 @@ const AboutUs = () => {
               <ThreeDots />
             </div>
             <p className="text-blue">
-              บริษัท ปิ่นวัฒนาการค้า จำกัด ก่อตั้งขึ้นในปี พ.ศ. 2518
+              {lang === "th"
+                ? ` บริษัท ปิ่นวัฒนาการค้า จำกัด ก่อตั้งขึ้นในปี พ.ศ. 2518
               โดยคุณสุรมิตร สัฒฐิติวัฒนกูล
               ซึ่งมองเห็นการเติบโตทางเศรษฐกิจและการพัฒนาอุตสาหกรรมภายในประเทศไทยอย่างต่อเนื่อง
               จึงเริ่มต้นธุรกิจด้วยการจัดจำหน่าย สารส้ม น้ำกรดต่างๆ
@@ -124,14 +125,17 @@ const AboutUs = () => {
               เช่น Akzo Nobel (Nouryon), PQ Corporation, Roquette, Solvay, Dead
               Sea Works, Nippon Soda, Onoda, Shimonoseki Mitsui, Stella, Unids,
               Fujian Tianfu, Shandong Longgang Silicon Technology, Shandong
-              Fuyang Bio-Tech, Sichuan Youren, Techcera and etc.
+              Fuyang Bio-Tech, Sichuan Youren, Techcera and etc.`
+                : `P. Watana Trading Co., Ltd. was founded in 1975 by Mr.Suramitr Santhitiwatanakul who envisioned continuous economic growth and industrial development in Thailand by starting the business with distributing alum, various acid and basic chemicals. We started importing and exporting chemicals from leading manufacturers around the world such as Akzo Nobel (Nouryon), PQ Corporation, Roquette, Solvay, Dead Sea Works, Nippon Soda, Onoda, Shimonoseki Mitsui, Stella, Unids, Fujian Tianfu, Shandong Longgang Silicon Technology, Shandong Fuyang Bio-Tech, Sichuan Yaouren, Techcera and etc.`}
             </p>
             <p className="text-blue">
-              บริษัทฯ ได้พัฒนาคุณภาพการบริหารและจัดการด้วยระบบมาตรฐานสากล ISO
+              {lang === "th"
+                ? ` บริษัทฯ ได้พัฒนาคุณภาพการบริหารและจัดการด้วยระบบมาตรฐานสากล ISO
               9001:2015 รับรองโดย SGS พร้อมทั้งนำเสนอเคมีภัณฑ์ที่มีคุณภาพ
               จากแหล่งผลิตที่น่าเชื่อถือ ในราคาสมเหตุสมผล
               รวมทั้งการบริการที่เอาใส่ใจจากทีมงานที่มีความรู้และประสบการณ์
-              เพื่อสร้างความพึงพอใจสูงสุดให้กับลูกค้า คู่ค้า และสังคม 
+              เพื่อสร้างความพึงพอใจสูงสุดให้กับลูกค้า คู่ค้า และสังคม `
+                : `P. Watana Trading Co., Ltd. was founded in 1975 by Mr.Suramitr Santhitiwatanakul who envisioned continuous economic growth and industrial development in Thailand by starting the business with distributing alum, various acid and basic chemicals. We started importing and exporting chemicals from leading manufacturers around the world such as Akzo Nobel (Nouryon), PQ Corporation, Roquette, Solvay, Dead Sea Works, Nippon Soda, Onoda, Shimonoseki Mitsui, Stella, Unids, Fujian Tianfu, Shandong Longgang Silicon Technology, Shandong Fuyang Bio-Tech, Sichuan Yaouren, Techcera and etc.`}
             </p>
           </div>
         </section>
@@ -301,7 +305,7 @@ const AboutUs = () => {
               ให้สอดคล้องกับแนวโน้มสภาพความต้องการของตลาด
               โดยมุ่งเน้นสินค้าที่มีคุณภาพ, บริการที่มีประสิทธิภาพ,
               การพัฒนาบุคลากร และระบบการจัดการที่มีมาตรฐาน`
-                : `P. Watana Trading Co., Ltd. was founded in 1975 by Mr.Suramitr Santhitiwatanakul who envisioned continuous economic growth and industrial development in Thailand by starting the business with distributing alum, various acid and basic chemicals. We started importing and exporting chemicals from leading manufacturers around the world such as Akzo Nobel (Nouryon), PQ Corporation, Roquette, Solvay, Dead Sea Works, Nippon Soda, Onoda, Shimonoseki Mitsui, Stella, Unids, Fujian Tianfu, Shandong Longgang Silicon Technology, Shandong Fuyang Bio-Tech, Sichuan Yaouren, Techcera and etc.`}
+                : `With the experience more than 50 years of operating the business, P. Watana Trading Co., Ltd. aims to develop the business pattern and the market needs’ trend in the same direction by emphasizing on providing the superior product, serving the professional service, developing the organization and executing a standardized management.`}
             </p>
           </div>
         </section>
