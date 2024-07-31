@@ -14,6 +14,7 @@ import NewsCarousel from "../components/NewsCarousel/NewsCarousel";
 import ButtonGradient from "../components/Button/ButtonGradient";
 
 const Home = () => {
+  const [lang, setLang] = useState(localStorage.getItem("i18nextLng") || "th");
   const { t, i18n } = useTranslation();
   const [isHover, setIsHover] = useState(false);
 
@@ -25,11 +26,23 @@ const Home = () => {
     setIsHover(false);
   };
 
-  const handleLanguageChange = (e) => {
-    i18n.changeLanguage(e.target.value);
-  };
+  useEffect(() => {
+    const storedLang = localStorage.getItem("i18nextLng");
+    if (storedLang) {
+      i18n.changeLanguage(storedLang);
+      setLang(storedLang);
+    } else {
+      i18n.changeLanguage("th");
+      setLang("th");
+    }
+  }, [i18n]);
 
-  const lang = localStorage.getItem("i18nextLng");
+  const handleLanguageChange = (e) => {
+    const newLang = e.target.value;
+    i18n.changeLanguage(newLang);
+    localStorage.setItem("i18nextLng", newLang);
+    setLang(newLang);
+  };
 
   return (
     <div id="home">

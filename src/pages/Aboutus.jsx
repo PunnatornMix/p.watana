@@ -1,5 +1,5 @@
-import React, { Fragment, useState, useEffect } from "react";
-
+import React, { Fragment, useState, useEffect, useRef } from "react";
+import "flowbite";
 import { useTranslation } from "react-i18next";
 import SEO from "../components/Seo/Seo";
 import MenuNavbar from "../components/Navbar/MenuNavbar";
@@ -22,10 +22,22 @@ import NewsCard from "../components/NewsCard/NewsCard";
 import NewsCarousel from "../components/NewsCarousel/NewsCarousel";
 import ButtonGradient from "../components/Button/ButtonGradient";
 import MissionCard from "../components/MissionCard/MissionCard";
+import { Carousel } from "flowbite-react";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
+const settings = {
+  // dots: true,
+  infinite: true,
+  // speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  // arrows: true, // เปิดปุ่ม prev/next
+};
 const AboutUs = () => {
   const { t, i18n } = useTranslation();
-  // const [isHover, setIsHover] = useState(false);
 
   const handleLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
@@ -277,58 +289,88 @@ const AboutUs = () => {
         </section>
 
         {/* วิสัยทัศน์ */}
-        <section className="container flex flex-col mx-auto items-center text-blue gap-6 py-12">
-          <div className="text-center w-[65%]">
+
+        <section className="container  mx-auto items-center text-blue gap-6 py-12">
+          <div className="text-center mx-auto w-[65%]">
             <h1>วิสัยทัศน์</h1>
             <ThreeDots />
             <p className="text-blue mt-12 font-light">
-              ด้วยประสบการณ์ในการดำเนินธุรกิจมากว่า 50 ปี บริษัทฯ
+              {lang === "th"
+                ? `ด้วยประสบการณ์ในการดำเนินธุรกิจมากว่า 50 ปี บริษัทฯ
               ได้เล็งเห็นความสำคัญในการพัฒนารูปแบบของธุรกิจ
               ให้สอดคล้องกับแนวโน้มสภาพความต้องการของตลาด
               โดยมุ่งเน้นสินค้าที่มีคุณภาพ, บริการที่มีประสิทธิภาพ,
-              การพัฒนาบุคลากร และระบบการจัดการที่มีมาตรฐาน
+              การพัฒนาบุคลากร และระบบการจัดการที่มีมาตรฐาน`
+                : `P. Watana Trading Co., Ltd. was founded in 1975 by Mr.Suramitr Santhitiwatanakul who envisioned continuous economic growth and industrial development in Thailand by starting the business with distributing alum, various acid and basic chemicals. We started importing and exporting chemicals from leading manufacturers around the world such as Akzo Nobel (Nouryon), PQ Corporation, Roquette, Solvay, Dead Sea Works, Nippon Soda, Onoda, Shimonoseki Mitsui, Stella, Unids, Fujian Tianfu, Shandong Longgang Silicon Technology, Shandong Fuyang Bio-Tech, Sichuan Yaouren, Techcera and etc.`}
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-6">
-            <div>
-              <h3>
-                {lang === "th" ? "สินค้าที่มีคุณภาพ" : "The Superior Product"}
-              </h3>
+        </section>
 
-              <p className=" font-light pt-3">
-                {lang === "th"
-                  ? "บริษัทฯ จำหน่ายสินค้าที่หลากหลาย โดยคัดสรรแต่สินค้าที่มีคุณภาพที่ดีที่สุดเพื่อตอบสนองความต้องการ และให้เกิดประโยชน์สูงสุดให้แก่ลูกค้า โดยคำนึงถึงการจัดเก็บสินค้าอย่างถูกวิธี และเลือกใช้เครื่องมืออุปกรณ์ที่มีประสิทธิภาพ พร้อมระบบการบำรุงรักษาที่ได้มาตรฐาน"
-                  : "P.Watana Trading Co., Ltd. procures the variety of innovative products with the best quality for serving the consumer’s expectation. With a well-managed inventory of product utilization by using the most efficient instruments in company with standard maintenance, quality of products are at its finest."}
-              </p>
+        {/* <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+          <Carousel loop={true}>
+            <div className="flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white">
+              <img src="/images/aboutus/about01.png" />
             </div>
-            <div>
-              <h3>{lang === "th" ? "ระบบการจัดการที่มาตรฐาน" : ""}</h3>
+            <div className="flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white">
+              <img src="/images/aboutus/about02.png" />
+            </div>
+            <div className="flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white">
+              <img src="/images/aboutus/about03.png" />
+            </div>
+          </Carousel>
+        </div> */}
+        <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+          <Slider {...settings}>
+            <img src="/images/aboutus/about06.png" alt="Image 6" />
+            <img src="/images/aboutus/about07.png" alt="Image 7" />
+            <img src="/images/aboutus/about08.png" alt="Image 8" />
+            <img src="/images/aboutus/about09.png" alt="Image 9" />
+            <img src="/images/aboutus/about10.png" alt="Image 10" />
+            <img src="/images/aboutus/about11.png" alt="Image 11" />
+            <img src="/images/aboutus/about12.png" alt="Image 12" />
+            <img src="/images/aboutus/about05.png" alt="Image 5" />
+          </Slider>
+        </div>
 
-              <p className=" font-light pt-3">
-                {lang === "th"
-                  ? "บริษัทฯ มีความมุ่งมั่นในการบริหารและพัฒนาคุณภาพทั่วทั้งองค์กร เพื่อเพิ่มประสิทธิภาพ และประสิทธิผลตามมาตรฐาน ทั้งนี้เพื่อเป็นการสร้างความมั่นใจในคุณภาพและการบริหารงาน พร้อมทั้งเป็นการตอบสนองความต้องการให้แก่ลูกค้า"
-                  : ""}
-              </p>
-              <p>{lang === "th" ? "" : ""}</p>
-            </div>
-            <div>
-              <h3>{lang === "th" ? "การพัฒนาบุคลากร" : ""}</h3>
+        <section className="container mx-auto grid grid-cols-2 gap-6 my-8 text-blue">
+          <div>
+            <h3>
+              {lang === "th" ? "สินค้าที่มีคุณภาพ" : "The Superior Product"}
+            </h3>
 
-              <p className=" font-light pt-3">
-                {lang === "th"
-                  ? "บริษัทฯ คัดสรรบุคลากรที่มีคุณภาพ โดยมีการฝึกอบรม และให้ความรู้แก่พนักงานในองค์กร อย่างต่อเนื่อง พร้อมที่จะนำไปพัฒนาการทำงานได้อย่างมีระบบ และสามารถเข้าใจรูปแบบในการบริหารงาน เพื่อเข้าถึงความต้องการของตลาดได้อย่างแท้จริง ซึ่งสามารถทำให้บริษัทฯ ประสบความสำเร็จ"
-                  : ""}
-              </p>
-            </div>
-            <div>
-              <h3>{lang === "th" ? "บริการที่มีประสิทธิภาพ" : ""}</h3>
+            <p className=" font-light pt-3">
+              {lang === "th"
+                ? "บริษัทฯ จำหน่ายสินค้าที่หลากหลาย โดยคัดสรรแต่สินค้าที่มีคุณภาพที่ดีที่สุดเพื่อตอบสนองความต้องการ และให้เกิดประโยชน์สูงสุดให้แก่ลูกค้า โดยคำนึงถึงการจัดเก็บสินค้าอย่างถูกวิธี และเลือกใช้เครื่องมืออุปกรณ์ที่มีประสิทธิภาพ พร้อมระบบการบำรุงรักษาที่ได้มาตรฐาน"
+                : "P.Watana Trading Co., Ltd. procures the variety of innovative products with the best quality for serving the consumer’s expectation. With a well-managed inventory of product utilization by using the most efficient instruments in company with standard maintenance, quality of products are at its finest."}
+            </p>
+          </div>
+          <div>
+            <h3>{lang === "th" ? "ระบบการจัดการที่มาตรฐาน" : ""}</h3>
 
-              <p className=" font-light pt-3">
-                {lang === "th"
-                  ? "บริษัทฯ มุ่งเน้นถึงการให้บริการที่มีประสิทธิภาพ เป็นสิ่งที่สำคัญในการดำเนินธุรกิจ ทั้งในด้านบริการจัดส่งสินค้า บริการหลังการขาย บริการการให้ข้อมูล และคำแนะนำเกี่ยวกับสินค้า"
-                  : ""}
-              </p>
-            </div>
+            <p className=" font-light pt-3">
+              {lang === "th"
+                ? "บริษัทฯ มีความมุ่งมั่นในการบริหารและพัฒนาคุณภาพทั่วทั้งองค์กร เพื่อเพิ่มประสิทธิภาพ และประสิทธิผลตามมาตรฐาน ทั้งนี้เพื่อเป็นการสร้างความมั่นใจในคุณภาพและการบริหารงาน พร้อมทั้งเป็นการตอบสนองความต้องการให้แก่ลูกค้า"
+                : ""}
+            </p>
+            <p>{lang === "th" ? "" : ""}</p>
+          </div>
+          <div>
+            <h3>{lang === "th" ? "การพัฒนาบุคลากร" : ""}</h3>
+
+            <p className=" font-light pt-3">
+              {lang === "th"
+                ? "บริษัทฯ คัดสรรบุคลากรที่มีคุณภาพ โดยมีการฝึกอบรม และให้ความรู้แก่พนักงานในองค์กร อย่างต่อเนื่อง พร้อมที่จะนำไปพัฒนาการทำงานได้อย่างมีระบบ และสามารถเข้าใจรูปแบบในการบริหารงาน เพื่อเข้าถึงความต้องการของตลาดได้อย่างแท้จริง ซึ่งสามารถทำให้บริษัทฯ ประสบความสำเร็จ"
+                : ""}
+            </p>
+          </div>
+          <div>
+            <h3>{lang === "th" ? "บริการที่มีประสิทธิภาพ" : ""}</h3>
+
+            <p className=" font-light pt-3">
+              {lang === "th"
+                ? "บริษัทฯ มุ่งเน้นถึงการให้บริการที่มีประสิทธิภาพ เป็นสิ่งที่สำคัญในการดำเนินธุรกิจ ทั้งในด้านบริการจัดส่งสินค้า บริการหลังการขาย บริการการให้ข้อมูล และคำแนะนำเกี่ยวกับสินค้า"
+                : ""}
+            </p>
           </div>
         </section>
 

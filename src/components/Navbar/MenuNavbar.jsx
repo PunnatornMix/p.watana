@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { CirclePhone, LineIcon, Mail } from "../icons/icons";
 
 function MenuNavbar({ children }) {
+  // const lang = localStorage.getItem("i18nextLng");
   const lang = localStorage.getItem("i18nextLng");
 
   return (
