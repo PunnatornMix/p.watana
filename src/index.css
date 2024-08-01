@@ -52,6 +52,13 @@
   .missionH h3 {
     @apply tracking-widest;
   }
+  .menuHover {
+    @apply px-2 py-1 font-medium  text-center w-[180px];
+  }
+  .menuHover:hover {
+    @apply border-b-[2.5px] w-fit mx-auto border-red text-red;
+    letter-spacing: 0.075em;
+  }
 }
 
 #demo-simple-select {

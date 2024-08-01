@@ -11,14 +11,20 @@ function MenuNavbar({ children }) {
         <a href="/">
           <img src="/images/Logo/watana.png" className="w-[70px]"></img>
         </a>
-        <div className="md:flex hidden gap-16 items-center">
-          <a href="/aboutus">
+        <div className="md:grid md:grid-cols-4 hidden  items-center">
+          <a href="/aboutus" className="menuHover ">
             {lang === "th" ? "เกี่ยวกับบริษัท" : "ABOUT US"}
           </a>
-          <p>{lang === "th" ? "รายการสินค้า" : "PRODUCT LIST"}</p>
+          <a href="#" className="menuHover">
+            {lang === "th" ? "รายการสินค้า" : "PRODUCT LIST"}
+          </a>
           {lang === "th" ? "" : ""}
-          <p>{lang === "th" ? "ข่าวสารและกิจกรรม" : "NEWS & ACTIVITIES"}</p>
-          <p>{lang === "th" ? "ติดต่อบริษัท" : "CONTACT US"}</p>
+          <a href="#" className="menuHover">
+            {lang === "th" ? "ข่าวสารและกิจกรรม" : "NEWS & ACTIVITIES"}
+          </a>
+          <a href="#" className="menuHover">
+            {lang === "th" ? "ติดต่อบริษัท" : "CONTACT US"}
+          </a>
         </div>
         <div className="md:flex hidden items-center">
           <div className="flex gap-3 items-center">

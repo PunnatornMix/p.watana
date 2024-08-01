@@ -25,7 +25,6 @@ const Home = () => {
   const handleMouseLeave = () => {
     setIsHover(false);
   };
-  changeLanguage
   useEffect(() => {
     const storedLang = localStorage.getItem("i18nextLng");
     console.log("storedLang", storedLang);
@@ -82,7 +81,7 @@ const Home = () => {
         </MenuNavbar>
 
         <div className=" pt-32">
-          <HeaderBanner src="/images/Banner/HomeBanner.png" />
+          <HeaderBanner src="/images/Banner/home/Banner01.png" />
         </div>
         {/* Product search  */}
         <section
@@ -97,7 +96,7 @@ const Home = () => {
             src="/images/home/Group2133.png"
             className="absolute right-[-915px] top-[-30px] -z-10 "
           /> */}
-            <div className="flex flex-col mx-auto gap-5 ">
+            <div className="flex flex-col mx-auto gap-1 ">
               <h1 className="uppercase text-center text-red">Product search</h1>
               <h1 className="text-blue text-center">ค้นหาสินค้า</h1>
               <ThreeDots />
@@ -188,8 +187,8 @@ const Home = () => {
         </div>
         {/* Application */}
         <section className="container mx-auto ">
-          <div className="text-center flex flex-col gap-4 pt-20">
-            <h1 className="text-red">Application</h1>
+          <div className="text-center flex flex-col gap-1 pt-20">
+            <h1 className="text-red">APPLICATION</h1>
             <h1 className="text-blue">การใช้งาน</h1>
             <ThreeDots />
           </div>
@@ -268,7 +267,7 @@ const Home = () => {
         {/* NEWS & ACTIVITIES */}
         <section className=" bg-white pb-20">
           <div className="container mx-auto flex flex-col">
-            <div className=" text-center  mx-auto flex flex-col gap-4 -translate-y-[60%] ">
+            <div className=" text-center  mx-auto flex flex-col gap-1 -translate-y-[60%] ">
               <h1 className="text-red">NEWS & ACTIVITIES</h1>
               <h1 className="text-blue">ข่าวสารและกิจกรรม</h1>
               <ThreeDots />
@@ -284,8 +283,10 @@ const Home = () => {
         {/* Location */}
         <section>
           <div className="container mx-auto text-center">
-            <h1 className="text-red">Location</h1>
-            <h1 className="text-blue">ที่ตั้งบริษัท</h1>
+            <div className="flex flex-col gap-1">
+              <h1 className="text-red">LOCATION</h1>
+              <h1 className="text-blue">ที่ตั้งบริษัท</h1>
+            </div>
             <ThreeDots />
             <div className="flex justify-center pt-20">
               <div className="flex  gap-[45px] h-[491px]">

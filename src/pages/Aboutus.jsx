@@ -24,16 +24,20 @@ import ButtonGradient from "../components/Button/ButtonGradient";
 import MissionCard from "../components/MissionCard/MissionCard";
 import { Carousel } from "flowbite-react";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 const settings = {
   // dots: true,
   infinite: true,
-  // speed: 500,
+  autoplaySpeed: 2000,
+  speed: 3000,
   slidesToShow: 4,
   slidesToScroll: 4,
+  autoplay: true,
+  pauseOnHover: false,
+
   // arrows: true, // เปิดปุ่ม prev/next
 };
 const AboutUs = () => {
@@ -109,8 +113,10 @@ const AboutUs = () => {
             </div>
           </div>
           <div className="flex flex-col gap-16 items-center pl-[130px]">
-            <div className="flex flex-col gap-4">
-              <h1 className="text-blue">เกี่ยวกับบริษัท</h1>
+            <div className="flex flex-col gap-2">
+              <h1 className="text-blue">
+                {lang === "th" ? "เกี่ยวกับบริษัท" : "OUR HISTORY"}
+              </h1>
               <ThreeDots />
             </div>
             <p className="text-blue">
@@ -142,7 +148,9 @@ const AboutUs = () => {
 
         {/* รู้จักปิ่นวัฒนา */}
         <section className="container mx-auto flex flex-col items-center gap-6 mt-16">
-          <h1 className="text-blue">รู้จักปิ่นวัฒนา</h1>
+          <h1 className="text-blue">
+            {lang === "th" ? "รู้จักปิ่นวัฒนา" : "MORE ABOUT PINWATANA"}
+          </h1>
           <ThreeDots />
           <video
             className="h-[536px] w-[953px] my-16"
@@ -161,153 +169,158 @@ const AboutUs = () => {
 
         {/* พันธกิจ */}
         <section className="bg-white">
-          <div className="container mx-auto flex flex-col items-center gap-6 bg-white  py-20">
-            <h1 className="text-blue">พันธกิจ</h1>
-            <ThreeDots />
-            <div className="grid grid-cols-3 gap-[110px]">
-              <MissionCard
-                title={lang === "th" ? "ดำเนินธุรกิจ" : "Operating Business"}
-                content={
-                  lang === "th" ? (
-                    <>
-                      {" "}
-                      ด้วยความซื่อสัตย์ มีจริยธรรม <br /> ใส่ใจสังคม
-                      และสิ่งแวดล้อม
-                    </>
-                  ) : (
-                    <>
-                      With honesty and ethics <br /> Care of society and
-                      environment{" "}
-                    </>
-                  )
-                }
-                icon="1"
-              ></MissionCard>
-              <MissionCard
-                icon="2"
-                title={
-                  lang === "th"
-                    ? "จัดหาสินค้าชนิดใหม่"
-                    : "Sourcing new products"
-                }
-                content={
-                  lang === "th" ? (
-                    <>
-                      เพื่อครอบคลุมความต้องการ <br /> ที่หลากหลาย
-                    </>
-                  ) : (
-                    <>
-                      to cover and serve <br /> various inquiries
-                    </>
-                  )
-                }
-              >
-                <AboutIcon2 />
-              </MissionCard>
-              <MissionCard
-                icon="3"
-                title={
-                  lang === "th"
-                    ? "จำหน่ายสินค้าคุณภาพ"
-                    : "Providing quality product"
-                }
-                content={
-                  lang === "th" ? (
-                    <>ได้มาตรฐาน จากผู้ผลิตที่ดีระดับโลก ในราคาที่เหมาะสม</>
-                  ) : (
-                    <>
-                      Meet standard, Reliable World Manufacturer at reasonable
-                      price
-                    </>
-                  )
-                }
-              ></MissionCard>
-              <MissionCard
-                icon="4"
-                title={
-                  lang === "th" ? (
-                    "พัฒนาองค์กร/บุคลากร"
-                  ) : (
-                    <>
-                      Developing <br /> Organization/Human
-                    </>
-                  )
-                }
-                content={
-                  lang === "th" ? (
-                    <>
-                      มีคุณภาพ มีคุณธรรม <br /> ปรับปรุงอย่างต่อเนื่อง
-                    </>
-                  ) : (
-                    <>
-                      High quality, High morality <br /> Improve Continuously
-                    </>
-                  )
-                }
-              ></MissionCard>
-              <MissionCard
-                icon="5"
-                title={
-                  lang === "th" ? (
-                    "การสร้างความพึงพอใจ"
-                  ) : (
-                    <>
-                      Creating Customer <br /> Satisfaction
-                    </>
-                  )
-                }
-                content={
-                  lang === "th" ? (
-                    <>ส่งสินค้าถูกต้อง ครบถ้วน ตรงเวลาด้วยทีมงานมืออาชีพ</>
-                  ) : (
-                    <>
-                      Correct & Complete Product <br /> Delivery on time by
-                      professional team
-                    </>
-                  )
-                }
-              ></MissionCard>
-              <MissionCard
-                icon="6"
-                title={
-                  lang === "th" ? (
-                    "ส่งเสริมสังคม และสิ่งแวดล้อม"
-                  ) : (
-                    <>
-                      Promoting society <br /> and environment
-                    </>
-                  )
-                }
-                content={
-                  lang === "th" ? (
-                    <>ช่วยเหลือชุมชน/สังคม เป็นมิตรกับสิ่งแวดล้อม</>
-                  ) : (
-                    <>
-                      Support the community/society <br /> And Eco-friendly
-                    </>
-                  )
-                }
-              ></MissionCard>
+          <div className="container mx-auto">
+            <div className="w-[83%] mx-auto flex flex-col items-center gap-2 bg-white  py-20">
+              <h1 className="text-blue">
+                {lang === "th" ? "พันธกิจ" : "MISSION"}
+              </h1>
+              <ThreeDots />
+              <div className="grid grid-cols-3 gap-[110px] mt-10">
+                <MissionCard
+                  title={lang === "th" ? "ดำเนินธุรกิจ" : "Operating Business"}
+                  content={
+                    lang === "th" ? (
+                      <>
+                        {" "}
+                        ด้วยความซื่อสัตย์ มีจริยธรรม <br /> ใส่ใจสังคม
+                        และสิ่งแวดล้อม
+                      </>
+                    ) : (
+                      <>
+                        With honesty and ethics <br /> Care of society and
+                        environment{" "}
+                      </>
+                    )
+                  }
+                  icon="1"
+                ></MissionCard>
+                <MissionCard
+                  icon="2"
+                  title={
+                    lang === "th"
+                      ? "จัดหาสินค้าชนิดใหม่"
+                      : "Sourcing new products"
+                  }
+                  content={
+                    lang === "th" ? (
+                      <>
+                        เพื่อครอบคลุมความต้องการ <br /> ที่หลากหลาย
+                      </>
+                    ) : (
+                      <>
+                        to cover and serve <br /> various inquiries
+                      </>
+                    )
+                  }
+                >
+                  <AboutIcon2 />
+                </MissionCard>
+                <MissionCard
+                  icon="3"
+                  title={
+                    lang === "th"
+                      ? "จำหน่ายสินค้าคุณภาพ"
+                      : "Providing quality product"
+                  }
+                  content={
+                    lang === "th" ? (
+                      <>ได้มาตรฐาน จากผู้ผลิตที่ดีระดับโลก ในราคาที่เหมาะสม</>
+                    ) : (
+                      <>
+                        Meet standard, Reliable World Manufacturer at reasonable
+                        price
+                      </>
+                    )
+                  }
+                ></MissionCard>
+                <MissionCard
+                  icon="4"
+                  title={
+                    lang === "th" ? (
+                      "พัฒนาองค์กร/บุคลากร"
+                    ) : (
+                      <>
+                        Developing <br /> Organization/Human
+                      </>
+                    )
+                  }
+                  content={
+                    lang === "th" ? (
+                      <>
+                        มีคุณภาพ มีคุณธรรม <br /> ปรับปรุงอย่างต่อเนื่อง
+                      </>
+                    ) : (
+                      <>
+                        High quality, High morality <br /> Improve Continuously
+                      </>
+                    )
+                  }
+                ></MissionCard>
+                <MissionCard
+                  icon="5"
+                  title={
+                    lang === "th" ? (
+                      "การสร้างความพึงพอใจ"
+                    ) : (
+                      <>
+                        Creating Customer <br /> Satisfaction
+                      </>
+                    )
+                  }
+                  content={
+                    lang === "th" ? (
+                      <>ส่งสินค้าถูกต้อง ครบถ้วน ตรงเวลาด้วยทีมงานมืออาชีพ</>
+                    ) : (
+                      <>
+                        Correct & Complete Product <br /> Delivery on time by
+                        professional team
+                      </>
+                    )
+                  }
+                ></MissionCard>
+                <MissionCard
+                  icon="6"
+                  title={
+                    lang === "th" ? (
+                      "ส่งเสริมสังคม และสิ่งแวดล้อม"
+                    ) : (
+                      <>
+                        Promoting society <br /> and environment
+                      </>
+                    )
+                  }
+                  content={
+                    lang === "th" ? (
+                      <>ช่วยเหลือชุมชน/สังคม เป็นมิตรกับสิ่งแวดล้อม</>
+                    ) : (
+                      <>
+                        Support the community/society <br /> And Eco-friendly
+                      </>
+                    )
+                  }
+                ></MissionCard>
+              </div>
             </div>
           </div>
         </section>
 
         {/* วิสัยทัศน์ */}
 
-        <section className="container  mx-auto items-center text-blue gap-6 py-12">
-          <div className="text-center mx-auto w-[65%]">
-            <h1>วิสัยทัศน์</h1>
+        <section className="container mx-auto items-center text-blue gap-12 py-12">
+          <div className="text-center w-[83%] flex flex-col gap-1 mx-auto ">
+            <h1>{lang === "th" ? "วิสัยทัศน์" : "VISION"}</h1>
             <ThreeDots />
-            <p className="text-blue mt-12 font-light">
-              {lang === "th"
-                ? `ด้วยประสบการณ์ในการดำเนินธุรกิจมากว่า 50 ปี บริษัทฯ
+          </div>
+
+          <p className="text-blue text-center w-[83%] mx-auto mt-12 font-light">
+            {lang === "th"
+              ? `ด้วยประสบการณ์ในการดำเนินธุรกิจมากว่า 50 ปี บริษัทฯ
               ได้เล็งเห็นความสำคัญในการพัฒนารูปแบบของธุรกิจ
               ให้สอดคล้องกับแนวโน้มสภาพความต้องการของตลาด
               โดยมุ่งเน้นสินค้าที่มีคุณภาพ, บริการที่มีประสิทธิภาพ,
               การพัฒนาบุคลากร และระบบการจัดการที่มีมาตรฐาน`
-                : `With the experience more than 50 years of operating the business, P. Watana Trading Co., Ltd. aims to develop the business pattern and the market needs’ trend in the same direction by emphasizing on providing the superior product, serving the professional service, developing the organization and executing a standardized management.`}
-            </p>
-          </div>
+              : `With the experience more than 50 years of operating the business, P. Watana Trading Co., Ltd. aims to develop the business pattern and the market needs’ trend in the same direction by emphasizing on providing the superior product, serving the professional service, developing the organization and executing a standardized management.`}
+          </p>
         </section>
 
         {/* <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
@@ -342,38 +355,49 @@ const AboutUs = () => {
               {lang === "th" ? "สินค้าที่มีคุณภาพ" : "The Superior Product"}
             </h3>
 
-            <p className=" font-light pt-3">
+            <p className="text-height font-light pt-3">
               {lang === "th"
                 ? "บริษัทฯ จำหน่ายสินค้าที่หลากหลาย โดยคัดสรรแต่สินค้าที่มีคุณภาพที่ดีที่สุดเพื่อตอบสนองความต้องการ และให้เกิดประโยชน์สูงสุดให้แก่ลูกค้า โดยคำนึงถึงการจัดเก็บสินค้าอย่างถูกวิธี และเลือกใช้เครื่องมืออุปกรณ์ที่มีประสิทธิภาพ พร้อมระบบการบำรุงรักษาที่ได้มาตรฐาน"
                 : "P.Watana Trading Co., Ltd. procures the variety of innovative products with the best quality for serving the consumer’s expectation. With a well-managed inventory of product utilization by using the most efficient instruments in company with standard maintenance, quality of products are at its finest."}
             </p>
           </div>
           <div>
-            <h3>{lang === "th" ? "ระบบการจัดการที่มาตรฐาน" : ""}</h3>
+            <h3>
+              {lang === "th"
+                ? "ระบบการจัดการที่มาตรฐาน"
+                : "Standardized Management"}
+            </h3>
 
             <p className=" font-light pt-3">
               {lang === "th"
                 ? "บริษัทฯ มีความมุ่งมั่นในการบริหารและพัฒนาคุณภาพทั่วทั้งองค์กร เพื่อเพิ่มประสิทธิภาพ และประสิทธิผลตามมาตรฐาน ทั้งนี้เพื่อเป็นการสร้างความมั่นใจในคุณภาพและการบริหารงาน พร้อมทั้งเป็นการตอบสนองความต้องการให้แก่ลูกค้า"
-                : ""}
+                : "Engrossing to be in an operation and developing as a whole is to be effective and efficient. To guarantee with confidence, PWT is committed to quality management with consumers’ expectations."}
             </p>
-            <p>{lang === "th" ? "" : ""}</p>
           </div>
           <div>
-            <h3>{lang === "th" ? "การพัฒนาบุคลากร" : ""}</h3>
+            <h3>
+              {lang === "th"
+                ? "การพัฒนาบุคลากร"
+                : "Human Resource and Organization Management"}
+            </h3>
 
             <p className=" font-light pt-3">
               {lang === "th"
                 ? "บริษัทฯ คัดสรรบุคลากรที่มีคุณภาพ โดยมีการฝึกอบรม และให้ความรู้แก่พนักงานในองค์กร อย่างต่อเนื่อง พร้อมที่จะนำไปพัฒนาการทำงานได้อย่างมีระบบ และสามารถเข้าใจรูปแบบในการบริหารงาน เพื่อเข้าถึงความต้องการของตลาดได้อย่างแท้จริง ซึ่งสามารถทำให้บริษัทฯ ประสบความสำเร็จ"
-                : ""}
+                : "Emphasis on developing a continuous human resource, training and acknowledge a systematic management, standardization, and understanding the entire process in order to serve our consumers’ expectations. That is the mission to be in the successful business."}
             </p>
           </div>
           <div>
-            <h3>{lang === "th" ? "บริการที่มีประสิทธิภาพ" : ""}</h3>
+            <h3>
+              {lang === "th"
+                ? "บริการที่มีประสิทธิภาพ"
+                : "Our Professional Service"}
+            </h3>
 
             <p className=" font-light pt-3">
               {lang === "th"
                 ? "บริษัทฯ มุ่งเน้นถึงการให้บริการที่มีประสิทธิภาพ เป็นสิ่งที่สำคัญในการดำเนินธุรกิจ ทั้งในด้านบริการจัดส่งสินค้า บริการหลังการขาย บริการการให้ข้อมูล และคำแนะนำเกี่ยวกับสินค้า"
-                : ""}
+                : "The most important thing for doing business is to provide the professional service with on-time delivery, after sale service, and inquiry service. We strive to build long-lasting relationships with each and every one of our consumers."}
             </p>
           </div>
         </section>
