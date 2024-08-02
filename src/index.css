@@ -42,7 +42,6 @@
   .news .group span:hover {
     background: blue;
   }
-
   .container {
     @apply 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] w-full;
   }
@@ -56,20 +55,29 @@
     @apply border-b-[2.5px] w-fit mx-auto border-red text-red;
     letter-spacing: 0.075em;
   }
+  .menuActive {
+    @apply border-b-[2.5px] w-fit mx-auto border-blue;
+    letter-spacing: 0.075em;
+  }
 }
 
 #demo-simple-select {
   display: flex;
   gap: 4px;
   /* justify-content: center; */
-  width: 56px;
+  /* width: 100px; */
   align-items: center;
-  padding: 0px;
+  padding: 0;
+  padding-right: 20px;
   /* border: none !important; */
 }
 
-#demo-simple-select p {
+.form p {
   display: none;
+}
+
+.a p {
+  display: block;
 }
 
 /* 2xl */

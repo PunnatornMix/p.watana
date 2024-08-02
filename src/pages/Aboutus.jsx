@@ -1,5 +1,4 @@
 import React, { Fragment, useState, useEffect, useRef } from "react";
-import "flowbite";
 import { useTranslation } from "react-i18next";
 import SEO from "../components/Seo/Seo";
 import MenuNavbar from "../components/Navbar/MenuNavbar";
