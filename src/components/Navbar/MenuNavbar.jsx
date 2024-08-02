@@ -44,7 +44,11 @@ function MenuNavbar({ children }) {
           </div>
         </div>
       </div>
-      <div className="bg-[url('/images/tri.png')]  h-[120px] w-full bannerImages  top-[115px] "></div>
+      {/* <div className="bg-[url('/images/tri.png')]  h-[120px] w-full bannerImages  top-[115px] "></div> */}
+      <img
+        src="/images/tri.png"
+        className="lg:h-[clamp(65px,6.3vw,120px)] md:h-[clamp(50px,6.3vw,65px)] sm:h-[clamp(40px,6.3vw,50px)] h-[clamp(25px,6.3vw,40px)] bannerImages  top-[115px] "
+      ></img>
     </div>
   );
 }

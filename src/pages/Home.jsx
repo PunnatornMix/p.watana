@@ -58,12 +58,10 @@ const Home = () => {
         <MenuNavbar>
           <Box>
             <FormControl fullWidth variant="standard">
-              {/* <InputLabel id="demo-simple-select-label">Age</InputLabel> */}
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 value={localStorage.getItem("i18nextLng")}
-                // label="Age"
                 className="border-0px"
                 onChange={handleLanguageChange}
               >
@@ -81,11 +79,15 @@ const Home = () => {
         </MenuNavbar>
 
         <div className=" pt-32">
-          <HeaderBanner src="/images/Banner/home/Banner01.png" />
+          <HeaderBanner>
+            <img src="/images/Banner/home/Banner01.png" alt="Image 1" />
+            <img src="/images/Banner/home/Banner02.png" alt="Image 2" />
+            <img src="/images/Banner/home/Banner03.png" alt="Image 3" />
+          </HeaderBanner>
         </div>
         {/* Product search  */}
         <section
-          className="bg-[url('/images/home/Group2133.png')] bg-no-repeat bg-auto z-100"
+          className="bg-[url('/images/home/bg-01.png')] bg-no-repeat bg-auto z-100"
           style={{
             backgroundPosition: "right -72% bottom 100% ",
             backgroundSize: "60%",
@@ -265,7 +267,7 @@ const Home = () => {
         />
 
         {/* NEWS & ACTIVITIES */}
-        <section className=" bg-white pb-20">
+        <section className=" bg-white pb-12">
           <div className="container mx-auto flex flex-col">
             <div className=" text-center  mx-auto flex flex-col gap-1 -translate-y-[60%] ">
               <h1 className="text-red">NEWS & ACTIVITIES</h1>
@@ -278,63 +280,76 @@ const Home = () => {
             </button>
           </div>
         </section>
-        {lang === "th" ? "" : ""}
+
+        <div className="relative">
+          <img
+            src="/images/home/tribgGrey.png"
+            className="w-full absolute -top-[clamp(70px,5vw,85px)]"
+          />
+        </div>
 
         {/* Location */}
         <section>
-          <div className="container mx-auto text-center">
-            <div className="flex flex-col gap-1">
+          <div className="container mx-auto text-center pt-20 ">
+            <div className="flex flex-col gap-1 ">
               <h1 className="text-red">LOCATION</h1>
               <h1 className="text-blue">ที่ตั้งบริษัท</h1>
+              <ThreeDots />
             </div>
-            <ThreeDots />
-            <div className="flex justify-center pt-20">
-              <div className="flex  gap-[45px] h-[491px]">
+            <div className="flex justify-center pt-20 xl:gap-0 gap-12 ">
+              <div className=" location flex gap-[45px] lg:gap-[25px] lg:h-[491px] min-h-[491px]">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.1330096947077!2d100.33539487514713!3d13.710392986677208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e295ef8e6a287f%3A0x72b73ac00ddcfde!2z4Lib4Li04LmI4LiZ4Lin4Lix4LiS4LiZ4Liy4LiB4Liy4Lij4LiE4LmJ4Liy!5e0!3m2!1sth!2sth!4v1721890601350!5m2!1sth!2sth"
-                  width="679"
+                  className=" xl:w-[clamp(350px,35vw,679px)] lg:w-[300px] min-h-[240px] h-[400px] w-[100vw] mx-auto"
                   height="full"
                   allowfullscreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
-                <div className="flex flex-col items-center gap-4 self-center">
-                  {lang === "th" ? (
-                    <>
-                      <h3 className="w-[322px] text-center text-blue">
-                        บริษัท ปิ่นวัฒนาการค้า จำกัด <br /> ผู้นำเข้า-ส่งออก
-                        ผู้จัดจำหน่ายเคมีภัณฑ์ ตั้งแต่ปี พ.ศ. 2518
-                      </h3>
-                    </>
-                  ) : (
-                    <>
-                      <h3 className="w-[322px] text-center text-blue ">
-                        P. Watana Trading Co., Ltd.
-                        <br />
-                        Chemical Importer, Exporter and Distributor since 1975
-                      </h3>
-                    </>
-                  )}
+                <div className="flex justify-center lg:gap-12 gap-0">
+                  <div className="flex flex-col items-center gap-4 md:self-center   ml-12">
+                    {lang === "th" ? (
+                      <>
+                        <h3 className="md:w-[322px] w-[210px] text-center mt-4 md:mt-0 text-blue">
+                          บริษัท ปิ่นวัฒนาการค้า จำกัด <br /> ผู้นำเข้า-ส่งออก
+                          ผู้จัดจำหน่ายเคมีภัณฑ์ ตั้งแต่ปี พ.ศ. 2518
+                        </h3>
+                      </>
+                    ) : (
+                      <>
+                        <h3 className="w-[322px] text-center text-blue ">
+                          P. Watana Trading Co., Ltd.
+                          <br />
+                          Chemical Importer, Exporter and Distributor since 1975
+                        </h3>
+                      </>
+                    )}
 
-                  <div className="flex items-center gap-4">
-                    <img src="/images/Logo/joinus.png" className="w-[40px]" />
-                    <h3 className="font-bold text-blue">
-                      {lang === "th" ? "ร่วมงานกับเรา" : "JOIN WITH US"}
-                    </h3>
+                    <div className="flex items-center gap-4">
+                      <img src="/images/Logo/joinus.png" className="w-[40px]" />
+                      <h3 className="font-bold text-blue">
+                        {lang === "th" ? "ร่วมงานกับเรา" : "JOIN WITH US"}
+                      </h3>
+                    </div>
+                    <ButtonGradient>
+                      {lang === "th" ? "คลิกเลย" : "CLICK NOW"}
+                    </ButtonGradient>
                   </div>
-                  <ButtonGradient>
-                    {lang === "th" ? "คลิกเลย" : "CLICK NOW"}
-                  </ButtonGradient>
+                  <img
+                    src="/images/home/Rectangle1302_0.png"
+                    className="w-[clamp(188px,30vw,300px)] lg:hidden block"
+                  />
                 </div>
               </div>
               <img
                 src="/images/home/Rectangle1302_0.png"
-                className="w-[370px]"
+                className="w-[clamp(300px,20vw,370px)] lg:block hidden"
               />
             </div>
           </div>
         </section>
-        <Footer className="-translate-y-[33%]" />
+        <Footer className="-translate-y-[clamp(0%,7vw,33%)] " />
+        {/* <Footer className=" xl:-translate-y-[0%]  2xl:-translate-y-[33%] " /> */}
       </Fragment>
     </div>
   );

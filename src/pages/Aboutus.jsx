@@ -31,7 +31,7 @@ import Slider from "react-slick";
 const settings = {
   // dots: true,
   infinite: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 5000,
   speed: 3000,
   slidesToShow: 4,
   slidesToScroll: 4,
@@ -86,7 +86,7 @@ const AboutUs = () => {
         </MenuNavbar>
 
         <div className=" pt-32">
-          <HeaderBanner src="/images/Banner/HomeBanner.png" />
+          <img src="/images/Banner/aboutus/MaskGroup.png" alt="Image 1" />
         </div>
         {/* เกี่ยวกับบริษัท */}
         <section className="container mx-auto grid grid-cols-2  mt-20">
@@ -349,7 +349,7 @@ const AboutUs = () => {
           </Slider>
         </div>
 
-        <section className="container mx-auto grid grid-cols-2 gap-6 my-8 text-blue">
+        <section className="container mx-auto grid grid-cols-2 gap-6 pb-8 text-blue">
           <div>
             <h3>
               {lang === "th" ? "สินค้าที่มีคุณภาพ" : "The Superior Product"}
@@ -402,7 +402,7 @@ const AboutUs = () => {
           </div>
         </section>
 
-        <Footer />
+        <Footer className={"bg-lightBlue"} />
       </Fragment>
     </div>
   );

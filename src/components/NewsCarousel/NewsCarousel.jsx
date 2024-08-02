@@ -105,10 +105,45 @@ function NewsCarousel() {
   ];
 
   return (
-    <div className="h-56 sm:h-64 xl:h-80 2xl:h-[600px]">
-      <Carousel slide={false} className="a">
+    // <div className="h-56 sm:h-64 xl:h-80 2xl:h-[600px]">
+    <div className="h-[600px]">
+      <Carousel
+        slide={false}
+        indicators={false}
+        className="2xl:block hidden news px-[clamp(5px,4vw,60px)]"
+      >
         {NewsList.reduce((acc, current, index) => {
           if (index % 3 === 0) acc.push([]);
+          acc[acc.length - 1].push(current);
+          return acc;
+        }, []).map((group, idx) => (
+          <div key={idx} className="flex justify-around">
+            {group}
+          </div>
+        ))}
+      </Carousel>
+      <Carousel
+        slide={false}
+        indicators={false}
+        className=" 2xl:hidden lg:block hidden  news px-20"
+      >
+        {NewsList.reduce((acc, current, index) => {
+          if (index % 2 === 0) acc.push([]);
+          acc[acc.length - 1].push(current);
+          return acc;
+        }, []).map((group, idx) => (
+          <div key={idx} className="flex justify-around">
+            {group}
+          </div>
+        ))}
+      </Carousel>
+      <Carousel
+        slide={false}
+        indicators={false}
+        className=" lg:hidden news px-20"
+      >
+        {NewsList.reduce((acc, current, index) => {
+          if (index % 1 === 0) acc.push([]);
           acc[acc.length - 1].push(current);
           return acc;
         }, []).map((group, idx) => (

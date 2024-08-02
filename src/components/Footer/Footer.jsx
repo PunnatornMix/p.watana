@@ -8,7 +8,7 @@ function Footer({ className }) {
   return (
     <div className="relative">
       <div
-        className={`bg-[url('/images/home/footer.png')] bg-lightBlue absolute w-full bg-center bg-no-repeat ${className} `}
+        className={`bg-[url('/images/home/footer.png')] absolute w-full bg-center bg-no-repeat ${className} `}
       >
         <div className="container mx-auto flex text-white h-[362px]">
           <div className="h-[80%] w-[80%] mx-auto mt-auto flex items-center justify-between">

@@ -7,8 +7,8 @@
 @layer base {
   body {
     background-color: #f8fdff;
-    /* z-index: -20; */
     /* background-color: lightgray; */
+    /* z-index: -20; */
   }
   h1 {
     font-size: clamp(24px, 3vw, 36px);
@@ -25,13 +25,6 @@
     font-size: clamp(16px, 3vw, 18px);
     font-weight: medium;
   }
-  /* img {
-    transition: opacity 4s ease-in-out;
-  }
-
-  img.hovered {
-    opacity: 0;
-  } */
 }
 
 @layer components {
@@ -43,9 +36,13 @@
     background-position: center;
     background-size: 100%;
   }
-  .a .group span {
+  .news .group span {
     background: blue;
   }
+  .news .group span:hover {
+    background: blue;
+  }
+
   .container {
     @apply 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] w-full;
   }
@@ -75,13 +72,28 @@
   display: none;
 }
 
-/* .relative {
-  position: relative;
-  width: 100%;
-  height: 345px;
-} */
+/* 2xl */
+@media (max-width: 1536px) {
+  /* .location {
+    @apply flex flex-col;
+  } */
+}
 
-/* .absolute {
-  position: absolute;
-  transition: opacity 1s ease-in-out;
-} */
+/* xl */
+@media (max-width: 1280px) {
+  .location {
+    @apply flex flex-col justify-center;
+  }
+}
+
+/* lg */
+@media (max-width: 1024px) {
+}
+
+/* md */
+@media (max-width: 768px) {
+}
+
+/* sm */
+@media (max-width: 640px) {
+}

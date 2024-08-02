@@ -4,37 +4,19 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 const settings = {
-  // dots: true,
   infinite: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 5000,
   speed: 3000,
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
   pauseOnHover: false,
-  // arrows: true, // เปิดปุ่ม prev/next
 };
 
-function HeaderBanner({ src }) {
+function HeaderBanner({ children }) {
   return (
-    // <div
-    //   className={`bannerImages w-100 h-[700px] z-0`}
-    //   style={{ backgroundImage: `url(${src})` }}
-    // ></div>
-
-    // <Slider>
-    //   <div
-    //     className={`bannerImages w-100 h-[700px] z-0`}
-    //     style={{ backgroundImage: `url(${src})` }}
-    //   ></div>
-    // </Slider>
-
-    <div className="h-56 sm:h-64 xl:h-80 2xl:h-[700PX]">
-      <Slider {...settings}>
-        <img src="/images/Banner/home/Banner01.png" alt="Image 1" />
-        <img src="/images/Banner/home/Banner02.png" alt="Image 1" />
-        <img src="/images/Banner/home/Banner03.png" alt="Image 1" />
-      </Slider>
+    <div className=" h-30 sm:h-[320px] md:h-[clamp(320px,35vw,430px)] lg:h-[clamp(430px,35vw,550px)] xl:h-[550p] 2xl:h-[700px]">
+      <Slider {...settings}>{children}</Slider>
     </div>
   );
 }
