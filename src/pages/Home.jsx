@@ -80,9 +80,61 @@ const Home = () => {
 
         <div className=" pt-32">
           <HeaderBanner>
-            <img src="/images/Banner/home/Banner01.png" alt="Image 1" />
-            <img src="/images/Banner/home/Banner02.png" alt="Image 2" />
-            <img src="/images/Banner/home/Banner03.png" alt="Image 3" />
+            {/* <div className="bg-[url('/images/Banner/bgBanner.png')] z-50 h-[700px]">
+              <img src="/images/Banner/home/Banner1.png" alt="Image 1" />
+            </div> */}
+
+            {/* <img className="bg-[url('/images/Banner/home/Banner1.png')] h-full" /> */}
+            <div className="relative w-full h-full">
+              <img
+                src="/images/Banner/home/Banner1.png"
+                className="w-full h-[clamp(400px,40vw,750px)] object-cover "
+                alt="Banner 1"
+              />
+            </div>
+            <div className="relative w-full h-full">
+              <img
+                src="/images/Banner/home/Banner002.png"
+                className="w-full h-[clamp(400px,40vw,750px)] object-cover "
+                alt="Banner 2"
+              />
+            </div>
+            <div className="relative w-full h-full">
+              <img
+                src="/images/Banner/home/Banner3.png"
+                className="w-full h-[clamp(400px,40vw,750px)] object-cover "
+                alt="Banner 3"
+              />
+            </div>
+
+            {/* 11111111 */}
+            {/* <div>
+              <div className="bg-[url('/images/Banner/home/Banner1.png')] z-50 ">
+                <img
+                  src="/images/Banner/bgBanner.png"
+                  alt="Image 1"
+                  className="h-full"
+                />
+              </div>
+            </div>
+            <div>
+              <div className="bg-[url('/images/Banner/home/Banner2.png')] z-50 ">
+                <img
+                  src="/images/Banner/bgBanner.png"
+                  alt="Image 1"
+                  className="h-full"
+                />
+              </div>
+            </div>
+            <div>
+              <div className="bg-[url('/images/Banner/home/Banner3.png')] z-50 ">
+                <img
+                  src="/images/Banner/bgBanner.png"
+                  alt="Image 1"
+                  className="h-full"
+                />
+              </div>
+            </div> */}
           </HeaderBanner>
         </div>
         {/* Product search  */}
@@ -100,6 +152,7 @@ const Home = () => {
           /> */}
             <div className="flex flex-col mx-auto gap-1 ">
               <h1 className="uppercase text-center text-red">Product search</h1>
+
               <h1 className="text-blue text-center">ค้นหาสินค้า</h1>
               <ThreeDots />
             </div>

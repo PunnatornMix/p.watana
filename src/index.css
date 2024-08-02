@@ -59,6 +59,14 @@
     @apply border-b-[2.5px] w-fit mx-auto border-blue;
     letter-spacing: 0.075em;
   }
+  .bluegra {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 10%,
+      rgba(16, 15, 156, 1) 51%,
+      rgba(255, 255, 255, 1) 90%
+    );
+  }
 }
 
 #demo-simple-select {

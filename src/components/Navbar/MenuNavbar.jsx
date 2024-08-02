@@ -106,10 +106,12 @@ function MenuNavbar({ children }) {
           </div>
         </div>
         {/* <div className="bg-[url('/images/tri.png')]  h-[120px] w-full bannerImages  top-[115px] "></div> */}
-        <img
+
+        {/*----- triTop ------*/}
+        {/* <img
           src="/images/tri.png"
           className="lg:h-[clamp(65px,6.3vw,120px)] md:h-[clamp(50px,6.3vw,65px)] sm:h-[clamp(40px,6.3vw,50px)] h-[clamp(25px,6.3vw,40px)] bannerImages  top-[115px] "
-        ></img>
+        ></img> */}
       </div>
       {/**********************/}
 
@@ -119,22 +121,36 @@ function MenuNavbar({ children }) {
         position="right"
         className="duration-700 ease-in-out h-full"
       >
-        <div className="h-[35px] flex justify-end rounded-md p-1 cursor-pointer">
-          <div className="a  w-[80px] ml-auto ">{children}</div>
-          <div className="mx-4 border-l-2"></div>
-          <div onClick={handleClose}>close</div>
-        </div>
-
         <Drawer.Items>
           <Sidebar
-            aria-label="Sidebar with multi-level dropdown example"
-            className="[&>div]:bg-transparent [&>div]:p-0 z-50"
+            aria-label="Sidebar with multi-level dropdown example "
+            className="[&>div]:bg-transparent [&>div]:p-0 z-50 "
           >
-            <div className="flex h-full flex-col justify-between py-2">
+            <div className="h-[35px] flex justify-end rounded-md p-1 cursor-pointer">
+              <div className="a  w-[80px] ml-auto ">{children}</div>
+              <div className="mx-4 border-l-2"></div>
+              <div onClick={handleClose}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="#100F9C"
+                  className="size-7"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18 18 6M6 6l12 12"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div className="flex h-full flex-col justify-between py-2 mt-12">
               <div>
                 <Sidebar.Items>
                   <Sidebar.ItemGroup>
-                    <div className=" mx-auto flex flex-col text-blue justify-between h-full items-center">
+                    <div className=" mx-auto flex flex-col text-blue gap-4 h-full items-center">
                       <a
                         href="/about-us"
                         className={`menuHover ${selectMenu(about)}`}
@@ -163,15 +179,15 @@ function MenuNavbar({ children }) {
                         {lang === "th" ? "ติดต่อบริษัท" : "CONTACT US"}
                       </a>
 
-                      <hr className="w-full my-8" />
+                      <div className="w-full mt-6 mb-2 bluegra h-[2px] " />
 
-                      <div className="md:flex hidden items-center">
+                      <div className="md:flex  hidden items-center">
                         <div className="flex flex-col gap-3 items-center">
                           <div className="flex gap-2 items-center">
                             <CirclePhone className="fill-blue w-[35px] hover:fill-red cursor-pointer" />
                             <div>084 111 0053</div>
                           </div>
-                          <div className="flex gap-2">
+                          <div className="flex gap-2 mt-2">
                             <Mail className="fill-blue w-[35px] border-[2.5px] border-blue hover:border-red hover:fill-red rounded-full p-1 cursor-pointer" />
                             <div>
                               <LineIcon

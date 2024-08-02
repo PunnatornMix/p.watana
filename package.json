@@ -15,6 +15,7 @@
     "@mui/material": "^5.16.4",
     "flowbite": "^2.4.1",
     "flowbite-react": "^0.10.1",
+    "fontawesome": "^5.6.3",
     "i18next": "^23.12.1",
     "i18next-browser-languagedetector": "^8.0.0",
     "i18next-http-backend": "^2.5.2",
