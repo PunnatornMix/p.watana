@@ -30,7 +30,7 @@ function HeaderBanner({ children }) {
     // <div className="relative h-30 sm:h-[320px] md:h-[clamp(320px,35vw,430px)] lg:h-[clamp(430px,35vw,550px)] xl:h-[550px] 2xl:h-[750px]">
     <div className="relative h-[clamp(400px,40vw,750px)]">
       {/* Background Image */}
-      <div className="absolute inset-0 bg-[url('/images/Banner/bgBanner.png')]   bg-cover bg-center z-20"></div>
+      <div className="absolute inset-0 bg-[url('/images/Banner/bgBanner1.png')]   bg-cover bg-center z-20"></div>
 
       {/* Slider Component */}
       <div className="relative z-10 h-[clamp(400px,40vw,750px)]">
