@@ -736,6 +736,30 @@ export function AboutIcon6({ className = null, isHover }) {
   );
 }
 
+export function ThreeDotIcon({ className = null }) {
+  return (
+    <div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        fill="#100F9C"
+        height="40px"
+        width="40px"
+        version="1.1"
+        id="Icons"
+        viewBox="0 0 32 32"
+        xml:space="preserve"
+      >
+        <g>
+          <path d="M16,10c1.7,0,3-1.3,3-3s-1.3-3-3-3s-3,1.3-3,3S14.3,10,16,10z" />
+          <path d="M16,13c-1.7,0-3,1.3-3,3s1.3,3,3,3s3-1.3,3-3S17.7,13,16,13z" />
+          <path d="M16,22c-1.7,0-3,1.3-3,3s1.3,3,3,3s3-1.3,3-3S17.7,22,16,22z" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
 export function Icon({ className = null }) {
   return <div></div>;
 }

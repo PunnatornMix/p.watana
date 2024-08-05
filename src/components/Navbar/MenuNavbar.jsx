@@ -4,6 +4,7 @@ import {
   LineIcon,
   Mail,
   ThailandIcon,
+  ThreeDotIcon,
   UnitedStates,
 } from "../icons/icons";
 ("use client");
@@ -56,7 +57,7 @@ function MenuNavbar({ children }) {
   return (
     <>
       <div className=" w-full text-blue h-32 bg-[white] fixed top-0 z-40">
-        <div className="container mx-auto flex justify-between h-full items-center">
+        <div className="container mx-auto flex justify-between h-full items-center px-6">
           <a href="/">
             <img src="/images/Logo/watana.png" className={`w-[70px] `}></img>
           </a>
@@ -101,8 +102,12 @@ function MenuNavbar({ children }) {
               {/* <UnitedStates className="w-[35px]  border-[2.5px] border-[#100F9C] rounded-md p-1" /> */}
             </div>
           </div>
-          <div className="flex items-center justify-center xl:hidden ">
-            <Button onClick={() => setIsOpen(true)}>Show navigation</Button>
+          <div
+            className="flex items-center justify-center xl:hidden "
+            onClick={() => setIsOpen(true)}
+          >
+            {/* <Button className="h-10">Show navigation</Button> */}
+            <ThreeDotIcon />
           </div>
         </div>
         {/* <div className="bg-[url('/images/tri.png')]  h-[120px] w-full bannerImages  top-[115px] "></div> */}
