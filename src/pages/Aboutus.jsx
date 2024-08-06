@@ -84,9 +84,28 @@ const AboutUs = () => {
           </Box>
         </MenuNavbar>
 
-        <div className=" pt-32">
+        {/* <div className=" pt-32">
           <img src="/images/Banner/aboutus/MaskGroup.png" alt="Image 1" />
+        </div> */}
+
+        <div className=" pt-32">
+          <div className="relative h-[clamp(400px,40vw,750px)]">
+            {/* Background Image */}
+            <div className="absolute inset-0 bg-[url('/images/Banner/bgBanner1.png')]   bg-cover bg-center z-20"></div>
+
+            {/* Slider Component */}
+            <div className="relative z-10 h-[clamp(400px,40vw,750px)]">
+              <div className="relative w-full h-full">
+                <img
+                  src="/images/aboutus/Banner_about_1.jpg"
+                  className="w-full h-[clamp(400px,40vw,750px)] object-cover "
+                  alt="Banner 1"
+                />
+              </div>
+            </div>
+          </div>
         </div>
+
         {/* เกี่ยวกับบริษัท */}
         <section className="container mx-auto grid grid-cols-2  mt-20">
           <div className="grid grid-cols-2 gap-4">

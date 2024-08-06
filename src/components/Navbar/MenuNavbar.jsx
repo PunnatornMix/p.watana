@@ -23,6 +23,19 @@ import {
 } from "react-icons/hi";
 import { Box, FormControl, MenuItem, Select } from "@mui/material";
 
+window.addEventListener("scroll", function () {
+  const scrollPosition = window.scrollY;
+  const targetPosition = 5; // ตำแหน่งที่คุณต้องการให้แสดง bg
+
+  const contentElement = document.getElementById("content");
+
+  if (scrollPosition >= targetPosition) {
+    contentElement.classList.remove("hidden");
+  } else {
+    contentElement.classList.add("hidden");
+  }
+});
+
 function MenuNavbar({ children }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -113,12 +126,14 @@ function MenuNavbar({ children }) {
         {/* <div className="bg-[url('/images/tri.png')]  h-[120px] w-full bannerImages  top-[115px] "></div> */}
 
         {/*----- triTop ------*/}
-        {/* <img
+        <img
+          id="content"
           src="/images/tri.png"
-          className="lg:h-[clamp(65px,6.3vw,120px)] md:h-[clamp(50px,6.3vw,65px)] sm:h-[clamp(40px,6.3vw,50px)] h-[clamp(25px,6.3vw,40px)] bannerImages  top-[115px] "
-        ></img> */}
+          className="lg:h-[clamp(65px,6.3vw,120px)] md:h-[clamp(50px,6.3vw,65px)] sm:h-[clamp(40px,6.3vw,50px)] h-[clamp(25px,6.3vw,40px)] bannerImages  top-[115px] hidden"
+        ></img>
       </div>
-      {/**********************/}
+
+      {/********** Moblie SideBar ************/}
 
       <Drawer
         open={isOpen}

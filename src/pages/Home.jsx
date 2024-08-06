@@ -105,6 +105,8 @@ const Home = () => {
         </div>
 
         {/* Product search  */}
+
+        {/*------ PC ------*/}
         <section
           className="xl:block hidden bg-[url('/images/home/bg-01.png')] bg-no-repeat bg-auto z-10"
           style={{
@@ -151,6 +153,8 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+        {/*------ Mobile ------*/}
 
         <section
           className="xl:hidden block "
@@ -293,7 +297,7 @@ const Home = () => {
           <img
             src="/images/home/tribgGrey.png"
             // className="w-full absolute -top-[85px]"
-            className="w-full absolute -top-[clamp(104px,10vw,120px)] lg:hidden bg-center"
+            className="w-full absolute -top-[clamp(105px,11vw,120px)] lg:hidden bg-center"
           />
         </div>
         {/* Application */}
@@ -463,6 +467,7 @@ const Home = () => {
           </div>
         </section>
 
+        {/*------- tribgGrey ------*/}
         <div className="relative">
           <img
             src="/images/home/tribgGrey.png"
@@ -482,7 +487,7 @@ const Home = () => {
               <div className=" xl-col  flex gap-[45px] lg:gap-[25px] lg:h-[491px] min-h-[491px]">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.1330096947077!2d100.33539487514713!3d13.710392986677208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e295ef8e6a287f%3A0x72b73ac00ddcfde!2z4Lib4Li04LmI4LiZ4Lin4Lix4LiS4LiZ4Liy4LiB4Liy4Lij4LiE4LmJ4Liy!5e0!3m2!1sth!2sth!4v1721890601350!5m2!1sth!2sth"
-                  className=" xl:w-[clamp(350px,35vw,679px)] lg:w-[300px] min-h-[240px] h-[400px] w-[100vw] mx-auto"
+                  className=" xl:w-[clamp(350px,35vw,679px)] lg:w-[300px] min-h-[240px] h-[400px] w-[100vw] mx-auto pt-6"
                   height="full"
                   allowfullscreen=""
                   loading="lazy"
