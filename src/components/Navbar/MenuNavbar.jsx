@@ -92,8 +92,10 @@ function MenuNavbar({ children }) {
           </div>
           <div className="xl:flex hidden items-center">
             <div className="flex gap-3 items-center">
-              <CirclePhone className="fill-blue w-[35px] hover:fill-red cursor-pointer" />
-              <div>084 111 0053</div>
+              <div className="hover:text-red hover:fill-red cursor-pointer flex">
+                <CirclePhone className="fill-blue  w-[35px] " />
+                <div>084 111 0053</div>
+              </div>
               <Mail className="fill-blue w-[35px] border-[2.5px] border-blue hover:border-red hover:fill-red rounded-full p-1 cursor-pointer" />
               <div>
                 <LineIcon
