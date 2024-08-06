@@ -39,15 +39,7 @@ window.addEventListener("scroll", function () {
 function MenuNavbar({ children }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleLanguageChange = (e) => {
-    const newLang = e.target.value;
-    i18n.changeLanguage(newLang);
-    localStorage.setItem("i18nextLng", newLang);
-    setLang(newLang);
-  };
-
   const handleClose = () => setIsOpen(false);
-  // const lang = localStorage.getItem("i18nextLng");
   const lang = localStorage.getItem("i18nextLng");
 
   // const [active, setActive] = useState();

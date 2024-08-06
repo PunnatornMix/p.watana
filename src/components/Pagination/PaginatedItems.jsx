@@ -64,17 +64,6 @@ function PaginatedItems({ itemsPerPage }) {
         activeClassName="active"
         renderOnZeroPageCount={null}
       />
-
-      {/* <Pagination
-        count={10}
-        breakLabel="..."
-        nextLabel="next >"
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
-        pageCount={pageCount}
-        previousLabel="< previous"
-        renderOnZeroPageCount={null}
-      /> */}
     </>
   );
 }

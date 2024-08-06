@@ -31,5 +31,8 @@ export default {
       sans: ["Kanit"],
     },
   },
-  plugins: [require("daisyui"), require("flowbite/plugin")],
+  plugins: [
+    require("daisyui"),
+    // , require("flowbite/plugin")
+  ],
 };
