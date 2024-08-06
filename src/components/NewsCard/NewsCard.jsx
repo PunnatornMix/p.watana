@@ -3,7 +3,7 @@ import React from "react";
 function NewsCard({ date, content, title, src }) {
   return (
     <>
-      <div className="w-[350px] h-[525px] cursor-pointer shadow-xl">
+      <div className="w-[350px] h-[525px] cursor-pointer shadow-xl my-6">
         <div
           className={
             " bg-transparent w-full h-[45%] bg-no-repeat bg-center hoverImg"
