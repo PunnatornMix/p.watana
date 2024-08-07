@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   CirclePhone,
   LineIcon,
@@ -10,18 +10,7 @@ import {
 ("use client");
 
 import { Button, Drawer, Sidebar, TextInput } from "flowbite-react";
-import {
-  HiChartPie,
-  HiClipboard,
-  HiCollection,
-  HiInformationCircle,
-  HiLogin,
-  HiPencil,
-  HiSearch,
-  HiShoppingBag,
-  HiUsers,
-} from "react-icons/hi";
-import { Box, FormControl, MenuItem, Select } from "@mui/material";
+import HoverItem from "./HoverItem";
 
 window.addEventListener("scroll", function () {
   const scrollPosition = window.scrollY;
@@ -37,6 +26,7 @@ window.addEventListener("scroll", function () {
 });
 
 function MenuNavbar({ children }) {
+  const [hover, setHover] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClose = () => setIsOpen(false);
@@ -92,17 +82,23 @@ function MenuNavbar({ children }) {
           </div>
           <div className="xl:flex hidden items-center">
             <div className="flex gap-3 items-center">
-              <div className="hover:text-red hover:fill-red cursor-pointer flex">
-                <CirclePhone className="fill-blue  w-[35px] " />
-                <div>084 111 0053</div>
-              </div>
+              <HoverItem
+                content="084 111 0053"
+                setHover={setHover}
+                hover={hover}
+              >
+                <CirclePhone
+                  className={`fill-blue  w-[35px] ${hover ? "fill-red" : ""} `}
+                />
+              </HoverItem>
+
               <Mail className="fill-blue w-[35px] border-[2.5px] border-blue hover:border-red hover:fill-red rounded-full p-1 cursor-pointer" />
               <div>
                 <LineIcon
                   className={`w-[35px] border-[2.5px] border-blue hover:border-red rounded-full  p-1 cursor-pointer`}
                 />
               </div>
-              <div className="border-[2.5px] h-[35px] flex border-blue  rounded-md p-1 cursor-pointer">
+              <div className="border-[2.5px] h-[35px] flex border-blue rounded-md p-1 cursor-pointer">
                 <div className="form">{children}</div>
               </div>
 

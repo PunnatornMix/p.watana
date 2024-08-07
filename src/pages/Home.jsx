@@ -55,7 +55,7 @@ const Home = () => {
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 value={localStorage.getItem("i18nextLng")}
-                className="border-0px pc"
+                className="border-0px "
                 onChange={handleLanguageChange}
               >
                 <MenuItem value={"th"} className="flex">

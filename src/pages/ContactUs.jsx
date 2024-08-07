@@ -10,9 +10,11 @@ import {
 } from "../components/icons/icons";
 import { Box, FormControl, MenuItem, Select } from "@mui/material";
 import ThreeDots from "../components/ThreeDots/ThreeDots";
+import HoverItem from "../components/Navbar/HoverItem";
 
 const ContactUs = () => {
   const { t, i18n } = useTranslation();
+  const [hover, setHover] = useState(false);
 
   const handleLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
@@ -80,7 +82,7 @@ const ContactUs = () => {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
-              <div className="flex flex-col text-center gap-5">
+              <div className="flex flex-col text-center items-center gap-5">
                 {lang === "th" ? "" : ""}
                 <h3>
                   {lang === "th"
@@ -102,10 +104,17 @@ const ContactUs = () => {
                 </p>
                 <ThreeDots />
                 <h3>{lang === "th" ? "สอบถามข้อมูลทั่วไป" : ""}</h3>
-                <div className="flex gap-2 justify-center items-center">
-                  <CirclePhone className="fill-blue w-[35px] hover:fill-red cursor-pointer" />
-                  <p>084 111 0053</p>
-                </div>
+                <HoverItem
+                  content="084 111 0053"
+                  setHover={setHover}
+                  hover={hover}
+                >
+                  <CirclePhone
+                    className={`fill-blue  w-[35px] ${
+                      hover ? "fill-red" : ""
+                    } `}
+                  />
+                </HoverItem>
                 <p>{lang === "th" ? "หรือ" : "or"}</p>
                 <p>02 408 9393, 02 408 9394,</p>
                 <p>02 408 9395, 02 408 9396,</p>
