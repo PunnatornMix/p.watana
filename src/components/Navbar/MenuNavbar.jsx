@@ -86,34 +86,30 @@ function MenuNavbar({ children }) {
                 content="084 111 0053"
                 setHover={setHover}
                 hover={hover}
-              >
-                <CirclePhone
-                  className={`fill-blue  w-[35px] ${hover ? "fill-red" : ""} `}
-                />
-              </HoverItem>
+                icon={"CirclePhone"}
+              ></HoverItem>
 
-              <Mail className="fill-blue w-[35px] border-[2.5px] border-blue hover:border-red hover:fill-red rounded-full p-1 cursor-pointer" />
+              <HoverItem
+                setHover={setHover}
+                hover={hover}
+                icon={"CircleMail"}
+              />
+
               <div>
-                <LineIcon
-                  className={`w-[35px] border-[2.5px] border-blue hover:border-red rounded-full  p-1 cursor-pointer`}
-                />
+                <HoverItem icon={"CircleLine"} />
               </div>
               <div className="border-[2.5px] h-[35px] flex border-blue rounded-md p-1 cursor-pointer">
                 <div className="form">{children}</div>
               </div>
-
-              {/* <UnitedStates className="w-[35px]  border-[2.5px] border-[#100F9C] rounded-md p-1" /> */}
             </div>
           </div>
           <div
             className="flex items-center justify-center xl:hidden "
             onClick={() => setIsOpen(true)}
           >
-            {/* <Button className="h-10">Show navigation</Button> */}
             <ThreeDotIcon />
           </div>
         </div>
-        {/* <div className="bg-[url('/images/tri.png')]  h-[120px] w-full bannerImages  top-[115px] "></div> */}
 
         {/*----- triTop ------*/}
         <img

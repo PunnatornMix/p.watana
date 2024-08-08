@@ -5,16 +5,18 @@ import MenuNavbar from "../components/Navbar/MenuNavbar";
 import Footer from "../components/Footer/Footer";
 import {
   CirclePhone,
+  LineIcon,
   ThailandIcon,
   UnitedStates,
 } from "../components/icons/icons";
 import { Box, FormControl, MenuItem, Select } from "@mui/material";
 import ThreeDots from "../components/ThreeDots/ThreeDots";
 import HoverItem from "../components/Navbar/HoverItem";
+import ButtonGradient from "../components/Button/ButtonGradient";
 
 const ContactUs = () => {
   const { t, i18n } = useTranslation();
-  const [hover, setHover] = useState(false);
+  // const [hover, setHover] = useState(false);
 
   const handleLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
@@ -58,6 +60,7 @@ const ContactUs = () => {
           </Box>
         </MenuNavbar>
 
+        {/*---- map -----*/}
         <section className="mt-20 pb-24">
           <img
             id="content"
@@ -76,14 +79,13 @@ const ContactUs = () => {
             <div className="flex gap-20 text-blue">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.1330096947077!2d100.33539487514713!3d13.710392986677208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e295ef8e6a287f%3A0x72b73ac00ddcfde!2z4Lib4Li04LmI4LiZ4Lin4Lix4LiS4LiZ4Liy4LiB4Liy4Lij4LiE4LmJ4Liy!5e0!3m2!1sth!2sth!4v1721890601350!5m2!1sth!2sth"
-                className=" xl:w-[clamp(350px,35vw,679px)] lg:w-[300px] min-h-[240px] h-[400px] w-[100vw] mx-auto pt-6"
-                height="full"
+                // className=" xl:w-[clamp(350px,35vw,679px)] lg:w-[300px] min-h-[240px] h-[400px] w-[100vw] mx-auto pt-6"
+                className="w-full "
                 allowfullscreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
-              <div className="flex flex-col text-center items-center gap-5">
-                {lang === "th" ? "" : ""}
+              <div className="flex flex-col text-center items-center gap-4">
                 <h3>
                   {lang === "th"
                     ? "บริษัท ปิ่นวัฒนาการค้า จำกัด"
@@ -106,28 +108,38 @@ const ContactUs = () => {
                 <h3>{lang === "th" ? "สอบถามข้อมูลทั่วไป" : ""}</h3>
                 <HoverItem
                   content="084 111 0053"
-                  setHover={setHover}
-                  hover={hover}
-                >
-                  <CirclePhone
-                    className={`fill-blue  w-[35px] ${
-                      hover ? "fill-red" : ""
-                    } `}
-                  />
-                </HoverItem>
+                  icon={"CirclePhone"}
+                ></HoverItem>
                 <p>{lang === "th" ? "หรือ" : "or"}</p>
-                <p>02 408 9393, 02 408 9394,</p>
-                <p>02 408 9395, 02 408 9396,</p>
-                <p>02 420 1044, 02 420 2306</p>
+                <div className="flex flex-col  gap-1.5">
+                  <p>02 408 9393, 02 408 9394,</p>
+                  <p>02 408 9395, 02 408 9396,</p>
+                  <p>02 420 1044, 02 420 2306</p>
+                </div>
                 <div className="flex items-center justify-center">
                   <h3>Fax :</h3>
                   <span>02 408 9397, 02 810 7563</span>
                 </div>
+                <div className="flex gap-7">
+                  <HoverItem
+                    content="order@pinwatana.com"
+                    icon={"Mail"}
+                  ></HoverItem>
+                  <HoverItem content="pinwatana" icon={"Line"}></HoverItem>
+                </div>
                 {lang === "th" ? "" : ""}
+                <div className="pt-3">
+                  <ButtonGradient className={"w-56"}>
+                    {lang === "th" ? "ดาวน์โหลดแผนที่" : ""}
+                  </ButtonGradient>
+                </div>
               </div>
             </div>
           </div>
         </section>
+
+        {/*---- table -----*/}
+        <section></section>
 
         <Footer className={"bg-lightBlue"} />
       </Fragment>
