@@ -51,7 +51,8 @@ function MenuNavbar({ children }) {
 
   return (
     <>
-      <div className=" w-full text-blue h-32 bg-[white] fixed top-0 z-40">
+      {/*----- Pc ----*/}
+      <div className=" w-full text-blue h-32 bg-[white] fixed top-0 z-30">
         <div className="container mx-auto flex justify-between h-full items-center px-6">
           <a href="/">
             <img src="/images/Logo/watana.png" className={`w-[70px] `}></img>
@@ -120,16 +121,16 @@ function MenuNavbar({ children }) {
       </div>
 
       {/********** Moblie SideBar ************/}
-
       <Drawer
         open={isOpen}
         onClose={handleClose}
         position="right"
-        className="duration-700 ease-in-out h-full"
+        className="duration-700 ease-in-out h-full "
+        style={{ backgroundColor: "white" }}
       >
         <Drawer.Items>
           <Sidebar
-            aria-label="Sidebar with multi-level dropdown example "
+            aria-label="Sidebar with  multi-level dropdown example "
             className="[&>div]:bg-transparent [&>div]:p-0 z-50 "
           >
             <div className="h-[35px] flex justify-end rounded-md p-1 cursor-pointer">

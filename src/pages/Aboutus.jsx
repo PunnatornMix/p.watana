@@ -189,7 +189,7 @@ const AboutUs = () => {
         {/* พันธกิจ */}
         <section className="bg-white">
           <div className="container mx-auto">
-            <div className="w-[83%] mx-auto flex flex-col items-center gap-2 bg-white  py-20">
+            <div className="w-[83%] mx-auto flex flex-col items-center gap-2 bg-white text-black py-20">
               <h1 className="text-blue">
                 {lang === "th" ? "พันธกิจ" : "MISSION"}
               </h1>

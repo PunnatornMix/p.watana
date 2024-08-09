@@ -32,7 +32,7 @@ function HeaderBanner({ children }) {
       <div className="absolute inset-0 bg-[url('/images/Banner/bgBanner1.png')]   bg-cover bg-center z-20"></div>
 
       {/* Slider Component */}
-      <div className="relative z-10 h-[clamp(400px,40vw,750px)]">
+      <div className="relative -[clamp(400px,40vw,750px)]">
         <Slider {...settings}>{children}</Slider>
       </div>
     </div>

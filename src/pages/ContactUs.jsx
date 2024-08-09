@@ -25,10 +25,10 @@ const ContactUs = () => {
   const lang = localStorage.getItem("i18nextLng");
 
   return (
-    <div id="home">
+    <div id="ContactUs">
       <Fragment>
         <SEO
-          title="Home"
+          title="ContactUs"
           description="A description of the page"
           name="Company name"
           type="articlec"
@@ -139,7 +139,28 @@ const ContactUs = () => {
         </section>
 
         {/*---- table -----*/}
-        <section></section>
+        <section>
+          <div className="flex flex-col mx-auto gap-1 py-20" id="list">
+            {lang === "th" ? "" : ""}
+            <h3 className="uppercase text-center font-medium text-blue">
+              {lang === "th"
+                ? "กรุณากรอกข้อมูลให้ชัดเจน สำหรับการติดต่อกลับ"
+                : ""}
+            </h3>
+
+            <ThreeDots />
+          </div>
+          <div className="flex flex-col items-center mx-auto border p-4 w-[50%] ">
+            <label className="form-control w-full max-w-xs ">
+              <span className="label label-text">What is your name?</span>
+              <input
+                type="text"
+                placeholder="Type here"
+                className="input input-bordered w-full max-w-xs "
+              />
+            </label>
+          </div>
+        </section>
 
         <Footer className={"bg-lightBlue"} />
       </Fragment>

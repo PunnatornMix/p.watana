@@ -79,7 +79,7 @@ const ProductList = () => {
               <ThreeDots />
             </div>
             <div className=" bg-[url('/images/home/Group2149.png')]  backgroundImg  h-[358px] w-full flex flex-col justify-end">
-              <label className="input input-primary rounded-full flex items-center gap-2 mx-[79px]">
+              <label className="input input-primary bg-lightBlue rounded-full flex items-center gap-2 mx-[79px]">
                 <input
                   type="text"
                   className="input grow border-none"
@@ -171,7 +171,7 @@ const ProductList = () => {
           />
         </div>
 
-        <section className="container mx-auto text-center grid lg:grid-cols-3 grid-cols-2 my-20">
+        <section className="container mx-auto text-center grid lg:grid-cols-3 grid-cols-2 py-20">
           <ProductNav>
             <h3 className="text-red ">ก</h3>
             <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>

@@ -20,7 +20,7 @@ function NewsCard({ date, content, title, src }) {
             e.currentTarget.style.backgroundSize = "100%";
           }}
         ></div>
-        <div className="flex flex-col gap-3 p-10 h-[58%] ">
+        <div className="flex flex-col gap-3 p-10 h-[58%] text-black">
           <small>{date}</small>
           <h3 className=" font-medium">{title}</h3>
           <p className="font-light line-clamp-3">{content}</p>

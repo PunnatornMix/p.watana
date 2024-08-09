@@ -80,7 +80,7 @@ export function Mail({ className = null, fill }) {
               sketch:type="MSLayerGroup"
               transform="translate(-414.000000, -261.000000)"
               // fill={fill || isHover ? "#DC1E32" : "#100F9C"}
-              fill={fill}
+              fill={fill || "#100F9C"}
             >
               {" "}
               <path
@@ -122,7 +122,7 @@ export function LineIcon({ className = null, fill, filltext }) {
           {" "}
           <path
             d="M30 14.4979C30 8.15792 23.7199 3 15.9999 3C8.28094 3 2 8.15792 2 14.4979C2 20.1817 6.98063 24.9417 13.7084 25.8418C14.1644 25.9412 14.7849 26.146 14.9419 26.5404C15.0831 26.8986 15.0342 27.4598 14.987 27.8216C14.987 27.8216 14.8227 28.8214 14.7873 29.0343C14.7264 29.3926 14.5061 30.4353 15.9999 29.7981C17.4942 29.1609 24.0626 24.9935 26.9998 21.572C29.0287 19.3204 30 17.0353 30 14.4979Z"
-            fill={fill}
+            fill={fill || "#100F9C"}
             // fill={fill || isHover ? "#DC1E32" : "#100F9C"}
           ></path>{" "}
           <path
