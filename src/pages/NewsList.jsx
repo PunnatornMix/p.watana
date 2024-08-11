@@ -118,30 +118,29 @@ const NewsList = () => {
           />
 
           <div className="container mx-auto ">
-            <div className="flex flex-col mx-auto gap-1 py-20" id="list">
+            <div className="flex flex-col mx-auto gap-1 pt-12 pb-10" id="list">
               <h1 className="uppercase text-center text-blue">
                 {lang === "th" ? "ข่าวสารและกิจกรรม" : "NEWS & ACTIVITIES"}
               </h1>
               <ThreeDots />
             </div>
 
-            <h5 className="text-gray-500 font-light ">
-              {currentNewsItem.date}
-            </h5>
-
             {/*----- ปุ่มแชร์ -----*/}
             <div
-              className="fb-share-button"
+              className="fb-share-button flex flex-col gap-4 items-end "
               data-href="http://localhost:5173/news-item"
               data-layout=""
               data-size=""
             >
+              <h5 className="text-gray-500 font-light ">
+                {currentNewsItem.date}
+              </h5>
               <a
                 target="_blank"
                 href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A5173%2Fnews-item&amp;src=sdkpreparse"
                 className="fb-xfbml-parse-ignore"
               >
-                <FaceBookIcon className="ml-auto cursor-pointer" />
+                <FaceBookIcon className="cursor-pointer" />
               </a>
             </div>
             {/*----- ปุ่มแชร์ -----*/}

@@ -37,6 +37,11 @@
 }
 
 @layer components {
+  .Banner {
+    @apply flex justify-center items-center w-full bg-no-repeat bg-center;
+    height: clamp(400px, 40vw, 750px)
+  }
+
   .input {
     @apply bg-transparent;
   }

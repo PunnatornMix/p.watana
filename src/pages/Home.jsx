@@ -74,25 +74,33 @@ const Home = () => {
         <div className=" pt-32">
           <HeaderBanner>
             <div className="relative w-full h-full">
-              <img
-                src="/images/Banner/home/Banner1.png"
-                className="w-full h-[clamp(400px,40vw,750px)] object-cover "
-                alt="Banner 1"
-              />
+              <div
+                className="relative sm:bg-[url('/images/Banner/home/Banner1.png')] bg-[url('/images/Banner/home/Banner1mb.png')]  Banner "
+                style={{ backgroundSize: "110%" }}
+              >
+                <div className="absolute w-[clamp(300px,30vw,610px)] h-[clamp(150px,15vw,250px)] bg-white opacity-35" />
+                <div className="relative   text-center ">
+                  <h1 className="text-blue text-center leading-[clamp(2.5rem,3vw,4rem)] font-extrabold ">
+                    Quality Chemical <br /> For Better Life <br />{" "}
+                    (คัดสรรสิ่งดีๆ เพื่อคุณ)
+                  </h1>
+                </div>
+              </div>
+
+              {/* <div className="bg-[url('/images/Banner/home/Banner1.png')] Banner">
+                <div className="w-[650px]  bg-white opacity-50">
+                  <h1 className="text-blue text-center py-10 ">
+                    Quality Chemical <br /> For Better Life <br />{" "}
+                    (คัดสรรสิ่งดีๆ เพื่อคุณ)
+                  </h1>
+                </div>
+              </div> */}
             </div>
             <div className="relative w-full h-full">
-              <img
-                src="/images/Banner/home/Banner002.png"
-                className="w-full h-[clamp(400px,40vw,750px)] object-cover "
-                alt="Banner 2"
-              />
+              <div className="bg-[url('/images/Banner/home/Banner002.png')] Banner"></div>
             </div>
             <div className="relative w-full h-full">
-              <img
-                src="/images/Banner/home/Banner3.png"
-                className="w-full h-[clamp(400px,40vw,750px)] object-cover "
-                alt="Banner 3"
-              />
+              <div className="bg-[url('/images/Banner/home/Banner3.png')] Banner"></div>
             </div>
           </HeaderBanner>
         </div>
