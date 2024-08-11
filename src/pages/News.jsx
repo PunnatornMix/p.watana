@@ -6,7 +6,6 @@ import Footer from "../components/Footer/Footer";
 import { ThailandIcon, UnitedStates } from "../components/icons/icons";
 import { Box, FormControl, MenuItem, Select } from "@mui/material";
 import ThreeDots from "../components/ThreeDots/ThreeDots";
-import NewsCard from "../components/NewsCard/NewsCard";
 import PaginatedItems from "../components/Pagination/PaginatedItems";
 
 const News = () => {
@@ -68,7 +67,7 @@ const News = () => {
 
               <ThreeDots />
             </div>
-            <PaginatedItems itemsPerPage={9} />
+            <PaginatedItems itemsPerPage={9} className={"tracking-widest"} />
             {/* <div className="grid grid-cols-3 ">
               {NewsList.map((news, index) => news)}
             </div> */}

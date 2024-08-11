@@ -263,7 +263,7 @@ function Items({ currentItems }) {
   );
 }
 
-function PaginatedItems({ itemsPerPage }) {
+function PaginatedItems({ itemsPerPage, className }) {
   // Here we use item offsets; we could also use page offsets
   // following the API or data you're working with.
   const [itemOffset, setItemOffset] = useState(0);
@@ -288,7 +288,7 @@ function PaginatedItems({ itemsPerPage }) {
 
   return (
     <>
-      <Items currentItems={currentItems} />
+      <Items currentItems={currentItems} className={className} />
       <ReactPaginate
         nextLabel="next >>"
         onPageChange={handlePageClick}
@@ -298,10 +298,10 @@ function PaginatedItems({ itemsPerPage }) {
         previousLabel="<< previous"
         pageClassName="page-item"
         pageLinkClassName="page-link "
-        previousClassName="page-item previous"
+        previousClassName="page-item previous hover:tracking-widest"
         previousLinkClassName="page-link "
-        nextClassName="page-item next"
-        nextLinkClassName="page-link"
+        nextClassName="page-item next hover:tracking-widest"
+        nextLinkClassName="page-link "
         breakLabel="..."
         breakClassName="page-item"
         breakLinkClassName="page-link"
