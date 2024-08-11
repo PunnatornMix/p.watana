@@ -9,7 +9,7 @@ import ThreeDots from "../components/ThreeDots/ThreeDots";
 import NewsCard from "../components/NewsCard/NewsCard";
 import PaginatedItems from "../components/Pagination/PaginatedItems";
 
-const News = () => {
+const NewsItem = () => {
   const { t, i18n } = useTranslation();
 
   const handleLanguageChange = (e) => {
@@ -53,6 +53,7 @@ const News = () => {
             </FormControl>
           </Box>
         </MenuNavbar>
+
         <section className="mt-20 pb-24">
           <img
             id="content"
@@ -68,19 +69,19 @@ const News = () => {
 
               <ThreeDots />
             </div>
-            <PaginatedItems itemsPerPage={9} />
-            {/* <div className="grid grid-cols-3 ">
-              {NewsList.map((news, index) => news)}
-            </div> */}
-            {/* {NewsList.reduce((acc, current, index) => {
-              if (index % 3 === 0) acc.push([]);
-              acc[acc.length - 1].push(current);
-              return acc;
-            }, []).map((group, idx) => (
-              <div key={idx} className="flex justify-around">
-                {group}
-              </div>
-            ))} */}
+            <img src="/images/news/NewsItem01.png" className="mx-auto mb-14" />
+            <div>
+              <h3 className="text-center font-semibold mb-6">
+                {lang === "th"
+                  ? "กิจกรรมบริษัทกับพนักงานร่วมกันเพื่อสร้างสัมพันธ์"
+                  : ""}
+              </h3>
+              <p>
+                {lang === "th"
+                  ? "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi."
+                  : ""}
+              </p>
+            </div>
           </div>
         </section>
 
@@ -89,4 +90,4 @@ const News = () => {
     </div>
   );
 };
-export default News;
+export default NewsItem;

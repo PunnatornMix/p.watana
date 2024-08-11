@@ -13,18 +13,22 @@
     /* background-color: lightgray; */
     /* z-index: -20; */
   }
+
   h1 {
     font-size: clamp(24px, 3vw, 36px);
     font-weight: bold;
   }
+
   h3 {
     font-size: clamp(18px, 3vw, 20px);
     font-weight: medium;
     /* color: black; */
   }
+
   title {
     font-size: clamp(18px, 3vw, 20px);
   }
+
   p {
     font-size: clamp(16px, 3vw, 18px);
     font-weight: medium;
@@ -36,44 +40,59 @@
   .input {
     @apply bg-transparent;
   }
+
+
+  .input-field::placeholder {
+    /* color: black; */
+    /* สีของ placeholder ปกติ */
+  }
+
+
   .bannerImages {
     @apply bg-no-repeat bg-center bg-cover;
   }
+
   .backgroundImg {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
   }
+
   .news .group span {
     background: blue;
   }
+
   .news .group span:hover {
     background: blue;
   }
+
   .container {
     @apply 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] w-full;
   }
+
   .missionH h3 {
     @apply tracking-widest;
   }
+
   .menuHover {
-    @apply px-2 py-1 font-medium  text-center w-[180px];
+    @apply px-2 py-1 font-medium text-center w-[180px];
   }
+
   .menuHover:hover {
     @apply border-b-[2.5px] w-fit mx-auto border-red text-red;
     letter-spacing: 0.075em;
   }
+
   .menuActive {
     @apply border-b-[2.5px] w-fit mx-auto border-blue;
     letter-spacing: 0.075em;
   }
+
   .bluegra {
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 1) 10%,
-      rgba(16, 15, 156, 1) 51%,
-      rgba(255, 255, 255, 1) 90%
-    );
+    background: linear-gradient(90deg,
+        rgba(255, 255, 255, 1) 10%,
+        rgba(16, 15, 156, 1) 51%,
+        rgba(255, 255, 255, 1) 90%);
   }
 
   .pagination {
@@ -93,7 +112,8 @@
     display: inline-block;
     padding: 8px 16px;
     text-decoration: none;
-    color: #100f9c; /* Material-UI primary color */
+    color: #100f9c;
+    /* Material-UI primary color */
     border: 1px solid #100f9c;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -103,12 +123,14 @@
   .pagination .next .page-link {
     @apply w-44 text-center;
   }
+
   .pagination .previous .page-link {
     @apply w-44 text-center;
   }
 
   .pagination .page-link:hover {
-    background-color: #100f9c; /* Light blue background on hover */
+    background-color: #100f9c;
+    /* Light blue background on hover */
     color: white;
   }
 
@@ -131,18 +153,21 @@
   /*------ appBorder -----*/
 
   .appBorder {
-    @apply h-[clamp(180px,40vw,300px)];
+    height: clamp(180px, 40vw, 300px);
   }
 
   .appBorder:nth-child(odd) {
     @apply border-r border-b border-blue;
   }
+
   .appBorder:nth-child(even) {
     @apply border-b border-blue;
   }
+
   .appBorder:nth-last-child(1) {
     @apply border-b-0;
   }
+
   .show-tri {
     @apply block;
   }
@@ -166,14 +191,17 @@
 .a p {
   display: block;
 }
+
 /*------ productList -----*/
 
 .productList {
   @apply border-r-[3px] border-blue px-20 my-6;
 }
+
 .productList:nth-child(3n) {
   border-right: 0px;
 }
+
 .productList h3 {
   @apply text-left font-bold;
 }
@@ -181,9 +209,11 @@
 .productListMb h3 {
   @apply text-left font-bold;
 }
+
 .productListMb {
   @apply border-r-[3px] border-blue px-20 my-6;
 }
+
 .productListMb:nth-child(2n) {
   @apply border-0;
 }
@@ -219,5 +249,4 @@
 }
 
 /* sm */
-@media (max-width: 640px) {
-}
+@media (max-width: 640px) {}
