@@ -2,31 +2,32 @@ import React, { Fragment, useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import SEO from "../components/Seo/Seo";
 import MenuNavbar from "../components/Navbar/MenuNavbar";
-import HeaderBanner from "../components/Banner/HeaderBanner";
 import Footer from "../components/Footer/Footer";
 import {
-  AboutIcon1,
   AboutIcon2,
-  AboutIcon3,
-  AboutIcon4,
-  AboutIcon5,
-  AboutIcon6,
   ThailandIcon,
   UnitedStates,
 } from "../components/icons/icons";
 import { Box, FormControl, MenuItem, Select } from "@mui/material";
 import ThreeDots from "../components/ThreeDots/ThreeDots";
-import ApplicationLists from "../components/ApplicationLists/ApplicationLists";
-import NewsCard from "../components/NewsCard/NewsCard";
-import NewsCarousel from "../components/NewsCarousel/NewsCarousel";
-import ButtonGradient from "../components/Button/ButtonGradient";
+
 import MissionCard from "../components/MissionCard/MissionCard";
-import { Carousel } from "flowbite-react";
 
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import ModalBanner from "../components/ModalBanner/ModalBanner";
+
+const slideList = [
+  <img src="/images/aboutus/about06.png" className="h-80" alt="Image 6" />,
+  <img src="/images/aboutus/about07.png" className="h-80" alt="Image 7" />,
+  <img src="/images/aboutus/about08.png" className="h-80" alt="Image 8" />,
+  <img src="/images/aboutus/about09.png" className="h-80" alt="Image 9" />,
+  <img src="/images/aboutus/about10.png" className="h-80" alt="Image 10" />,
+  <img src="/images/aboutus/about11.png" className="h-80" alt="Image 11" />,
+  <img src="/images/aboutus/about12.png" className="h-80" alt="Image 12" />,
+  <img src="/images/aboutus/about05.png" className="h-80" alt="Image 5" />,
+];
 
 const settings = {
   // dots: true,
@@ -38,9 +39,45 @@ const settings = {
   slidesToScroll: 4,
   autoplay: true,
   pauseOnHover: false,
-
   // arrows: true, // เปิดปุ่ม prev/next
 };
+const settingsXl = {
+  // dots: true,
+  infinite: true,
+  autoplaySpeed: 5000,
+  speed: 3000,
+  arrows: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  autoplay: true,
+  pauseOnHover: false,
+  // arrows: true, // เปิดปุ่ม prev/next
+};
+const settingsLg = {
+  // dots: true,
+  infinite: true,
+  autoplaySpeed: 5000,
+  speed: 3000,
+  arrows: true,
+  slidesToShow: 2,
+  slidesToScroll: 2,
+  autoplay: true,
+  pauseOnHover: false,
+  // arrows: true, // เปิดปุ่ม prev/next
+};
+const settingsMb = {
+  // dots: true,
+  infinite: true,
+  autoplaySpeed: 5000,
+  speed: 3000,
+  arrows: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  pauseOnHover: false,
+  // arrows: true, // เปิดปุ่ม prev/next
+};
+
 const AboutUs = () => {
   const { t, i18n } = useTranslation();
 
@@ -169,7 +206,7 @@ const AboutUs = () => {
           </h1>
           <ThreeDots />
           <video
-            className="h-[536px] w-[953px] my-16"
+            className="h-full w-[953px] my-16"
             src="/images/LANY.mp4"
             loop
             autoPlay
@@ -378,49 +415,17 @@ const AboutUs = () => {
             </div>
           </Carousel>
         </div> */}
-        <div className="h-96">
-          <Slider {...settings}>
-            <img
-              src="/images/aboutus/about06.png"
-              className="h-80"
-              alt="Image 6"
-            />
-            <img
-              src="/images/aboutus/about07.png"
-              className="h-80"
-              alt="Image 7"
-            />
-            <img
-              src="/images/aboutus/about08.png"
-              className="h-80"
-              alt="Image 8"
-            />
-            <img
-              src="/images/aboutus/about09.png"
-              className="h-80"
-              alt="Image 9"
-            />
-            <img
-              src="/images/aboutus/about10.png"
-              className="h-80"
-              alt="Image 10"
-            />
-            <img
-              src="/images/aboutus/about11.png"
-              className="h-80"
-              alt="Image 11"
-            />
-            <img
-              src="/images/aboutus/about12.png"
-              className="h-80"
-              alt="Image 12"
-            />
-            <img
-              src="/images/aboutus/about05.png"
-              className="h-80"
-              alt="Image 5"
-            />
-          </Slider>
+        <div className="2xl:block hidden h-96">
+          <Slider {...settings}>{slideList.map((img, imdex) => img)}</Slider>
+        </div>
+        <div className="2xl:hidden xl:block hidden h-96">
+          <Slider {...settingsXl}>{slideList.map((img, imdex) => img)}</Slider>
+        </div>
+        <div className="xl:hidden md:block hidden h-96">
+          <Slider {...settingsLg}>{slideList.map((img, imdex) => img)}</Slider>
+        </div>
+        <div className="md:hidden   h-96">
+          <Slider {...settingsMb}>{slideList.map((img, imdex) => img)}</Slider>
         </div>
 
         <section className="container w-[80%] mx-auto grid lg:grid-cols-2 grid-cols-1 gap-6 pb-8 text-blue">
