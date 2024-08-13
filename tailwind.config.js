@@ -25,6 +25,7 @@ export default {
         3000: "3000ms",
         4000: "4000ms",
       },
+      backgroundSize: { "100%": "100%" },
     },
 
     fontFamily: {

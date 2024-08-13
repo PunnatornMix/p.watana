@@ -26,6 +26,7 @@ import { Carousel } from "flowbite-react";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import ModalBanner from "../components/ModalBanner/ModalBanner";
 
 const settings = {
   // dots: true,
@@ -53,9 +54,9 @@ const AboutUs = () => {
     <div id="home">
       <Fragment>
         <SEO
-          title="Home"
+          title="About-us"
           description="A description of the page"
-          name="Company name"
+          name="Watana"
           type="articlec"
           keywords="HTML, CSS, JavaScript"
         />
@@ -97,41 +98,37 @@ const AboutUs = () => {
             {/* Slider Component */}
             <div className="relative z-10 h-[clamp(400px,40vw,750px)]">
               <div className="relative w-full h-full">
-                <img
-                  src="/images/aboutus/Banner_about_1.jpg"
-                  className="w-full h-[clamp(400px,40vw,750px)] object-cover "
-                  alt="Banner 1"
-                />
+                <div
+                  // src="/images/aboutus/Banner_about_1.jpg"
+                  className=" w-full sm:bg-[url('/images/aboutus/Banner_about_1.jpg')] bg-[url('/images/Banner/aboutus/Banner_about_1Mb.jpg')] sm:bg-cover bg-100%   h-[clamp(400px,40vw,750px)] object-cover Banner"
+                >
+                  <ModalBanner>
+                    นำเข้า-ส่งออก และจัดจำหน่าย <br />{" "}
+                    เคมีภัณฑ์อุตสาหกรรมจากทั่วโลก <br />
+                    ตั้งแต่ปี พ.ศ. 2518
+                  </ModalBanner>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         {/* เกี่ยวกับบริษัท */}
-        <section className="container mx-auto grid grid-cols-2  mt-20">
+        <section className="container mx-auto grid lg:grid-cols-2 grid-cols-1   mt-20">
           <div className="grid grid-cols-2 gap-4">
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 items-end">
               <img
                 src="/images/aboutus/about01.png"
-                className="h-[345px] w-[312px] mt-12"
+                className="aboutUsImg mt-12"
               />
-              <img
-                src="/images/aboutus/about03.png"
-                className="h-[345px] w-[312px]"
-              />
+              <img src="/images/aboutus/about03.png" className="aboutUsImg" />
             </div>
             <div className="flex flex-col gap-4">
-              <img
-                src="/images/aboutus/about02.png"
-                className="h-[345px] w-[312px]"
-              />
-              <img
-                src="/images/aboutus/about04.png"
-                className="h-[345px] w-[312px]"
-              />
+              <img src="/images/aboutus/about02.png" className="aboutUsImg" />
+              <img src="/images/aboutus/about04.png" className="aboutUsImg" />
             </div>
           </div>
-          <div className="flex flex-col gap-16 items-center pl-[130px]">
+          <div className=" w-[80%] mx-auto flex flex-col gap-16 items-center   pl-0 lg:mt-0 mt-16 ">
             <div className="flex flex-col gap-2">
               <h1 className="text-blue">
                 {lang === "th" ? "เกี่ยวกับบริษัท" : "OUR HISTORY"}
@@ -189,12 +186,12 @@ const AboutUs = () => {
         {/* พันธกิจ */}
         <section className="bg-white">
           <div className="container mx-auto">
-            <div className="w-[83%] mx-auto flex flex-col items-center gap-2 bg-white text-black py-20">
+            <div className="w-[83%] mx-auto flex flex-col items-center gap-2 bg-white text-black lg:py-20 py-0 pt-6">
               <h1 className="text-blue">
                 {lang === "th" ? "พันธกิจ" : "MISSION"}
               </h1>
               <ThreeDots />
-              <div className="grid grid-cols-3 gap-[110px] mt-10">
+              <div className="lg:grid 2xl:grid-cols-3 lg:grid-cols-2 gap-[110px] mt-10 hidden">
                 <MissionCard
                   title={lang === "th" ? "ดำเนินธุรกิจ" : "Operating Business"}
                   content={
@@ -319,6 +316,32 @@ const AboutUs = () => {
                   }
                 ></MissionCard>
               </div>
+              <div className="grid grid-cols-2 lg:hidden mt-16 justify-center w-fit mx-auto ">
+                <img
+                  src="/images/aboutus/Icon/Group3334.png"
+                  className="mx-auto p-4 w-[clamp(200px,35vw,250px)]  object-contain appBorder "
+                />
+                <img
+                  src="/images/aboutus/Icon/Group3335.png"
+                  className="mx-auto p-4 w-[clamp(200px,35vw,250px)]  object-contain appBorder"
+                />
+                <img
+                  src="/images/aboutus/Icon/Group3336.png"
+                  className="mx-auto p-4 w-[clamp(200px,35vw,250px)]  object-contain appBorder"
+                />
+                <img
+                  src="/images/aboutus/Icon/Group3337.png"
+                  className="mx-auto p-4 w-[clamp(200px,35vw,250px)]  object-contain appBorder"
+                />
+                <img
+                  src="/images/aboutus/Icon/Group3338.png"
+                  className="mx-auto p-4 w-[clamp(200px,35vw,250px)]    border-r border-blue"
+                />
+                <img
+                  src="/images/aboutus/Icon/Group3339.png"
+                  className="mx-auto p-4 w-[clamp(200px,35vw,220px)]  object-contain appBorder"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -355,20 +378,52 @@ const AboutUs = () => {
             </div>
           </Carousel>
         </div> */}
-        <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+        <div className="h-96">
           <Slider {...settings}>
-            <img src="/images/aboutus/about06.png" alt="Image 6" />
-            <img src="/images/aboutus/about07.png" alt="Image 7" />
-            <img src="/images/aboutus/about08.png" alt="Image 8" />
-            <img src="/images/aboutus/about09.png" alt="Image 9" />
-            <img src="/images/aboutus/about10.png" alt="Image 10" />
-            <img src="/images/aboutus/about11.png" alt="Image 11" />
-            <img src="/images/aboutus/about12.png" alt="Image 12" />
-            <img src="/images/aboutus/about05.png" alt="Image 5" />
+            <img
+              src="/images/aboutus/about06.png"
+              className="h-80"
+              alt="Image 6"
+            />
+            <img
+              src="/images/aboutus/about07.png"
+              className="h-80"
+              alt="Image 7"
+            />
+            <img
+              src="/images/aboutus/about08.png"
+              className="h-80"
+              alt="Image 8"
+            />
+            <img
+              src="/images/aboutus/about09.png"
+              className="h-80"
+              alt="Image 9"
+            />
+            <img
+              src="/images/aboutus/about10.png"
+              className="h-80"
+              alt="Image 10"
+            />
+            <img
+              src="/images/aboutus/about11.png"
+              className="h-80"
+              alt="Image 11"
+            />
+            <img
+              src="/images/aboutus/about12.png"
+              className="h-80"
+              alt="Image 12"
+            />
+            <img
+              src="/images/aboutus/about05.png"
+              className="h-80"
+              alt="Image 5"
+            />
           </Slider>
         </div>
 
-        <section className="container mx-auto grid grid-cols-2 gap-6 pb-8 text-blue">
+        <section className="container w-[80%] mx-auto grid lg:grid-cols-2 grid-cols-1 gap-6 pb-8 text-blue">
           <div>
             <h3>
               {lang === "th" ? "สินค้าที่มีคุณภาพ" : "The Superior Product"}

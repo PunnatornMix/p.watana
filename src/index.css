@@ -37,21 +37,23 @@
 }
 
 @layer components {
+  .aboutUsImg {
+    @apply h-[clamp(190,35vw,345px)] w-[clamp(173px,35vw,312px)];
+  }
+
   .Banner {
     @apply flex justify-center items-center w-full bg-no-repeat bg-center;
-    height: clamp(400px, 40vw, 750px)
+    height: clamp(400px, 40vw, 750px);
   }
 
   .input {
     @apply bg-transparent;
   }
 
-
   .input-field::placeholder {
     /* color: black; */
     /* สีของ placeholder ปกติ */
   }
-
 
   .bannerImages {
     @apply bg-no-repeat bg-center bg-cover;
@@ -94,10 +96,12 @@
   }
 
   .bluegra {
-    background: linear-gradient(90deg,
-        rgba(255, 255, 255, 1) 10%,
-        rgba(16, 15, 156, 1) 51%,
-        rgba(255, 255, 255, 1) 90%);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 10%,
+      rgba(16, 15, 156, 1) 51%,
+      rgba(255, 255, 255, 1) 90%
+    );
   }
 
   .pagination {
@@ -254,4 +258,5 @@
 }
 
 /* sm */
-@media (max-width: 640px) {}
+@media (max-width: 640px) {
+}

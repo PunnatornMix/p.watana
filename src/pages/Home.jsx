@@ -12,11 +12,15 @@ import ApplicationLists from "../components/ApplicationLists/ApplicationLists";
 import NewsCard from "../components/NewsCard/NewsCard";
 import NewsCarousel from "../components/NewsCarousel/NewsCarousel";
 import ButtonGradient from "../components/Button/ButtonGradient";
+import ModalBanner from "../components/ModalBanner/ModalBanner";
+import useWindowSize from "../useWindowSize/useWindowSize";
 
 const Home = () => {
   const [lang, setLang] = useState(localStorage.getItem("i18nextLng") || "th");
   const { t, i18n } = useTranslation();
   const [isHover, setIsHover] = useState(false);
+
+  const { width } = useWindowSize();
 
   const handleMouseEnter = () => {
     setIsHover(true);
@@ -75,16 +79,15 @@ const Home = () => {
           <HeaderBanner>
             <div className="relative w-full h-full">
               <div
-                className="relative sm:bg-[url('/images/Banner/home/Banner1.png')] bg-[url('/images/Banner/home/Banner1mb.png')]  Banner "
-                style={{ backgroundSize: "110%" }}
+                className=" sm:bg-[url('/images/Banner/home/Banner1.png')] sm:bg-cover bg-100%   bg-[url('/images/Banner/home/Banner1mb.png')]  Banner "
+                // style={{ backgroundSize: "50%" }}
+
+                // style={{ backgroundSize: "110%" }}
               >
-                <div className="absolute w-[clamp(300px,30vw,610px)] h-[clamp(150px,15vw,250px)] bg-white opacity-35" />
-                <div className="relative   text-center ">
-                  <h1 className="text-blue text-center leading-[clamp(2.5rem,3vw,4rem)] font-extrabold ">
-                    Quality Chemical <br /> For Better Life <br />{" "}
-                    (คัดสรรสิ่งดีๆ เพื่อคุณ)
-                  </h1>
-                </div>
+                <ModalBanner>
+                  Quality Chemical <br /> For Better Life <br /> (คัดสรรสิ่งดีๆ
+                  เพื่อคุณ)
+                </ModalBanner>
               </div>
 
               {/* <div className="bg-[url('/images/Banner/home/Banner1.png')] Banner">
@@ -97,10 +100,40 @@ const Home = () => {
               </div> */}
             </div>
             <div className="relative w-full h-full">
-              <div className="bg-[url('/images/Banner/home/Banner002.png')] Banner"></div>
+              <div className="sm:bg-[url('/images/Banner/home/Banner002.png')] sm:bg-cover bg-100%   bg-[url('/images/Banner/home/Banner2Mb.png')] Banner">
+                <ModalBanner>
+                  {width <= 640 ? (
+                    <>
+                      Transforming Chemical, <br /> Enriching lives <br />{" "}
+                      (การเปลี่ยนแปลง <br /> เพื่อคุณภาพชีวิตที่ดีขึ้น)
+                    </>
+                  ) : (
+                    <>
+                      Transforming Chemical, <br /> Enriching lives <br />{" "}
+                      (การเปลี่ยนแปลงเพื่อคุณภาพชีวิตที่ดีขึ้น)
+                    </>
+                  )}
+                </ModalBanner>
+              </div>
             </div>
             <div className="relative w-full h-full">
-              <div className="bg-[url('/images/Banner/home/Banner3.png')] Banner"></div>
+              <div className="sm:bg-[url('/images/Banner/home/Banner3.png')] sm:bg-cover bg-100%  bg-[url('/images/Banner/home/Banner3Mb.png')] Banner ">
+                <ModalBanner>
+                  {width <= 640 ? (
+                    <>
+                      {" "}
+                      Elevate with Chemical <br /> (ยกระดับเคมีให้มี <br />{" "}
+                      คุณภาพที่ดีกับทุกคน)
+                    </>
+                  ) : (
+                    <>
+                      {" "}
+                      Elevate with Chemical <br />{" "}
+                      (ยกระดับเคมีให้มีคุณภาพที่ดีกับทุกคน)
+                    </>
+                  )}
+                </ModalBanner>
+              </div>
             </div>
           </HeaderBanner>
         </div>
