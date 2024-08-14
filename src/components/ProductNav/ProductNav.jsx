@@ -5,7 +5,7 @@ function ProductNav({ children }) {
   const { width } = useWindowSize();
   const className = width >= 1024 ? "productList" : "productListMb";
 
-  return <div className={`${className}`}>{children}</div>;
+  return <div className={`${className} ProductNav`}>{children}</div>;
 }
 
 export default ProductNav;

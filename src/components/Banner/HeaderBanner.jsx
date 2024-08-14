@@ -10,7 +10,7 @@ const settings = {
   speed: 4500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  // autoplay: true,
+  autoplay: true,
   pauseOnHover: false,
 };
 

@@ -7,6 +7,7 @@ import { ThailandIcon, UnitedStates } from "../components/icons/icons";
 import { Box, FormControl, MenuItem, Select } from "@mui/material";
 import ThreeDots from "../components/ThreeDots/ThreeDots";
 import ProductNav from "../components/ProductNav/ProductNav";
+import ReactSearchBox from "react-search-box";
 
 const ProductList = () => {
   const { t, i18n } = useTranslation();
@@ -14,6 +15,34 @@ const ProductList = () => {
   const handleLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
   };
+
+  const dataList = [
+    { key: "แบเรียมฟลูออไรด์", value: "แบเรียมฟลูออไรด์" },
+    { key: "ผงโซเดียมฟลูออไรด์", value: "ผงโซเดียมฟลูออไรด์" },
+    { key: "ผงแคลเซียมฟลูออไรด์", value: "ผงแคลเซียมฟลูออไรด์" },
+    { key: "ผงแมกนีเซียมฟลูออไรด์", value: "ผงแมกนีเซียมฟลูออไรด์" },
+    { key: "ผงอะลูมิเนียมไฮดรอกไซด์", value: "ผงอะลูมิเนียมไฮดรอกไซด์" },
+    { key: "โพแทสเซียม", value: "โพแทสเซียม" },
+    {
+      key: "โพแทสเซียมอะลูมิเนียมฟลูออไรด์",
+      value: "โพแทสเซียมอะลูมิเนียมฟลูออไรด์",
+    },
+    { key: "โพแทสเซียมฟลูออโรเรต", value: "โพแทสเซียมฟลูออโรเรต" },
+    { key: "เม็ดสีเหล็กออกไซด์", value: "เม็ดสีเหล็กออกไซด์" },
+    { key: "อลูมิเนียมฟลูออไรด์", value: "อลูมิเนียมฟลูออไรด์" },
+  ];
+
+  // const handleSelect = (record) => {
+  //   console.log(record);
+  // };
+
+  // const handleFocus = () => {
+  //   console.log("This function is called when is focussed");
+  // };
+
+  // const handleChange = (value) => {
+  //   console.log(value);
+  // };
 
   const lang = localStorage.getItem("i18nextLng");
 
@@ -78,6 +107,23 @@ const ProductList = () => {
 
               <ThreeDots />
             </div>
+
+            <ReactSearchBox
+              placeholder="Search for John, Jane or Mary"
+              data={dataList}
+              // onSelect={handleSelect}
+              // onFocus={handleFocus}
+              // onChange={handleChange}
+              inputBorderColor={"blue"}
+              autoFocus
+              leftIcon={
+                <span role="img" aria-label="art">
+                  🎨
+                </span>
+              }
+              iconBoxSize="48px"
+            />
+
             <div className=" bg-[url('/images/home/Group2149.png')]  backgroundImg  h-[358px] w-full flex flex-col justify-end">
               <label className="input input-primary bg-lightBlue rounded-full flex items-center gap-2 mx-[79px]">
                 <input
@@ -125,7 +171,7 @@ const ProductList = () => {
             <div className="flex flex-col mx-auto gap-1 ">
               <h1 className="uppercase text-center text-red">Product search</h1>
 
-              <h1 className="text-blue text-center">ค้นหาสินค้า</h1>
+              <h1 className="text-blue  text-center">ค้นหาสินค้า</h1>
               <ThreeDots />
             </div>
             <label className="input input-primary rounded-full flex items-center gap-2">
@@ -174,80 +220,108 @@ const ProductList = () => {
         <section className="container mx-auto text-center grid lg:grid-cols-3 grid-cols-2 py-20">
           <ProductNav>
             <h3 className="text-red ">ก</h3>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
+            <p className="">- </p>
           </ProductNav>
           <ProductNav>
             <h3 className="text-red">ข</h3>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
+            <p className="">- </p>
           </ProductNav>
           <ProductNav>
             <h3 className="text-red">ค</h3>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
+            <p className="">- </p>
           </ProductNav>
 
           <ProductNav>
             <h3 className="text-red">ง</h3>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
+            <p className="">- </p>
           </ProductNav>
 
           <ProductNav>
             <h3 className="text-red">ด</h3>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
+            <p className="">- </p>
           </ProductNav>
           <ProductNav>
             <h3 className="text-red">ต</h3>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
+            <p className="">- </p>
           </ProductNav>
 
           <ProductNav>
             <h3 className="text-red">ท</h3>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
+            <p className="">- </p>
           </ProductNav>
 
           <ProductNav>
             <h3 className="text-red">น</h3>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
+            <p className="">- </p>
           </ProductNav>
 
           <ProductNav>
             <h3 className="text-red">บ</h3>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
-            <p className="text-blue">- อลูมิเนียมฟลูออไรด์</p>
+            <p className="">- แบเรียมฟลูออไรด์ </p>
+          </ProductNav>
+
+          <ProductNav>
+            <h3 className="text-red">ป</h3>
+            <p className="">- </p>
+          </ProductNav>
+          <ProductNav>
+            <h3 className="text-red">ผ</h3>
+            <p className="">- ผงโซเดียมฟลูออไรด์ </p>
+            <p className="">- ผงแคลเซียมฟลูออไรด์ </p>
+            <p className="">- ผงแมกนีเซียมฟลูออไรด์ </p>
+            <p className="">- ผงอะลูมิเนียมไฮดรอกไซด์ </p>
+            <p className="">- ผงอลูมินา </p>
+          </ProductNav>
+          <ProductNav>
+            <h3 className="text-red">ฝ</h3>
+            <p className="">- </p>
+          </ProductNav>
+
+          <ProductNav>
+            <h3 className="text-red">พ</h3>
+            <p className="">- โพแทสเซียม </p>
+            <p className="">- โพแทสเซียมอะลูมิเนียมฟลูออไรด์ </p>
+            <p className="">- โพแทสเซียมฟลูออโรเรต </p>
+          </ProductNav>
+          <ProductNav>
+            <h3 className="text-red">ฟ</h3>
+            <p className="">- </p>
+          </ProductNav>
+          <ProductNav>
+            <h3 className="text-red">ม</h3>
+            <p className="">- เม็ดสีเหล็กออกไซด์ </p>
+          </ProductNav>
+          <ProductNav>
+            <h3 className="text-red">ย</h3>
+            <p className="">- </p>
+          </ProductNav>
+          <ProductNav>
+            <h3 className="text-red">ร</h3>
+            <p className="">- </p>
+          </ProductNav>
+          <ProductNav>
+            <h3 className="text-red">ล</h3>
+            <p className="">- </p>
+          </ProductNav>
+          <ProductNav>
+            <h3 className="text-red">ว</h3>
+            <p className="">- </p>
+          </ProductNav>
+          <ProductNav>
+            <h3 className="text-red">ส</h3>
+            <p className="">- </p>
+          </ProductNav>
+          <ProductNav>
+            <h3 className="text-red">ห</h3>
+            <p className="">- </p>
+          </ProductNav>
+          <ProductNav>
+            <h3 className="text-red">อ</h3>
+            <p className="">- อลูมิเนียมฟลูออไรด์</p>
+          </ProductNav>
+          <ProductNav>
+            <h3 className="text-red">ฮ</h3>
+            <p className="">- </p>
           </ProductNav>
         </section>
 

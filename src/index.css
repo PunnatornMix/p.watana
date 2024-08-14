@@ -180,6 +180,9 @@
   .show-tri {
     @apply block;
   }
+  .ProductNav p {
+    @apply text-blue text-start pl-4;
+  }
 }
 
 #demo-simple-select {
