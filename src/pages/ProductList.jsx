@@ -8,6 +8,8 @@ import { Box, FormControl, MenuItem, Select } from "@mui/material";
 import ThreeDots from "../components/ThreeDots/ThreeDots";
 import ProductNav from "../components/ProductNav/ProductNav";
 import ReactSearchBox from "react-search-box";
+import { Link, useNavigate } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 
 const ProductList = () => {
   const { t, i18n } = useTranslation();
@@ -16,33 +18,62 @@ const ProductList = () => {
     i18n.changeLanguage(e.target.value);
   };
 
+  const navigate = useNavigate();
+
   const dataList = [
-    { key: "แบเรียมฟลูออไรด์", value: "แบเรียมฟลูออไรด์" },
-    { key: "ผงโซเดียมฟลูออไรด์", value: "ผงโซเดียมฟลูออไรด์" },
-    { key: "ผงแคลเซียมฟลูออไรด์", value: "ผงแคลเซียมฟลูออไรด์" },
-    { key: "ผงแมกนีเซียมฟลูออไรด์", value: "ผงแมกนีเซียมฟลูออไรด์" },
-    { key: "ผงอะลูมิเนียมไฮดรอกไซด์", value: "ผงอะลูมิเนียมไฮดรอกไซด์" },
-    { key: "โพแทสเซียม", value: "โพแทสเซียม" },
+    {
+      key: "แบเรียมฟลูออไรด์",
+      value: "แบเรียมฟลูออไรด์",
+      link: "/product-item",
+    },
+    {
+      key: "ผงโซเดียมฟลูออไรด์",
+      value: "ผงโซเดียมฟลูออไรด์",
+      link: "/product-itemabout-us",
+    },
+    {
+      key: "ผงแคลเซียมฟลูออไรด์",
+      value: "ผงแคลเซียมฟลูออไรด์",
+      link: "/product-item",
+    },
+    {
+      key: "ผงแมกนีเซียมฟลูออไรด์",
+      value: "ผงแมกนีเซียมฟลูออไรด์",
+      link: "/product-item",
+    },
+    {
+      key: "ผงอะลูมิเนียมไฮดรอกไซด์",
+      value: "ผงอะลูมิเนียมไฮดรอกไซด์",
+      link: "/product-item",
+    },
+    { key: "โพแทสเซียม", value: "โพแทสเซียม", link: "/product-item" },
     {
       key: "โพแทสเซียมอะลูมิเนียมฟลูออไรด์",
       value: "โพแทสเซียมอะลูมิเนียมฟลูออไรด์",
+      link: "/product-item",
     },
-    { key: "โพแทสเซียมฟลูออโรเรต", value: "โพแทสเซียมฟลูออโรเรต" },
-    { key: "เม็ดสีเหล็กออกไซด์", value: "เม็ดสีเหล็กออกไซด์" },
-    { key: "อลูมิเนียมฟลูออไรด์", value: "อลูมิเนียมฟลูออไรด์" },
+    {
+      key: "โพแทสเซียมฟลูออโรเรต",
+      value: "โพแทสเซียมฟลูออโรเรต",
+      link: "/product-item",
+    },
+    {
+      key: "เม็ดสีเหล็กออกไซด์",
+      value: "เม็ดสีเหล็กออกไซด์",
+      link: "/product-item",
+    },
+    {
+      key: "อลูมิเนียมฟลูออไรด์",
+      value: "อลูมิเนียมฟลูออไรด์",
+      link: "/product-item",
+    },
   ];
 
-  // const handleSelect = (record) => {
-  //   console.log(record);
-  // };
-
-  // const handleFocus = () => {
-  //   console.log("This function is called when is focussed");
-  // };
-
-  // const handleChange = (value) => {
-  //   console.log(value);
-  // };
+  const handleSelect = (record) => {
+    const selectedItem = dataList.find((item) => item.key == record.item.key);
+    console.log("record", record);
+    navigate(selectedItem.link); // นำทางไปยังลิงก์ที่เลือก
+  };
 
   const lang = localStorage.getItem("i18nextLng");
 
@@ -108,30 +139,26 @@ const ProductList = () => {
               <ThreeDots />
             </div>
 
-            <ReactSearchBox
-              placeholder="Search for John, Jane or Mary"
-              data={dataList}
-              // onSelect={handleSelect}
-              // onFocus={handleFocus}
-              // onChange={handleChange}
-              inputBorderColor={"blue"}
-              autoFocus
-              leftIcon={
-                <span role="img" aria-label="art">
-                  🎨
-                </span>
-              }
-              iconBoxSize="48px"
-            />
-
-            <div className=" bg-[url('/images/home/Group2149.png')]  backgroundImg  h-[358px] w-full flex flex-col justify-end">
-              <label className="input input-primary bg-lightBlue rounded-full flex items-center gap-2 mx-[79px]">
-                <input
+            {/* <div className=" bg-[url('/images/home/Group2149.png')]  backgroundImg  h-[358px] w-full flex flex-col justify-end"> */}
+            <div className=" bg-[url('/images/home/Group2149.png')]  backgroundImg  h-[358px] w-full justify-end">
+              <div className="  rounded-full ddd gap-2 pt-[100px] w-full">
+                <div className="my-custom-search-box ">
+                  <ReactSearchBox
+                    placeholder="ค้นหาข้อความ..."
+                    value=""
+                    data={dataList}
+                    onFocus={() => {
+                      console.log("This function is called when is focussed");
+                    }}
+                    onSelect={handleSelect}
+                  />
+                </div>
+                {/* <input
                   type="text"
-                  className="input grow border-none"
+                  className=" grow border-none"
                   placeholder={lang === "th" ? `ค้นหาสินค้า` : `PRODUCT SEARCH`}
-                />
-                <svg
+                /> */}
+                {/* <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
                   fill="#100F9C"
@@ -143,8 +170,8 @@ const ProductList = () => {
                     d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
                     clipRule="evenodd"
                   />
-                </svg>
-              </label>
+                </svg> */}
+              </div>
               <img
                 src="/images/home/Component31– 2.png"
                 className="h-[90px] mt-[50px] mb-[30px] px-[79px] "
@@ -218,111 +245,48 @@ const ProductList = () => {
         </div>
 
         <section className="container mx-auto text-center grid lg:grid-cols-3 grid-cols-2 py-20">
-          <ProductNav>
-            <h3 className="text-red ">ก</h3>
-            <p className="">- </p>
-          </ProductNav>
-          <ProductNav>
-            <h3 className="text-red">ข</h3>
-            <p className="">- </p>
-          </ProductNav>
-          <ProductNav>
-            <h3 className="text-red">ค</h3>
-            <p className="">- </p>
-          </ProductNav>
-
-          <ProductNav>
-            <h3 className="text-red">ง</h3>
-            <p className="">- </p>
-          </ProductNav>
-
-          <ProductNav>
-            <h3 className="text-red">ด</h3>
-            <p className="">- </p>
-          </ProductNav>
-          <ProductNav>
-            <h3 className="text-red">ต</h3>
-            <p className="">- </p>
-          </ProductNav>
-
-          <ProductNav>
-            <h3 className="text-red">ท</h3>
-            <p className="">- </p>
-          </ProductNav>
-
-          <ProductNav>
-            <h3 className="text-red">น</h3>
-            <p className="">- </p>
-          </ProductNav>
-
-          <ProductNav>
-            <h3 className="text-red">บ</h3>
+          {lang === "th" ? "" : ""}
+          <ProductNav character={lang === "th" ? "ก" : "a"}></ProductNav>
+          <ProductNav character={lang === "th" ? "ข" : "b"}></ProductNav>
+          <ProductNav character={lang === "th" ? "ค" : "c"}></ProductNav>
+          <ProductNav character={lang === "th" ? "ง" : "d"}></ProductNav>
+          <ProductNav character={lang === "th" ? "จ" : "e"}></ProductNav>
+          <ProductNav character={lang === "th" ? "ช" : "f"}></ProductNav>
+          <ProductNav character={lang === "th" ? "ซ" : "g"}></ProductNav>
+          <ProductNav character={lang === "th" ? "ด" : "h"}></ProductNav>
+          <ProductNav character={lang === "th" ? "ต" : "i"}></ProductNav>
+          <ProductNav character={lang === "th" ? "ท" : "i"}></ProductNav>
+          <ProductNav character={lang === "th" ? "น" : "i"}></ProductNav>
+          <ProductNav character={lang === "th" ? "บ" : "i"}>
             <p className="">- แบเรียมฟลูออไรด์ </p>
           </ProductNav>
-
-          <ProductNav>
-            <h3 className="text-red">ป</h3>
-            <p className="">- </p>
-          </ProductNav>
-          <ProductNav>
-            <h3 className="text-red">ผ</h3>
+          <ProductNav character={lang === "th" ? "ป" : "i"}></ProductNav>
+          <ProductNav character={lang === "th" ? "ผ" : "i"}>
             <p className="">- ผงโซเดียมฟลูออไรด์ </p>
             <p className="">- ผงแคลเซียมฟลูออไรด์ </p>
             <p className="">- ผงแมกนีเซียมฟลูออไรด์ </p>
             <p className="">- ผงอะลูมิเนียมไฮดรอกไซด์ </p>
             <p className="">- ผงอลูมินา </p>
           </ProductNav>
-          <ProductNav>
-            <h3 className="text-red">ฝ</h3>
-            <p className="">- </p>
-          </ProductNav>
-
-          <ProductNav>
-            <h3 className="text-red">พ</h3>
+          <ProductNav character={lang === "th" ? "ฝ" : "i"}></ProductNav>
+          <ProductNav character={lang === "th" ? "พ" : "i"}>
             <p className="">- โพแทสเซียม </p>
             <p className="">- โพแทสเซียมอะลูมิเนียมฟลูออไรด์ </p>
             <p className="">- โพแทสเซียมฟลูออโรเรต </p>
           </ProductNav>
-          <ProductNav>
-            <h3 className="text-red">ฟ</h3>
-            <p className="">- </p>
-          </ProductNav>
-          <ProductNav>
-            <h3 className="text-red">ม</h3>
+          <ProductNav character={lang === "th" ? "ฟ" : "i"}></ProductNav>
+          <ProductNav character={lang === "th" ? "ม" : "i"}>
             <p className="">- เม็ดสีเหล็กออกไซด์ </p>
           </ProductNav>
-          <ProductNav>
-            <h3 className="text-red">ย</h3>
-            <p className="">- </p>
-          </ProductNav>
-          <ProductNav>
-            <h3 className="text-red">ร</h3>
-            <p className="">- </p>
-          </ProductNav>
-          <ProductNav>
-            <h3 className="text-red">ล</h3>
-            <p className="">- </p>
-          </ProductNav>
-          <ProductNav>
-            <h3 className="text-red">ว</h3>
-            <p className="">- </p>
-          </ProductNav>
-          <ProductNav>
-            <h3 className="text-red">ส</h3>
-            <p className="">- </p>
-          </ProductNav>
-          <ProductNav>
-            <h3 className="text-red">ห</h3>
-            <p className="">- </p>
-          </ProductNav>
-          <ProductNav>
-            <h3 className="text-red">อ</h3>
+          <ProductNav character={lang === "th" ? "ย" : "i"}></ProductNav>
+          <ProductNav character={lang === "th" ? "ร" : "i"}></ProductNav>
+          <ProductNav character={lang === "th" ? "ล" : "i"}></ProductNav>
+          <ProductNav character={lang === "th" ? "ส" : "i"}></ProductNav>
+          <ProductNav character={lang === "th" ? "ห" : "i"}></ProductNav>
+          <ProductNav character={lang === "th" ? "อ" : "i"}>
             <p className="">- อลูมิเนียมฟลูออไรด์</p>
           </ProductNav>
-          <ProductNav>
-            <h3 className="text-red">ฮ</h3>
-            <p className="">- </p>
-          </ProductNav>
+          <ProductNav character={lang === "th" ? "ฮ" : "i"}></ProductNav>
         </section>
 
         <Footer className={"bg-lightBlue"} />
@@ -330,4 +294,5 @@ const ProductList = () => {
     </div>
   );
 };
+
 export default ProductList;

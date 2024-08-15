@@ -183,6 +183,58 @@
   .ProductNav p {
     @apply text-blue text-start pl-4;
   }
+  input .sc-gswNZR {
+    background-color: #100f9c !important;
+  }
+  /* .ddd::after {
+    content: "aaa";
+
+  } */
+
+  /* .my-custom-search-box {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .my-custom-search-box input {
+    border: 1px solid #ccc;
+    padding: 8px;
+  } */
+
+  .my-custom-search-box {
+    position: relative; /* ทำให้ dropdown ใช้ตำแหน่งที่สัมพันธ์กับกล่องค้นหา */
+    margin-inline: auto !important;
+  }
+
+  /* .react-search-box {
+    position: relative; 
+  } */
+}
+.bncmtB {
+  position: absolute !important; /* ให้ dropdown ลอยอยู่เหนือองค์ประกอบอื่น */
+  top: 100%; /* วาง dropdown ให้เริ่มต้นจากด้านล่างของกล่องค้นหา */
+  left: 8.5%;
+  width: 83%;
+  /* background-color: red !important; */
+  /* border: 1px solid #ccc; */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* ให้สูงกว่าคอมโพเนนต์อื่น ๆ */
+}
+
+.dAZYal {
+  position: relative !important; /* ถ้า class นี้ถูกใช้ใน dropdown */
+  margin-inline: auto !important;
+  width: 83% !important;
+  display: flex;
+  border-radius: 100px !important ;
+  border: 1px solid #100f9c !important;
+  /* background-color: #100f9c !important; */
+}
+
+.dAZYal:hover,
+.dAZYal:active {
+  @apply ring-2;
 }
 
 #demo-simple-select {

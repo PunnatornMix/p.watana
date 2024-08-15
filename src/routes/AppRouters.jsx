@@ -6,6 +6,7 @@ import ProductList from "../pages/ProductList";
 import News from "../pages/News";
 import ContactUs from "../pages/ContactUs";
 import NewsList from "../pages/NewsList";
+import ProductItem from "../pages/ProductItems";
 
 const AppRouters = () => (
   <Fragment>
@@ -13,6 +14,7 @@ const AppRouters = () => (
       <Route path="/" exact element={<Home />} />
       <Route path="/about-us" exact element={<AboutUs />} />
       <Route path="/product-list" exact element={<ProductList />} />
+      <Route path="/product-item" exact element={<ProductItem />} />
       <Route path="/news-activity" exact element={<News />} />
       <Route path="/news-item" exact element={<NewsList />} />
       <Route path="/contact-us" exact element={<ContactUs />} />

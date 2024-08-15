@@ -33,7 +33,7 @@ function MenuNavbar({ children }) {
   const lang = localStorage.getItem("i18nextLng");
 
   // const [active, setActive] = useState();
-  console.log("pathname", window.location.pathname);
+  // console.log("pathname", window.location.pathname);
   const path = window.location.pathname;
 
   const about = path === "/about-us" ? true : false;
