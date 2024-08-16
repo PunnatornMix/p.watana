@@ -79,7 +79,7 @@ const ContactUs = () => {
               src="/images/tri.png"
               className="lg:h-[clamp(65px,6.3vw,120px)] md:h-[clamp(50px,6.3vw,65px)] sm:h-[clamp(40px,6.3vw,50px)] h-[clamp(25px,6.3vw,40px)] bannerImages  mt-32 "
             ></img>
-            <div className="container mx-auto">
+            <div className=" mx-auto">
               <div className="flex flex-col mx-auto gap-1 py-20" id="list">
                 {lang === "th" ? "" : ""}
                 <h1 className="uppercase text-center text-blue">
@@ -88,11 +88,11 @@ const ContactUs = () => {
 
                 <ThreeDots />
               </div>
-              <div className="flex gap-20 text-blue">
+              <div className="grid xl:grid-cols-2 grid-cols-1 xl:gap-0 gap-20 text-blue">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.1330096947077!2d100.33539487514713!3d13.710392986677208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e295ef8e6a287f%3A0x72b73ac00ddcfde!2z4Lib4Li04LmI4LiZ4Lin4Lix4LiS4LiZ4Liy4LiB4Liy4Lij4LiE4LmJ4Liy!5e0!3m2!1sth!2sth!4v1721890601350!5m2!1sth!2sth"
                   // className=" xl:w-[clamp(350px,35vw,679px)] lg:w-[300px] min-h-[240px] h-[400px] w-[100vw] mx-auto pt-6"
-                  className="w-full "
+                  className="xl:w-4/5 ml-auto xl:h-full min-h-[400px] w-[100vw]"
                   allowfullscreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
@@ -152,7 +152,7 @@ const ContactUs = () => {
 
           {/*---- table -----*/}
           <section className="pb-20">
-            <div className="flex flex-col mx-auto gap-1 py-20" id="list">
+            <div className="flex flex-col mx-auto gap-1 pb-20" id="list">
               {lang === "th" ? "" : ""}
               <h3 className="uppercase text-center font-medium text-blue">
                 {lang === "th"

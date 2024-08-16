@@ -8,11 +8,11 @@ import Select from "@mui/material/Select";
 
 export default function MultipleSelect({ className }) {
   return (
-    <div className="mt-3">
+    <div className="mt-3 w-full">
       <span className="label label-text text-white">Your interested topic</span>
 
       <select
-        className={`select select-bordered w-full bg-white ${className} `}
+        className={`select select-bordered w-full bg-white  ${className} `}
       >
         <option disabled selected>
           Who shot first?

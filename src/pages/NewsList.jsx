@@ -127,7 +127,7 @@ const NewsList = () => {
 
             {/*----- ปุ่มแชร์ -----*/}
             <div
-              className="fb-share-button flex flex-col gap-4 items-end "
+              className="fb-share-button flex lg:flex-col justify-between gap-3 items-center   lg:items-end pb-4"
               data-href="http://localhost:5173/news-item"
               data-layout=""
               data-size=""
@@ -147,14 +147,14 @@ const NewsList = () => {
 
             <img
               src={currentNewsItem.src}
-              className="mx-auto mb-14 min-h-[500px]"
+              className="mx-auto mb-14 w-[clamp(380px,45vw,800px)]"
             />
 
             <div>
-              <h3 className="text-center font-semibold mb-6">
+              <h3 className="text-center font-semibold mb-6 w-4/5 mx-auto">
                 {currentNewsItem.title}
               </h3>
-              <p>{currentNewsItem.content}</p>
+              <p className="">{currentNewsItem.content}</p>
             </div>
 
             <div className="flex w-full justify-between mt-10">

@@ -3,7 +3,7 @@ import React from "react";
 function NewsCard({ date, content, title, src }) {
   return (
     <>
-      <div className="w-[350px] h-[525px] shadow-xl my-6">
+      <div className="w-[clamp(320px,30vw,350px)] h-[525px] mx-auto min-mx-2 shadow-xl my-8">
         <a href="/news-item">
           <div
             className={

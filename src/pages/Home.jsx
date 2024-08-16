@@ -487,7 +487,7 @@ const Home = () => {
               backgroundSize: "40%",
             }}
           >
-            <div className="container mx-auto flex flex-col">
+            <div className=" sm:container w-full mx-auto flex flex-col ">
               <div className=" text-center  mx-auto flex flex-col gap-1 -translate-y-[60%] md:mt-0 mt-10">
                 <h1 className="text-red">NEWS & ACTIVITIES</h1>
                 <h1 className="text-blue">ข่าวสารและกิจกรรม</h1>

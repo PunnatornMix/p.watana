@@ -53,14 +53,20 @@ const ProductItem = () => {
           </Box>
         </MenuNavbar>
 
-        <section>
+        <section
+          className=" bg-[url('/images/product/bgtriT.png')] bg-no-repeat bg-auto "
+          style={{
+            backgroundPosition: "right -70% top -15vw ",
+            backgroundSize: "59%",
+          }}
+        >
           <img
             id="content"
             src="/images/tri.png"
             className="lg:h-[clamp(65px,6.3vw,120px)] md:h-[clamp(50px,6.3vw,65px)] sm:h-[clamp(40px,6.3vw,50px)] h-[clamp(25px,6.3vw,40px)] bannerImages  mt-32 "
           ></img>
           <div className="container mx-auto pb-24">
-            <div className="flex flex-col mx-auto gap-1 py-20" id="list">
+            <div className="flex flex-col gap-1 py-20" id="list">
               {lang === "th" ? "" : ""}
               <h1 className="text-center uppercase text-blue">
                 {lang === "th" ? "รายการสินค้า" : "Product List"}
@@ -68,14 +74,14 @@ const ProductItem = () => {
 
               <ThreeDots />
             </div>
-            <div className="flex gap-32">
+            <div className="grid xl:grid-cols-2 grid-cols-1 gap-[clamp(50px,10vw,70px)] justify-center">
               <img
                 src="/images/product/mock.png"
-                className="w-[650px] h-[600px]"
+                className=" w-[clamp(400px,40vw,800px)]  m-auto"
               />
               {lang === "th" ? "" : ""}
 
-              <div className="text-blue flex flex-col gap-3">
+              <div className="text-blue flex flex-col gap-3 md:w-[80%] w-[95%] mx-auto">
                 <div className="flex flex-col">
                   <h3 className="font-medium">
                     {lang === "th" ? "ชื่อผลิตภัณฑ์ :" : ""}

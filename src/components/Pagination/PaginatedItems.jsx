@@ -257,9 +257,11 @@ function scrollToElement(id) {
 
 function Items({ currentItems }) {
   return (
-    <div className="grid grid-cols-3">
-      {currentItems && currentItems.map((item) => <div>{item}</div>)}
-    </div>
+    <>
+      <div className="grid 2xl:grid-cols-3 md:grid-cols-2 grid-cols-1 2xl:w-full lg:w-5/6 w-full mx-auto pb-12">
+        {currentItems && currentItems.map((item) => <div>{item}</div>)}
+      </div>
+    </>
   );
 }
 

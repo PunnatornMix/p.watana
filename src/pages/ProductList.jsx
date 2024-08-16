@@ -243,51 +243,52 @@ const ProductList = () => {
             className="w-full absolute -top-[clamp(70px,5vw,85px)]"
           />
         </div>
-
-        <section className="container mx-auto text-center grid lg:grid-cols-3 grid-cols-2 py-20">
-          {lang === "th" ? "" : ""}
-          <ProductNav character={lang === "th" ? "ก" : "a"}></ProductNav>
-          <ProductNav character={lang === "th" ? "ข" : "b"}></ProductNav>
-          <ProductNav character={lang === "th" ? "ค" : "c"}></ProductNav>
-          <ProductNav character={lang === "th" ? "ง" : "d"}></ProductNav>
-          <ProductNav character={lang === "th" ? "จ" : "e"}></ProductNav>
-          <ProductNav character={lang === "th" ? "ช" : "f"}></ProductNav>
-          <ProductNav character={lang === "th" ? "ซ" : "g"}></ProductNav>
-          <ProductNav character={lang === "th" ? "ด" : "h"}></ProductNav>
-          <ProductNav character={lang === "th" ? "ต" : "i"}></ProductNav>
-          <ProductNav character={lang === "th" ? "ท" : "i"}></ProductNav>
-          <ProductNav character={lang === "th" ? "น" : "i"}></ProductNav>
-          <ProductNav character={lang === "th" ? "บ" : "i"}>
-            <p className="">- แบเรียมฟลูออไรด์ </p>
-          </ProductNav>
-          <ProductNav character={lang === "th" ? "ป" : "i"}></ProductNav>
-          <ProductNav character={lang === "th" ? "ผ" : "i"}>
-            <p className="">- ผงโซเดียมฟลูออไรด์ </p>
-            <p className="">- ผงแคลเซียมฟลูออไรด์ </p>
-            <p className="">- ผงแมกนีเซียมฟลูออไรด์ </p>
-            <p className="">- ผงอะลูมิเนียมไฮดรอกไซด์ </p>
-            <p className="">- ผงอลูมินา </p>
-          </ProductNav>
-          <ProductNav character={lang === "th" ? "ฝ" : "i"}></ProductNav>
-          <ProductNav character={lang === "th" ? "พ" : "i"}>
-            <p className="">- โพแทสเซียม </p>
-            <p className="">- โพแทสเซียมอะลูมิเนียมฟลูออไรด์ </p>
-            <p className="">- โพแทสเซียมฟลูออโรเรต </p>
-          </ProductNav>
-          <ProductNav character={lang === "th" ? "ฟ" : "i"}></ProductNav>
-          <ProductNav character={lang === "th" ? "ม" : "i"}>
-            <p className="">- เม็ดสีเหล็กออกไซด์ </p>
-          </ProductNav>
-          <ProductNav character={lang === "th" ? "ย" : "i"}></ProductNav>
-          <ProductNav character={lang === "th" ? "ร" : "i"}></ProductNav>
-          <ProductNav character={lang === "th" ? "ล" : "i"}></ProductNav>
-          <ProductNav character={lang === "th" ? "ส" : "i"}></ProductNav>
-          <ProductNav character={lang === "th" ? "ห" : "i"}></ProductNav>
-          <ProductNav character={lang === "th" ? "อ" : "i"}>
-            <p className="">- อลูมิเนียมฟลูออไรด์</p>
-          </ProductNav>
-          <ProductNav character={lang === "th" ? "ฮ" : "i"}></ProductNav>
-        </section>
+        <div className="bg-white">
+          <section className="container mx-auto text-center grid lg:grid-cols-3 grid-cols-2 py-20">
+            {lang === "th" ? "" : ""}
+            <ProductNav character={lang === "th" ? "ก" : "a"}></ProductNav>
+            <ProductNav character={lang === "th" ? "ข" : "b"}></ProductNav>
+            <ProductNav character={lang === "th" ? "ค" : "c"}></ProductNav>
+            <ProductNav character={lang === "th" ? "ง" : "d"}></ProductNav>
+            <ProductNav character={lang === "th" ? "จ" : "e"}></ProductNav>
+            <ProductNav character={lang === "th" ? "ช" : "f"}></ProductNav>
+            <ProductNav character={lang === "th" ? "ซ" : "g"}></ProductNav>
+            <ProductNav character={lang === "th" ? "ด" : "h"}></ProductNav>
+            <ProductNav character={lang === "th" ? "ต" : "i"}></ProductNav>
+            <ProductNav character={lang === "th" ? "ท" : "i"}></ProductNav>
+            <ProductNav character={lang === "th" ? "น" : "i"}></ProductNav>
+            <ProductNav character={lang === "th" ? "บ" : "i"}>
+              <p className="">- แบเรียมฟลูออไรด์ </p>
+            </ProductNav>
+            <ProductNav character={lang === "th" ? "ป" : "i"}></ProductNav>
+            <ProductNav character={lang === "th" ? "ผ" : "i"}>
+              <p className="">- ผงโซเดียมฟลูออไรด์ </p>
+              <p className="">- ผงแคลเซียมฟลูออไรด์ </p>
+              <p className="">- ผงแมกนีเซียมฟลูออไรด์ </p>
+              <p className="">- ผงอะลูมิเนียมไฮดรอกไซด์ </p>
+              <p className="">- ผงอลูมินา </p>
+            </ProductNav>
+            <ProductNav character={lang === "th" ? "ฝ" : "i"}></ProductNav>
+            <ProductNav character={lang === "th" ? "พ" : "i"}>
+              <p className="">- โพแทสเซียม </p>
+              <p className="">- โพแทสเซียมอะลูมิเนียมฟลูออไรด์ </p>
+              <p className="">- โพแทสเซียมฟลูออโรเรต </p>
+            </ProductNav>
+            <ProductNav character={lang === "th" ? "ฟ" : "i"}></ProductNav>
+            <ProductNav character={lang === "th" ? "ม" : "i"}>
+              <p className="">- เม็ดสีเหล็กออกไซด์ </p>
+            </ProductNav>
+            <ProductNav character={lang === "th" ? "ย" : "i"}></ProductNav>
+            <ProductNav character={lang === "th" ? "ร" : "i"}></ProductNav>
+            <ProductNav character={lang === "th" ? "ล" : "i"}></ProductNav>
+            <ProductNav character={lang === "th" ? "ส" : "i"}></ProductNav>
+            <ProductNav character={lang === "th" ? "ห" : "i"}></ProductNav>
+            <ProductNav character={lang === "th" ? "อ" : "i"}>
+              <p className="">- อลูมิเนียมฟลูออไรด์</p>
+            </ProductNav>
+            <ProductNav character={lang === "th" ? "ฮ" : "i"}></ProductNav>
+          </section>
+        </div>
 
         <Footer className={"bg-lightBlue"} />
       </Fragment>

@@ -74,7 +74,7 @@
   }
 
   .container {
-    @apply 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] w-full;
+    @apply 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] max-w-[80%];
   }
 
   .missionH h3 {

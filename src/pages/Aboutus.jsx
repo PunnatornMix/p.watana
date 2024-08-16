@@ -151,7 +151,7 @@ const AboutUs = () => {
         </div>
 
         {/* เกี่ยวกับบริษัท */}
-        <section className="container mx-auto grid lg:grid-cols-2 grid-cols-1   mt-20">
+        <section className="container mx-auto grid lg:grid-cols-2 grid-cols-1 mt-20">
           <div className="grid grid-cols-2 gap-4">
             <div className="flex flex-col gap-4 items-end">
               <img
@@ -165,7 +165,7 @@ const AboutUs = () => {
               <img src="/images/aboutus/about04.png" className="aboutUsImg" />
             </div>
           </div>
-          <div className=" w-[80%] mx-auto flex flex-col gap-16 items-center   pl-0 lg:mt-0 mt-16 ">
+          <div className="mx-auto flex flex-col gap-16 items-center   pl-0 lg:mt-0 mt-16 ">
             <div className="flex flex-col gap-2">
               <h1 className="text-blue">
                 {lang === "th" ? "เกี่ยวกับบริษัท" : "OUR HISTORY"}
@@ -223,7 +223,7 @@ const AboutUs = () => {
         {/* พันธกิจ */}
         <section className="bg-white">
           <div className="container mx-auto">
-            <div className="w-[83%] mx-auto flex flex-col items-center gap-2 bg-white text-black lg:py-20 py-0 pt-6">
+            <div className="mx-auto flex flex-col items-center gap-2 bg-white text-black lg:py-20 py-0 pt-6">
               <h1 className="text-blue">
                 {lang === "th" ? "พันธกิจ" : "MISSION"}
               </h1>
@@ -386,12 +386,12 @@ const AboutUs = () => {
         {/* วิสัยทัศน์ */}
 
         <section className="container mx-auto items-center text-blue gap-12 py-12">
-          <div className="text-center w-[83%] flex flex-col gap-1 mx-auto ">
+          <div className="text-center  flex flex-col gap-1 mx-auto ">
             <h1>{lang === "th" ? "วิสัยทัศน์" : "VISION"}</h1>
             <ThreeDots />
           </div>
 
-          <p className="text-blue text-center w-[83%] mx-auto mt-12 font-light">
+          <p className="text-blue text-center  mx-auto mt-12 font-light">
             {lang === "th"
               ? `ด้วยประสบการณ์ในการดำเนินธุรกิจมากว่า 50 ปี บริษัทฯ
               ได้เล็งเห็นความสำคัญในการพัฒนารูปแบบของธุรกิจ
@@ -428,7 +428,7 @@ const AboutUs = () => {
           <Slider {...settingsMb}>{slideList.map((img, imdex) => img)}</Slider>
         </div>
 
-        <section className="container w-[80%] mx-auto grid lg:grid-cols-2 grid-cols-1 gap-6 pb-8 text-blue">
+        <section className="container  grid lg:grid-cols-2 grid-cols-1 gap-6 pb-8 mx-auto text-blue">
           <div>
             <h3>
               {lang === "th" ? "สินค้าที่มีคุณภาพ" : "The Superior Product"}
