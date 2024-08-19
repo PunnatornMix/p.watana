@@ -281,7 +281,7 @@
 }
 
 .productListMb {
-  @apply border-r-[3px] border-blue px-20 my-6;
+  @apply border-r-[3px] border-blue md:px-20 px-6 my-6;
 }
 
 .productListMb:nth-child(2n) {

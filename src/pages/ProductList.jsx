@@ -371,11 +371,11 @@ const ProductList = () => {
         <div className="relative">
           <img
             src="/images/home/tribgGrey.png"
-            className="w-full absolute -top-[clamp(70px,5vw,85px)]"
+            className="w-full absolute lg:pt-2 pt-11 -top-[clamp(70px,5vw,85px)]"
           />
         </div>
         <div className="bg-white">
-          <section className="container mx-auto text-center grid lg:grid-cols-3 grid-cols-2 py-20">
+          <section className="md:container   mx-auto text-center grid lg:grid-cols-3 grid-cols-2 py-20">
             {lang === "th" ? "" : ""}
             <ProductNav
               id={lang === "th" ? "ก" : "A"}
