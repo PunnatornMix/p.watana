@@ -75,6 +75,16 @@ const ProductList = () => {
     navigate(selectedItem.link); // นำทางไปยังลิงก์ที่เลือก
   };
 
+  function scrollToElement(id) {
+    let offset = 240; // ระยะ offset ที่ต้องการ
+    const element = document.getElementById(id);
+    const offsetTop = element.offsetTop - offset; // คำนวณระยะ offset ที่ต้องการเลื่อน
+    window.scrollTo({
+      top: offsetTop,
+      behavior: "smooth", // เลื่อนโดยการ animate ให้เรียบร้อย
+    });
+  }
+
   const lang = localStorage.getItem("i18nextLng");
 
   return (
@@ -114,7 +124,7 @@ const ProductList = () => {
         {/*------ Product List ------*/}
         {/*------ PC ------*/}
         <section
-          className=" xl:block hidden bg-[url('/images/product/bgtriT.png')] bg-no-repeat bg-auto "
+          className=" lg:block hidden bg-[url('/images/product/bgtriT.png')] bg-no-repeat bg-auto "
           style={{
             backgroundPosition: "right -70% bottom -65% ",
             backgroundSize: "59%",
@@ -140,8 +150,8 @@ const ProductList = () => {
             </div>
 
             {/* <div className=" bg-[url('/images/home/Group2149.png')]  backgroundImg  h-[358px] w-full flex flex-col justify-end"> */}
-            <div className=" bg-[url('/images/home/Group2149.png')]  backgroundImg  h-[358px] w-full justify-end">
-              <div className="  rounded-full ddd gap-2 pt-[100px] w-full">
+            <div className=" bg-[url('/images/home/Group2149.png')] backgroundImg h-[358px] w-full justify-end">
+              <div className="rounded-full ddd gap-2 pt-[100px] w-full">
                 <div className="my-custom-search-box ">
                   <ReactSearchBox
                     placeholder="ค้นหาข้อความ..."
@@ -172,10 +182,73 @@ const ProductList = () => {
                   />
                 </svg> */}
               </div>
+              {/*--- Eng ---*/}
+              <div className="grid grid-cols-2  text-blue font-[700] w-5/6 mx-auto gap-32 py-14">
+                <div className="grid grid-cols-11 gap-2 navCharacter">
+                  <p onClick={() => scrollToElement("A")}>A</p>
+                  <p onClick={() => scrollToElement("B")}>B</p>
+                  <p onClick={() => scrollToElement("C")}>C</p>
+                  <p onClick={() => scrollToElement("D")}>D</p>
+                  <p onClick={() => scrollToElement("E")}>E</p>
+                  <p onClick={() => scrollToElement("F")}>F</p>
+                  <p onClick={() => scrollToElement("G")}>G</p>
+                  <p onClick={() => scrollToElement("H")}>H</p>
+                  <p onClick={() => scrollToElement("I")}>I</p>
+                  <p onClick={() => scrollToElement("J")}>J</p>
+                  <p onClick={() => scrollToElement("K")}>K</p>
+                  <p onClick={() => scrollToElement("L")}>L</p>
+                  <p onClick={() => scrollToElement("M")}>M</p>
+                  <p onClick={() => scrollToElement("N")}>N</p>
+                  <p onClick={() => scrollToElement("O")}>O</p>
+                  <p onClick={() => scrollToElement("P")}>P</p>
+                  <p onClick={() => scrollToElement("Q")}>Q</p>
+                  <p onClick={() => scrollToElement("R")}>R</p>
+                  <p onClick={() => scrollToElement("S")}>S</p>
+                  <p onClick={() => scrollToElement("T")}>T</p>
+                  <p onClick={() => scrollToElement("U")}>U</p>
+                  <p onClick={() => scrollToElement("V")}>V</p>
+                  <p onClick={() => scrollToElement("W")}>W</p>
+                  <p onClick={() => scrollToElement("X")}>X</p>
+                  <p onClick={() => scrollToElement("Y")}>Y</p>
+                  <p onClick={() => scrollToElement("Z")}>Z</p>
+                </div>
+                {/*--- TH ---*/}
+
+                <div className="grid grid-cols-11 gap-2 navCharacter">
+                  <p onClick={() => scrollToElement("ก")}>ก</p>
+                  <p onClick={() => scrollToElement("ข")}>ข</p>
+                  <p onClick={() => scrollToElement("ค")}>ค</p>
+                  <p onClick={() => scrollToElement("ง")}>ง</p>
+                  <p onClick={() => scrollToElement("จ")}>จ</p>
+                  <p onClick={() => scrollToElement("ช")}>ช</p>
+                  <p onClick={() => scrollToElement("ซ")}>ซ</p>
+                  <p onClick={() => scrollToElement("ด")}>ด</p>
+                  <p onClick={() => scrollToElement("ต")}>ต</p>
+                  <p onClick={() => scrollToElement("ท")}>ท</p>
+                  <p onClick={() => scrollToElement("น")}>น</p>
+                  <p onClick={() => scrollToElement("บ")}>บ</p>
+                  <p onClick={() => scrollToElement("ป")}>ป</p>
+                  <p onClick={() => scrollToElement("ผ")}>ผ</p>
+                  <p onClick={() => scrollToElement("ฝ")}>ฝ</p>
+                  <p onClick={() => scrollToElement("พ")}>พ</p>
+                  <p onClick={() => scrollToElement("ฟ")}>ฟ</p>
+                  <p onClick={() => scrollToElement("ม")}>ม</p>
+                  <p onClick={() => scrollToElement("ย")}>ย</p>
+                  <p onClick={() => scrollToElement("ร")}>ร</p>
+                  <p onClick={() => scrollToElement("ล")}>ล</p>
+                  <p onClick={() => scrollToElement("ว")}>ว</p>
+                  <p onClick={() => scrollToElement("ส")}>ส</p>
+                  <p onClick={() => scrollToElement("ห")}>ห</p>
+                  <p onClick={() => scrollToElement("อ")}>อ</p>
+                  <p onClick={() => scrollToElement("ฮ")}>ฮ</p>
+                </div>
+              </div>
+
+              {/* 
               <img
                 src="/images/home/Component31– 2.png"
                 className="h-[90px] mt-[50px] mb-[30px] px-[79px] "
-              />
+              /> */}
             </div>
           </div>
         </section>
@@ -183,7 +256,7 @@ const ProductList = () => {
         {/*------ Mobile ------*/}
 
         <section
-          className="xl:hidden block "
+          className="lg:hidden block "
           style={{
             backgroundPosition: "right -72% bottom 100% ",
             backgroundSize: "60%",
@@ -222,16 +295,74 @@ const ProductList = () => {
               </svg>
             </label>
             <div className="bg-[url('/images/home/product/abcBg.png')] h-[clamp(174px,20vw,300px)] bg-no-repeat bg-center flex justify-center items-center">
-              <img
+              <div className="grid grid-cols-11 gap-2 navCharacter w-[80vw]">
+                <p onClick={() => scrollToElement("A")}>A</p>
+                <p onClick={() => scrollToElement("B")}>B</p>
+                <p onClick={() => scrollToElement("C")}>C</p>
+                <p onClick={() => scrollToElement("D")}>D</p>
+                <p onClick={() => scrollToElement("E")}>E</p>
+                <p onClick={() => scrollToElement("F")}>F</p>
+                <p onClick={() => scrollToElement("G")}>G</p>
+                <p onClick={() => scrollToElement("H")}>H</p>
+                <p onClick={() => scrollToElement("I")}>I</p>
+                <p onClick={() => scrollToElement("J")}>J</p>
+                <p onClick={() => scrollToElement("K")}>K</p>
+                <p onClick={() => scrollToElement("L")}>L</p>
+                <p onClick={() => scrollToElement("M")}>M</p>
+                <p onClick={() => scrollToElement("N")}>N</p>
+                <p onClick={() => scrollToElement("O")}>O</p>
+                <p onClick={() => scrollToElement("P")}>P</p>
+                <p onClick={() => scrollToElement("Q")}>Q</p>
+                <p onClick={() => scrollToElement("R")}>R</p>
+                <p onClick={() => scrollToElement("S")}>S</p>
+                <p onClick={() => scrollToElement("T")}>T</p>
+                <p onClick={() => scrollToElement("U")}>U</p>
+                <p onClick={() => scrollToElement("V")}>V</p>
+                <p onClick={() => scrollToElement("W")}>W</p>
+                <p onClick={() => scrollToElement("X")}>X</p>
+                <p onClick={() => scrollToElement("Y")}>Y</p>
+                <p onClick={() => scrollToElement("Z")}>Z</p>
+              </div>
+              {/* <img
                 src="/images/home/product/abc.png"
                 className="h-[clamp(90px,12vw,130px)] "
-              />
+              /> */}
             </div>
             <div className="bg-[url('/images/home/product/กขคBg.png')] h-[clamp(174px,20vw,300px)] bg-no-repeat bg-center flex justify-center items-center">
-              <img
+              {/*--- TH ---*/}
+
+              <div className="grid grid-cols-11 gap-2 navCharacter w-[80vw]">
+                <p onClick={() => scrollToElement("ก")}>ก</p>
+                <p onClick={() => scrollToElement("ข")}>ข</p>
+                <p onClick={() => scrollToElement("ค")}>ค</p>
+                <p onClick={() => scrollToElement("ง")}>ง</p>
+                <p onClick={() => scrollToElement("จ")}>จ</p>
+                <p onClick={() => scrollToElement("ช")}>ช</p>
+                <p onClick={() => scrollToElement("ซ")}>ซ</p>
+                <p onClick={() => scrollToElement("ด")}>ด</p>
+                <p onClick={() => scrollToElement("ต")}>ต</p>
+                <p onClick={() => scrollToElement("ท")}>ท</p>
+                <p onClick={() => scrollToElement("น")}>น</p>
+                <p onClick={() => scrollToElement("บ")}>บ</p>
+                <p onClick={() => scrollToElement("ป")}>ป</p>
+                <p onClick={() => scrollToElement("ผ")}>ผ</p>
+                <p onClick={() => scrollToElement("ฝ")}>ฝ</p>
+                <p onClick={() => scrollToElement("พ")}>พ</p>
+                <p onClick={() => scrollToElement("ฟ")}>ฟ</p>
+                <p onClick={() => scrollToElement("ม")}>ม</p>
+                <p onClick={() => scrollToElement("ย")}>ย</p>
+                <p onClick={() => scrollToElement("ร")}>ร</p>
+                <p onClick={() => scrollToElement("ล")}>ล</p>
+                <p onClick={() => scrollToElement("ว")}>ว</p>
+                <p onClick={() => scrollToElement("ส")}>ส</p>
+                <p onClick={() => scrollToElement("ห")}>ห</p>
+                <p onClick={() => scrollToElement("อ")}>อ</p>
+                <p onClick={() => scrollToElement("ฮ")}>ฮ</p>
+              </div>
+              {/* <img
                 src="/images/home/product/กขค.png"
                 className="h-[clamp(90px,12vw,130px)] "
-              />
+              /> */}
             </div>
           </div>
         </section>
@@ -246,47 +377,126 @@ const ProductList = () => {
         <div className="bg-white">
           <section className="container mx-auto text-center grid lg:grid-cols-3 grid-cols-2 py-20">
             {lang === "th" ? "" : ""}
-            <ProductNav character={lang === "th" ? "ก" : "a"}></ProductNav>
-            <ProductNav character={lang === "th" ? "ข" : "b"}></ProductNav>
-            <ProductNav character={lang === "th" ? "ค" : "c"}></ProductNav>
-            <ProductNav character={lang === "th" ? "ง" : "d"}></ProductNav>
-            <ProductNav character={lang === "th" ? "จ" : "e"}></ProductNav>
-            <ProductNav character={lang === "th" ? "ช" : "f"}></ProductNav>
-            <ProductNav character={lang === "th" ? "ซ" : "g"}></ProductNav>
-            <ProductNav character={lang === "th" ? "ด" : "h"}></ProductNav>
-            <ProductNav character={lang === "th" ? "ต" : "i"}></ProductNav>
-            <ProductNav character={lang === "th" ? "ท" : "i"}></ProductNav>
-            <ProductNav character={lang === "th" ? "น" : "i"}></ProductNav>
-            <ProductNav character={lang === "th" ? "บ" : "i"}>
+            <ProductNav
+              id={lang === "th" ? "ก" : "A"}
+              character={lang === "th" ? "ก" : "A"}
+            ></ProductNav>
+            <ProductNav
+              id={lang === "th" ? "ข" : "B"}
+              character={lang === "th" ? "ข" : "B"}
+            ></ProductNav>
+            <ProductNav
+              id={lang === "th" ? "ค" : "C"}
+              character={lang === "th" ? "ค" : "C"}
+            ></ProductNav>
+            <ProductNav
+              id={lang === "th" ? "ง" : "D"}
+              character={lang === "th" ? "ง" : "D"}
+            ></ProductNav>
+            <ProductNav
+              id={lang === "th" ? "จ" : "E"}
+              character={lang === "th" ? "จ" : "E"}
+            ></ProductNav>
+            <ProductNav
+              id={lang === "th" ? "ช" : "F"}
+              character={lang === "th" ? "ช" : "F"}
+            ></ProductNav>
+            <ProductNav
+              id={lang === "th" ? "ซ" : "G"}
+              character={lang === "th" ? "ซ" : "G"}
+            ></ProductNav>
+            <ProductNav
+              id={lang === "th" ? "ด" : "H"}
+              character={lang === "th" ? "ด" : "H"}
+            ></ProductNav>
+            <ProductNav
+              id={lang === "th" ? "ต" : "I"}
+              character={lang === "th" ? "ต" : "I"}
+            ></ProductNav>
+            <ProductNav
+              id={lang === "th" ? "ท" : "J"}
+              character={lang === "th" ? "ท" : "J"}
+            ></ProductNav>
+            <ProductNav
+              id={lang === "th" ? "น" : "K"}
+              character={lang === "th" ? "น" : "K"}
+            ></ProductNav>
+            <ProductNav
+              id={lang === "th" ? "บ" : "L"}
+              character={lang === "th" ? "บ" : "L"}
+            >
               <p className="">- แบเรียมฟลูออไรด์ </p>
             </ProductNav>
-            <ProductNav character={lang === "th" ? "ป" : "i"}></ProductNav>
-            <ProductNav character={lang === "th" ? "ผ" : "i"}>
+            <ProductNav
+              id={lang === "th" ? "ป" : "M"}
+              character={lang === "th" ? "ป" : "M"}
+            ></ProductNav>
+            <ProductNav
+              id={lang === "th" ? "ผ" : "N"}
+              character={lang === "th" ? "ผ" : "N"}
+            >
               <p className="">- ผงโซเดียมฟลูออไรด์ </p>
               <p className="">- ผงแคลเซียมฟลูออไรด์ </p>
               <p className="">- ผงแมกนีเซียมฟลูออไรด์ </p>
               <p className="">- ผงอะลูมิเนียมไฮดรอกไซด์ </p>
               <p className="">- ผงอลูมินา </p>
             </ProductNav>
-            <ProductNav character={lang === "th" ? "ฝ" : "i"}></ProductNav>
-            <ProductNav character={lang === "th" ? "พ" : "i"}>
+            <ProductNav
+              id={lang === "th" ? "ฝ" : "O"}
+              character={lang === "th" ? "ฝ" : "O"}
+            ></ProductNav>
+            <ProductNav
+              id={lang === "th" ? "พ" : "P"}
+              character={lang === "th" ? "พ" : "P"}
+            >
               <p className="">- โพแทสเซียม </p>
               <p className="">- โพแทสเซียมอะลูมิเนียมฟลูออไรด์ </p>
               <p className="">- โพแทสเซียมฟลูออโรเรต </p>
             </ProductNav>
-            <ProductNav character={lang === "th" ? "ฟ" : "i"}></ProductNav>
-            <ProductNav character={lang === "th" ? "ม" : "i"}>
+            <ProductNav
+              id={lang === "th" ? "ฟ" : "Q"}
+              character={lang === "th" ? "ฟ" : "Q"}
+            ></ProductNav>
+            <ProductNav
+              id={lang === "th" ? "ม" : "R"}
+              character={lang === "th" ? "ม" : "R"}
+            >
               <p className="">- เม็ดสีเหล็กออกไซด์ </p>
             </ProductNav>
-            <ProductNav character={lang === "th" ? "ย" : "i"}></ProductNav>
-            <ProductNav character={lang === "th" ? "ร" : "i"}></ProductNav>
-            <ProductNav character={lang === "th" ? "ล" : "i"}></ProductNav>
-            <ProductNav character={lang === "th" ? "ส" : "i"}></ProductNav>
-            <ProductNav character={lang === "th" ? "ห" : "i"}></ProductNav>
-            <ProductNav character={lang === "th" ? "อ" : "i"}>
+            <ProductNav
+              id={lang === "th" ? "ย" : "S"}
+              character={lang === "th" ? "ย" : "S"}
+            ></ProductNav>
+            <ProductNav
+              id={lang === "th" ? "ร" : "T"}
+              character={lang === "th" ? "ร" : "T"}
+            ></ProductNav>
+            <ProductNav
+              id={lang === "th" ? "ล" : "U"}
+              character={lang === "th" ? "ล" : "U"}
+            ></ProductNav>
+            <ProductNav
+              id={lang === "th" ? "ว" : "V"}
+              character={lang === "th" ? "ว" : "V"}
+            ></ProductNav>
+            <ProductNav
+              id={lang === "th" ? "ส" : "W"}
+              character={lang === "th" ? "ส" : "W"}
+            ></ProductNav>
+            <ProductNav
+              id={lang === "th" ? "ห" : "X"}
+              character={lang === "th" ? "ห" : "X"}
+            ></ProductNav>
+            <ProductNav
+              id={lang === "th" ? "อ" : "Y"}
+              character={lang === "th" ? "อ" : "Y"}
+            >
               <p className="">- อลูมิเนียมฟลูออไรด์</p>
             </ProductNav>
-            <ProductNav character={lang === "th" ? "ฮ" : "i"}></ProductNav>
+            <ProductNav
+              id={lang === "th" ? "ฮ" : "Z"}
+              character={lang === "th" ? "ฮ" : "Z"}
+            ></ProductNav>
           </section>
         </div>
 

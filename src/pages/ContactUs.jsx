@@ -174,33 +174,35 @@ const ContactUs = () => {
               <Input
                 label={"First Name - Last Name"}
                 placeholder="ชื่อ - นานสกุล *"
-                className="w-[678px] bg-white"
+                className="lg:w-[678px] w-[318px]  bg-white"
               />
-              <div className="grid grid-cols-2 gap-[20px]">
+              <div className="grid lg:grid-cols-2 grid-cols-1 gap-[20px]">
                 <Input
                   label={"Telephone"}
                   placeholder="ชื่อ - นานสกุล *"
-                  className="w-[329px] bg-white"
+                  className="lg:w-[329px] w-[318px] bg-white"
                 />
                 <Input
                   label={"Email"}
                   placeholder="อีเมล *"
-                  className="w-[329px] bg-white"
+                  className="lg:w-[329px] w-[318px] bg-white"
                 />
               </div>
               <Input
                 label={"Company Name"}
                 placeholder="ชื่อบริษัท *"
-                className="w-[678px] bg-white"
+                className="lg:w-[678px] w-[318px] bg-white"
               />
-              <MultipleSelect className={"w-[678px] rounded-none "} />
+              <MultipleSelect
+                className={"lg:w-[678px] w-[318px] rounded-none "}
+              />
 
               <label className="form-control">
                 <div className="label">
                   <span className="label-text text-white">Message</span>
                 </div>
                 <textarea
-                  className="textarea textarea-bordered bg-white h-24 w-[678px] rounded-none"
+                  className="textarea textarea-bordered bg-white h-24 lg:w-[678px] w-[318px] rounded-none"
                   placeholder="ข้อความ *"
                 ></textarea>
                 <div className="label"></div>

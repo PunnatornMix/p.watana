@@ -210,6 +210,12 @@
   /* .react-search-box {
     position: relative; 
   } */
+  .navCharacter {
+    @apply text-blue font-[700];
+  }
+  .navCharacter p {
+    @apply cursor-pointer;
+  }
 }
 .bncmtB {
   position: absolute !important; /* ให้ dropdown ลอยอยู่เหนือองค์ประกอบอื่น */
