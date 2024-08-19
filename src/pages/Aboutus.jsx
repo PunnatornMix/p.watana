@@ -151,8 +151,8 @@ const AboutUs = () => {
         </div>
 
         {/* เกี่ยวกับบริษัท */}
-        <section className="container mx-auto grid lg:grid-cols-2 grid-cols-1 mt-20">
-          <div className="grid grid-cols-2 gap-4">
+        <section className="container mx-auto grid lg:grid-cols-2 grid-cols-1 mt-20 lg:gap-32 gap-0">
+          <div className="grid grid-cols-2 gap-4 items-center">
             <div className="flex flex-col gap-4 items-end">
               <img
                 src="/images/aboutus/about01.png"

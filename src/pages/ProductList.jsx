@@ -3,7 +3,11 @@ import { useTranslation } from "react-i18next";
 import SEO from "../components/Seo/Seo";
 import MenuNavbar from "../components/Navbar/MenuNavbar";
 import Footer from "../components/Footer/Footer";
-import { ThailandIcon, UnitedStates } from "../components/icons/icons";
+import {
+  SearchIcon,
+  ThailandIcon,
+  UnitedStates,
+} from "../components/icons/icons";
 import { Box, FormControl, MenuItem, Select } from "@mui/material";
 import ThreeDots from "../components/ThreeDots/ThreeDots";
 import ProductNav from "../components/ProductNav/ProductNav";
@@ -76,7 +80,7 @@ const ProductList = () => {
   };
 
   function scrollToElement(id) {
-    let offset = 240; // ระยะ offset ที่ต้องการ
+    let offset = 230; // ระยะ offset ที่ต้องการ
     const element = document.getElementById(id);
     const offsetTop = element.offsetTop - offset; // คำนวณระยะ offset ที่ต้องการเลื่อน
     window.scrollTo({
@@ -136,10 +140,6 @@ const ProductList = () => {
             className="lg:h-[clamp(65px,6.3vw,120px)] md:h-[clamp(50px,6.3vw,65px)] sm:h-[clamp(40px,6.3vw,50px)] h-[clamp(25px,6.3vw,40px)] bannerImages  mt-32 "
           ></img>
           <div className="container mx-auto py-16 2xl:w-[53.5%] w-[70%] h-100 ">
-            {/* <img
-            src="/images/home/Group2133.png"
-            className="absolute right-[-915px] top-[-30px] -z-10 "
-          /> */}
             <div className="flex flex-col mx-auto gap-1 ">
               {lang === "th" ? "" : ""}
               <h1 className="uppercase text-center text-blue">
@@ -149,38 +149,21 @@ const ProductList = () => {
               <ThreeDots />
             </div>
 
-            {/* <div className=" bg-[url('/images/home/Group2149.png')]  backgroundImg  h-[358px] w-full flex flex-col justify-end"> */}
             <div className=" bg-[url('/images/home/Group2149.png')] backgroundImg h-[358px] w-full justify-end">
               <div className="rounded-full ddd gap-2 pt-[100px] w-full">
                 <div className="my-custom-search-box ">
                   <ReactSearchBox
-                    placeholder="ค้นหาข้อความ..."
+                    placeholder={
+                      lang === "th" ? `ค้นหาสินค้า` : `PRODUCT SEARCH`
+                    }
                     value=""
                     data={dataList}
-                    onFocus={() => {
-                      console.log("This function is called when is focussed");
-                    }}
                     onSelect={handleSelect}
                   />
-                </div>
-                {/* <input
-                  type="text"
-                  className=" grow border-none"
-                  placeholder={lang === "th" ? `ค้นหาสินค้า` : `PRODUCT SEARCH`}
-                /> */}
-                {/* <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 16 16"
-                  fill="#100F9C"
-                  stroke="#100F9C"
-                  className="h-5 w-5 opacity-70 "
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-                    clipRule="evenodd"
+                  <SearchIcon
+                    className={"absolute right-[clamp(50px,7vw,100px)] top-2.5"}
                   />
-                </svg> */}
+                </div>
               </div>
               {/*--- Eng ---*/}
               <div className="grid grid-cols-2  text-blue font-[700] w-5/6 mx-auto gap-32 py-14">
@@ -243,12 +226,6 @@ const ProductList = () => {
                   <p onClick={() => scrollToElement("ฮ")}>ฮ</p>
                 </div>
               </div>
-
-              {/* 
-              <img
-                src="/images/home/Component31– 2.png"
-                className="h-[90px] mt-[50px] mb-[30px] px-[79px] "
-              /> */}
             </div>
           </div>
         </section>
@@ -267,33 +244,37 @@ const ProductList = () => {
             src="/images/tri.png"
             className="lg:h-[clamp(65px,6.3vw,120px)] md:h-[clamp(50px,6.3vw,65px)] sm:h-[clamp(40px,6.3vw,50px)] h-[clamp(25px,6.3vw,40px)] bannerImages  mt-32 "
           ></img>
-          <div className="container mx-auto py-16 2xl:w-[53.5%] w-[70%] h-100 flex flex-col gap-10">
+          <div className=" mx-auto py-16 2xl:w-[53.5%]  h-100 flex flex-col gap-10">
             <div className="flex flex-col mx-auto gap-1 ">
-              <h1 className="uppercase text-center text-red">Product search</h1>
-
-              <h1 className="text-blue  text-center">ค้นหาสินค้า</h1>
+              <h1 className="text-blue  text-center">
+                {" "}
+                {lang === "th" ? "รายการสินค้า" : "Product List"}
+              </h1>
               <ThreeDots />
             </div>
-            <label className="input input-primary rounded-full flex items-center gap-2">
-              <input
+            {/* <label className="input input-primary rounded-full flex items-center gap-2"> */}
+            {/* <input
                 type="text"
                 className="input grow border-none"
                 placeholder={lang === "th" ? `ค้นหาสินค้า` : `PRODUCT SEARCH`}
-              />
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 16 16"
-                fill="#100F9C"
-                stroke="#100F9C"
-                className="h-5 w-5 opacity-70 "
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-                  clipRule="evenodd"
+              /> */}
+            <div className="rounded-full ddd gap-2 pt-[100px] w-full">
+              <div className="my-custom-search-box ">
+                <ReactSearchBox
+                  placeholder={lang === "th" ? `ค้นหาสินค้า` : `PRODUCT SEARCH`}
+                  value=""
+                  data={dataList}
+                  onFocus={() => {
+                    console.log("This function is called when is focussed");
+                  }}
+                  onSelect={handleSelect}
                 />
-              </svg>
-            </label>
+                <SearchIcon
+                  className={"absolute  right-[clamp(40px,10vw,80px)] top-2.5"}
+                />
+              </div>
+            </div>
+            {/* </label> */}
             <div className="bg-[url('/images/home/product/abcBg.png')] h-[clamp(174px,20vw,300px)] bg-no-repeat bg-center flex justify-center items-center">
               <div className="grid grid-cols-11 gap-2 navCharacter w-[80vw]">
                 <p onClick={() => scrollToElement("A")}>A</p>
@@ -323,10 +304,6 @@ const ProductList = () => {
                 <p onClick={() => scrollToElement("Y")}>Y</p>
                 <p onClick={() => scrollToElement("Z")}>Z</p>
               </div>
-              {/* <img
-                src="/images/home/product/abc.png"
-                className="h-[clamp(90px,12vw,130px)] "
-              /> */}
             </div>
             <div className="bg-[url('/images/home/product/กขคBg.png')] h-[clamp(174px,20vw,300px)] bg-no-repeat bg-center flex justify-center items-center">
               {/*--- TH ---*/}
@@ -359,10 +336,6 @@ const ProductList = () => {
                 <p onClick={() => scrollToElement("อ")}>อ</p>
                 <p onClick={() => scrollToElement("ฮ")}>ฮ</p>
               </div>
-              {/* <img
-                src="/images/home/product/กขค.png"
-                className="h-[clamp(90px,12vw,130px)] "
-              /> */}
             </div>
           </div>
         </section>
@@ -374,6 +347,9 @@ const ProductList = () => {
             className="w-full absolute lg:pt-2 pt-11 -top-[clamp(70px,5vw,85px)]"
           />
         </div>
+
+        {/*------- ProductNav abc กขค ------*/}
+
         <div className="bg-white">
           <section className="md:container   mx-auto text-center grid lg:grid-cols-3 grid-cols-2 py-20">
             {lang === "th" ? "" : ""}
@@ -470,7 +446,9 @@ const ProductList = () => {
             <ProductNav
               id={lang === "th" ? "ร" : "T"}
               character={lang === "th" ? "ร" : "T"}
-            ></ProductNav>
+            >
+              <p className="">- เรเดียม</p>
+            </ProductNav>
             <ProductNav
               id={lang === "th" ? "ล" : "U"}
               character={lang === "th" ? "ล" : "U"}
@@ -482,7 +460,9 @@ const ProductList = () => {
             <ProductNav
               id={lang === "th" ? "ส" : "W"}
               character={lang === "th" ? "ส" : "W"}
-            ></ProductNav>
+            >
+              <p> - สตรอนเชียม</p>
+            </ProductNav>
             <ProductNav
               id={lang === "th" ? "ห" : "X"}
               character={lang === "th" ? "ห" : "X"}
